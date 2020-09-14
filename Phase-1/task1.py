@@ -3,11 +3,13 @@ import os
 import pandas as pd
 import pickle as pkl
 from scipy.stats import norm
+from pathlib import Path
 
 
 class Task1:
     def __init__(self, dir, r, w, s):
         self.data_dir = os.path.abspath(dir)
+        self.out_dir = os.path.join(str(Path(self.data_dir).parent), "SampleOutputs", "task1")
         self.r = r
         self.w = w
         self.s = s
@@ -21,7 +23,8 @@ class Task1:
             lengths = self.get_lengths()
             data = self.quantize(data, lengths)
             all_features = self.windowing(data, f)
-            pkl.dump(all_features, open(os.path.join(self.data_dir, "task1", f.split(".")[0] + ".wrd"), "wb"))
+            pkl.dump(all_features, open(os.path.join(self.data_dir, f.split(".")[0] + ".wrd"), "wb"))
+            pkl.dump(all_features, open(os.path.join(self.out_dir, f.split(".")[0] + ".wrd"), "wb"))
 
     def normalize(self, df, lower=-1, upper=1):
         df = df.T

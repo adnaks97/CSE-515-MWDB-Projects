@@ -1,0 +1,11 @@
+Most similar files found are,
+1 - file id 26 with a score of 6.75 
+2 - file id 38 with a score of 6.78 
+3 - file id 14 with a score of 8.31 
+4 - file id 28 with a score of 8.45 
+5 - file id 8 with a score of 8.89 
+6 - file id 10 with a score of 8.91 
+7 - file id 45 with a score of 9.23 
+8 - file id 31 with a score of 9.24 
+9 - file id 5 with a score of 9.48 
+10 - file id 58 with a score of 10.21 

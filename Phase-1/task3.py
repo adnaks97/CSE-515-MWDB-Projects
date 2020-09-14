@@ -3,7 +3,7 @@ import json
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-
+from pathlib import Path
 
 class Task3:
     """
@@ -12,6 +12,7 @@ class Task3:
     """
     def __init__(self, dir):
         self.dir = os.path.abspath(dir)
+        self.out_dir = os.path.join(str(Path(self.dir).parent), "SampleOutputs", "task3")
         # load all vectors created in  the previous task
         self.vectors = json.load(open(os.path.join(self.dir, "vectors.txt"), "r"))
 
@@ -29,7 +30,7 @@ class Task3:
         ft_arr = np.array(features).reshape((num_sensors, -1))
         fig = plt.figure(figsize=(14, 8))
         sns.heatmap(ft_arr, cmap="gray", xticklabels=False)
-        fig.savefig(os.path.join(self.dir, "task3", "{}_{}.png".format(file_id,feature)))
+        fig.savefig(os.path.join(self.out_dir, "{}_{}.png".format(file_id, feature)))
         plt.show()
 
     def get_user_preference(self):

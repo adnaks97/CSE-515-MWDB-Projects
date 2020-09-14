@@ -2,11 +2,13 @@ import os
 import json
 import numpy as np
 import operator
+from pathlib import Path
 from scipy.spatial import distance as dis
 
 class Task4:
     def __init__(self, dir):
         self.dir = os.path.abspath(dir)
+        self.out_dir = os.path.join(str(Path(self.dir).parent), "SampleOutputs", "task4")
         self.num_files = len([x for x in os.listdir(self.dir) if ".wrd" in x])
         self.vectors = json.load(open(os.path.join(self.dir, "vectors.txt"), "r"))
         self.tf, self.tf_idf, self.tf_idf2 = [], [], []
@@ -84,7 +86,9 @@ class Task4:
             score = items[i][1]
             save_string += "{} - file id {} with a score of {} \n".format(i+1, file_id+1, np.round(score, decimals=2))
             print("{} - file id {} with a score of {}".format(i+1, file_id+1, np.round(score, decimals=2)))
-        with open(os.path.join(self.dir, "task4", "{}_similarity_results.txt".format(self.file_id+1)), "w") as f:
+        # with open(os.path.join(self.dir, "task4", "{}_similarity_results.txt".format(self.file_id+1)), "w") as f:
+        #     f.write(save_string)
+        with open(os.path.join(self.out_dir, "{}_similarity_results.txt".format(self.file_id+1)), "w") as f:
             f.write(save_string)
 
 

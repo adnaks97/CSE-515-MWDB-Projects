@@ -2,6 +2,7 @@ import os
 import json
 import numpy as np
 import pickle as pkl
+from pathlib import Path
 
 
 class Task2:
@@ -14,6 +15,7 @@ class Task2:
         self.tf_idf2 = {}
         self.tf_idf = {}
         self.dir = os.path.abspath(dir)
+        self.out_dir = os.path.join(str(Path(self.dir).parent), "SampleOutputs", "task2")
         self.file_paths = sorted([os.path.join(self.dir, f) for f in os.listdir(self.dir) if ".wrd" in f])
         self.tf = {}
         self.idf = {}
@@ -143,8 +145,11 @@ class Task2:
                 tf_idf2.append(self.tf_idf2[file_id][sensor_id][word])
                 prev_sensor_id = sensor_id
             vectors["{}-{}".format(file_id, sensor_id)] = [tf, tf_idf, tf_idf2]
-        with open(os.path.join(self.dir, "task2", "vectors.txt"), "w") as f:
+        with open(os.path.join(self.dir, "vectors.txt"), "w") as f:
             json.dump(vectors, f)
+        with open(os.path.join(self.out_dir, "vectors.txt"), "w") as f:
+            json.dump(vectors, f)
+
 
 dir = "Z"
 task2 = Task2(dir)
