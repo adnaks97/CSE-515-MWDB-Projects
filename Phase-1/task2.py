@@ -15,13 +15,21 @@ class Task2:
         self.tf_idf2 = {}
         self.tf_idf = {}
         self.dir = os.path.abspath(dir)
-        self.out_dir = os.path.join(str(Path(self.dir).parent), "SampleOutputs", "task2")
+        self.out_dir = os.path.join(str(Path(self.dir).parent), "Outputs", "task2")
+        Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.file_paths = sorted([os.path.join(self.dir, f) for f in os.listdir(self.dir) if ".wrd" in f])
         self.tf = {}
         self.idf = {}
         self.idf2 = {}
         self.calculate_values()
         self.compute_products()
+        pkl.dump(self.tf, open(os.path.join(self.out_dir, "tf_dict.pkl"), "wb"))
+        pkl.dump(self.tf_idf, open(os.path.join(self.out_dir, "tf_idf_dict.pkl"), "wb"))
+        pkl.dump(self.tf_idf2, open(os.path.join(self.out_dir, "tf_idf2_dict.pkl"), "wb"))
+
+        pkl.dump(self.tf, open(os.path.join(self.dir, "tf_dict.pkl"), "wb"))
+        pkl.dump(self.tf_idf, open(os.path.join(self.dir, "tf_idf_dict.pkl"), "wb"))
+        pkl.dump(self.tf_idf2, open(os.path.join(self.dir, "tf_idf2_dict.pkl"), "wb"))
         self.convert_to_vectors()
 
     def calculate_values(self):
@@ -150,6 +158,6 @@ class Task2:
         with open(os.path.join(self.out_dir, "vectors.txt"), "w") as f:
             json.dump(vectors, f)
 
-
-dir = "Z"
-task2 = Task2(dir)
+if __name__ == "__main__":
+    dir = input("Enter the directory : ")
+    task2 = Task2(dir)

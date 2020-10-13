@@ -1,0 +1,41 @@
+Readme
+
+To run these files, please place them separately in the directory which is the parent of the data directory
+For example, parent/data holds the csv files, then the python files need to be in parent/
+
+Steps to run the Task -1
+
+    Just run the program from the command line, the program would request input for ir, and other parameters.
+
+Steps to run the Task - 2
+
+    Just run the program from the command line and enter the dir name when prompted
+
+Steps to run the Task - 3
+
+    Just run the program from the command line and enter the dir name, the file id and the feature you wish to see the heatmap for when prompted
+    This can go on in an infinite loop till you choose to exit from main menu
+
+Steps to run the Task - 4
+
+    Just run the program from the command line and enter dir name, file id, feature and similarity measure when prompted
+    Then we can see the top 10 similar files for the query file id
+    This can go on in an infinite loop till you choose to exit from main menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

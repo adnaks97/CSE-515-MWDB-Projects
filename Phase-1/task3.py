@@ -12,7 +12,8 @@ class Task3:
     """
     def __init__(self, dir):
         self.dir = os.path.abspath(dir)
-        self.out_dir = os.path.join(str(Path(self.dir).parent), "SampleOutputs", "task3")
+        self.out_dir = os.path.join(str(Path(self.dir).parent), "Outputs", "task3")
+        Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         # load all vectors created in  the previous task
         self.vectors = json.load(open(os.path.join(self.dir, "vectors.txt"), "r"))
 
@@ -38,13 +39,14 @@ class Task3:
         Get user options to plot heatmap
         :return: None
         """
-        file_id = int(input("Enter the file no you wish to see (1-60): "))
+        file_id = int(input("Enter the file no you wish to see (1-66): "))
         feature = int(input("Enter the feature you wish to plot (tf - 0, tfidf - 1, tfidf2 - 2) : "))
         self.plot_heatmap(file_id, feature)
 
 
 if __name__ == "__main__":
-    task3 = Task3("Z")
+    dir = input("Enter the directory : ")
+    task3 = Task3(dir)
     while True:
         option = int(input("Choose an option : \n 1) Check some plots \n 2) Exit \n"))
         if option == 2:
