@@ -25,6 +25,7 @@ class wordExtractor:
         self.w = window_size
         self.s = stride
         self.fname = fname
+        self.nfname = "0"+self.fname if len(self.fname) == 1 else self.fname
         self.DIR = DIR
 
 
@@ -133,7 +134,7 @@ class wordExtractor:
             t = 0
             max_t_index = quantized_data[sensorId].shape[0]
             while t < max_t_index:
-                idx = (self.fname, sensorId, t)
+                idx = (self.nfname, sensorId, t)
                 end = t+self.w
                 if end >= quantized_data.shape[1]:
                     end = quantized_data.shape[1]
@@ -174,7 +175,7 @@ class wordExtractor2(wordExtractor):
         self.component = component
         self.DIR = self.DIR + '/' + self.component + '/'
         Path('outputs/task0a').mkdir(parents=True, exist_ok=True)
-        self.save_path = 'outputs/task0a/' + self.fname + '.wrd'
+        self.save_path = 'outputs/task0a/{}'.format(self.nfname) + '.wrd'
 
     def compute_mean_std(self, normalized_values):
         self.avg = normalized_values.mean(axis=1).tolist()

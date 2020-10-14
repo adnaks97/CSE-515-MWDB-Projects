@@ -126,7 +126,6 @@ class Task0b(object):
                 else:
                     tf_vector.append(0)
                     tfidf_vector.append(0)
-            print(len(tf_vector), len(tfidf_vector))
 
             json.dump(json.dumps(tf_vector), open(os.path.join(self.out_dir,"tf_vectors_{}.txt".format(file_id)), "w"))
             # pkl.dump(tf_vector, )

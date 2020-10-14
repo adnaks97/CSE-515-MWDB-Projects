@@ -2,6 +2,7 @@ from sklearn.decomposition import PCA, TruncatedSVD, NMF, LatentDirichletAllocat
 import numpy as np
 import pickle as pkl
 from pathlib import Path
+import json
 import os
 
 class Task1(object):
@@ -11,7 +12,6 @@ class Task1(object):
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.num_components = k
         self.vector_model = vector_model
-        self.vector_file_prefix = ""
         self.technique = technique
         self.file_vectors = []
         self.reduced_file_vectors = []
@@ -23,7 +23,7 @@ class Task1(object):
         self.run_model()
         self.write_outputs()
         self.write_task2_inputs()
-        
+
     def get_word_indexes(self, indexFileName):
         tempIndexData = pkl.load(open(os.path.join(self.input_dir, indexFileName), 'rb'))
         return {tempIndexData[i]:i for i in tempIndexData} # reversing key/values
@@ -36,18 +36,18 @@ class Task1(object):
             if(fileName.startswith(self.vector_file_prefix)):
                 fileNumber = int(fileName.split('.')[0].split('_')[-1])
                 with open(os.path.join(self.input_dir, fileName), 'r') as f:
-                    vectors[fileNumber] = eval(f.read()[1:-1]) #[1:-1] to remove extra "
+                    vectors[fileNumber] = json.loads(json.load(f))
 
         self.file_vectors = np.array([vectors[key] for key in sorted(vectors)])
     
     def run_model(self):
-        if(self.technique==1):
+        if self.technique==1:
             self.output_filename = "pca_{}.txt".format(self.num_components)
             self.model = PCA(n_components=self.num_components)
-        elif(self.technique==2):
+        elif self.technique==2:
             self.output_filename = "svd_{}.txt".format(self.num_components)
             self.model = TruncatedSVD(n_components=self.num_components)
-        elif(self.technique==3):
+        elif self.technique==3:
             self.output_filename = "nmf_{}.txt".format(self.num_components)
             self.model = NMF(n_components=self.num_components)
         else:
@@ -57,6 +57,8 @@ class Task1(object):
         self.reduced_file_vectors = self.model.fit_transform(self.file_vectors)
         
     def write_outputs(self):
+        name = self.output_filename.split("_")[0] + "_vectors.txt"
+        json.dump(json.dumps(self.reduced_file_vectors.tolist()), open(os.path.join(self.out_dir, name), "w"))
         with open(os.path.join(self.out_dir, self.output_filename), "w+") as f:
             f.write("[")
             for topic in self.model.components_:
@@ -67,12 +69,14 @@ class Task1(object):
                     f.write("{}:{},".format(originalWord, score))
                 f.write('},\n')
             f.write("]")
-            
+
+
+
     def write_task2_inputs(self):
         new_file_name = self.output_filename.split('.')[0] + "_" + self.vector_file_prefix.split('_')[0] + "_reduced.txt"
         pkl.dump(self.reduced_file_vectors, open(os.path.join(self.out_dir, new_file_name), "wb"))
-            
-            
+
+
 if __name__=="__main__":
     inputDir = input("Enter the directory to use: ")
     numComponents = int(input("Enter number of components (k): "))
