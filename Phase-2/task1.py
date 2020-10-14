@@ -11,6 +11,7 @@ class Task1(object):
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.num_components = k
         self.vector_model = vector_model
+        self.vector_file_prefix = ""
         self.technique = technique
         self.file_vectors = []
         self.reduced_file_vectors = []
@@ -21,17 +22,18 @@ class Task1(object):
         self.load_vectors()
         self.run_model()
         self.write_outputs()
+        self.write_task2_inputs()
         
     def get_word_indexes(self, indexFileName):
         tempIndexData = pkl.load(open(os.path.join(self.input_dir, indexFileName), 'rb'))
         return {tempIndexData[i]:i for i in tempIndexData} # reversing key/values
     
     def load_vectors(self):
-        vectorFilePrefix = "tf_vectors_" if self.vector_model==1 else "tfidf_vectors_"
+        self.vector_file_prefix = "tf_vectors_" if self.vector_model==1 else "tfidf_vectors_"
         
         vectors = {}
         for fileName in os.listdir(self.input_dir):
-            if(fileName.startswith(vectorFilePrefix)):
+            if(fileName.startswith(self.vector_file_prefix)):
                 fileNumber = int(fileName.split('.')[0].split('_')[-1])
                 with open(os.path.join(self.input_dir, fileName), 'r') as f:
                     vectors[fileNumber] = eval(f.read()[1:-1]) #[1:-1] to remove extra "
@@ -65,6 +67,11 @@ class Task1(object):
                     f.write("{}:{},".format(originalWord, score))
                 f.write('},\n')
             f.write("]")
+            
+    def write_task2_inputs(self):
+        new_file_name = self.output_filename.split('.')[0] + "_" + self.vector_file_prefix.split('_')[0] + "_reduced.txt"
+        pkl.dump(self.reduced_file_vectors, open(os.path.join(self.out_dir, new_file_name), "wb"))
+            
             
 if __name__=="__main__":
     inputDir = input("Enter the directory to use: ")
