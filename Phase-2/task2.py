@@ -1,22 +1,31 @@
 import os
 import json
 import numpy as np
+import pickle as pkl
 from pathlib import Path
+import multiprocessing as mpl
+from multiprocessing import Pool
 from sklearn.metrics import pairwise_distances
 
 
 class Task2:
     def __init__(self, dir):
         self.dir = os.path.abspath(dir)
+        self.task0a_dir = os.path.join(self.dir, "task0a")
+        self.task0b_dir = os.path.join(self.dir, "task0b")
+        self.task1_dir = os.path.join(self.dir, "task1")
         self.pca = self.nmf = self.lda = self.svd = None
         self.out_dir = os.path.join(self.dir, "task2")
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
-        self.tf_files = sorted([os.path.join(self.dir, "task0b", k) for k in os.listdir(os.path.join(self.dir, "task0b")) if "tf_" in k and ".txt" in k])
-        self.tfidf_files = sorted([os.path.join(self.dir, "task0b", k) for k in os.listdir(os.path.join(self.dir, "task0b")) if "tfidf_" in k and ".txt" in k])
-        self.tf, self.tfidf = [], []
+        self.compNames = ['words_X', 'words_Y', 'words_Z', 'words_W']
+        self.file_paths = sorted([os.path.join(self.task0a_dir, f) for f in os.listdir(self.task0a_dir) if ".wrd" in f])
+        self.tf_files = sorted([os.path.join(self.task0b_dir, k) for k in os.listdir(os.path.join(self.task0b_dir)) if "tf_" in k and ".txt" in k])
+        self.tfidf_files = sorted([os.path.join(self.task0b_dir, k) for k in os.listdir(os.path.join(self.task0b_dir)) if "tfidf_" in k and ".txt" in k])
+        self.sequences = {}
+        self.tf, self.tfidf, self.entropy = [], [], []
         self.file_idx, self.idx_file = {}, {}
+        self._read_wrd_files_()
         self._load_all_vectors_()
-
 
     def _load_all_vectors_(self):
         for fname in self.tf_files:
@@ -25,6 +34,8 @@ class Task2:
             self.file_idx[name] = idx
             self.idx_file[idx] = name
             self.tf.append(json.loads(json.load(open(fname, "r"))))
+            x = np.array(self.tf[-1])
+            self.entropy.append(np.multiply(-x, np.log2(x+1e-7)))
 
         self.tfidf = []
         for fname in self.tfidf_files:
@@ -32,21 +43,100 @@ class Task2:
 
         self.tf = np.array(self.tf).reshape((len(self.tf_files), -1))
         self.tfidf = np.array(self.tfidf).reshape((len(self.tfidf_files), -1))
+        self.entropy = np.array(self.entropy).reshape((len(self.tfidf_files), -1))
 
-        if os.path.exists(os.path.join(self.dir, "task1", "pca_vectors.txt")):
-            self.pca = np.array(json.loads(json.load(open(os.path.join(self.dir, "task1", "pca_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "pca_vectors.txt")):
+            self.pca = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "pca_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "svd_vectors.txt")):
+            self.svd = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "svd_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "nmf_vectors.txt")):
+            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "nmf_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "lda_vectors.txt")):
+            self.lda = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "lda_vectors.txt"), "r"))))
 
-        if os.path.exists(os.path.join(self.dir, "task1", "svd_vectors.txt")):
-            self.svd = np.array(json.loads(json.load(open(os.path.join(self.dir, "task1", "svd_vectors.txt"), "r"))))
+        self.allWords = pkl.load(open(os.path.join(self.task0b_dir, "all_words_idx.txt"), "rb"))
 
-        if os.path.exists(os.path.join(self.dir, "task1", "nmf_vectors.txt")):
-            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.dir, "task1", "nmf_vectors.txt"), "r"))))
+    def _read_wrd_files_(self):
+        for fp in self.file_paths:
+            data = json.load(open(fp, "r"))
+            file_name = fp.split("/")[-1].split(".")[0]
+            self.sequences[file_name] = {}
+            for c in self.compNames:
+                self.sequences[file_name][c] = {}
+                items = data[c]
+                for sid in range(20):
+                    words = [(it[1], it[2]) for it in items if it[0][1] == sid]
+                    self.sequences[file_name][c][sid] = words
 
-        if os.path.exists(os.path.join(self.dir, "task1", "lda_vectors.txt")):
-            self.lda = np.array(json.loads(json.load(open(os.path.join(self.dir, "task1", "lda_vectors.txt"), "r"))))
+    def _construct_list_for_mp_(self, fn1, fn2):
+        all_lists = []
+        for c in self.compNames:
+            for sid in range(20):
+                all_lists.append((fn1, fn2, c, sid, self.sequences[fn1][c][sid], self.sequences[fn2][c][sid]))
+        return all_lists
+
+    def _edit_distance_(self, seqs):
+        seq1 = seqs[4]
+        seq2 = seqs[5]
+        word1 = [item[0] for item in seq1]
+        word2 = [item[0] for item in seq2]
+        f1 = self.file_idx[seqs[0]]
+        f2 = self.file_idx[seqs[1]]
+        comp = seqs[2]
+        sensor = seqs[3]
+
+        n = len(word1)
+        m = len(word2)
+
+        # if one of the strings is empty
+        if n * m == 0:
+            return n + m
+
+        # array to store the conversion history
+        d = [[0] * (m + 1) for _ in range(n + 1)]
+
+        # init boundaries
+        for i in range(1, n + 1):
+            d[i][0] = d[i-1][0] + self.entropy[f1, self.allWords[(comp, sensor, tuple(word1[i-1]))]]
+        for j in range(1, m + 1):
+            d[0][j] = d[0][j-1] + self.entropy[f2, self.allWords[(comp, sensor, tuple(word2[j-1]))]]
+
+        # DP compute
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                e1 = self.entropy[f1, self.allWords[(comp, sensor, tuple(word1[i - 1]))]]
+                e2 = self.entropy[f2, self.allWords[(comp, sensor, tuple(word2[j - 1]))]]
+                cost = abs(e1 - e2)
+                d[i][j] = min(d[i-1][j]+cost, d[i][j-1]+cost, d[i-1][j-1] if word1[i-1] == word2[j-1] else d[i-1][j-1]+cost)
+        return d[n][m]
+
+    def _dtw_distance_(self, seqs):
+        seq1 = seqs[4]
+        seq2 = seqs[5]
+        word1 = [item[1] for item in seq1]
+        word2 = [item[1] for item in seq2]
+
+        n = len(word1)
+        m = len(word2)
+
+        dtw_matrix = [[0] * (m + 1) for i in range(n + 1)]
+
+        for i in range(1, n + 1):
+            dtw_matrix[i][0] = dtw_matrix[i - 1][0] + abs(word1[i - 1])
+        for j in range(1, m + 1):
+            dtw_matrix[0][j] = dtw_matrix[0][j - 1] + abs(word2[j - 1])
+
+        for i in range(1, n + 1):
+            for j in range(1, m + 1):
+                cost = abs(word1[i - 1] - word2[j - 1])
+                # take last min from a square box
+                last_min = min(dtw_matrix[i - 1][j], dtw_matrix[i][j - 1], dtw_matrix[i - 1][j - 1])
+                dtw_matrix[i][j] = cost + last_min
+        return dtw_matrix[n][m]
 
     def _save_results_(self, scores, fn, option):
-        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt"]
+        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
+                 "edit_dist_{}.txt", "dtw_dist_{}.txt"]
         fn = names[option-1].format(fn)
         json.dump(scores, open(os.path.join(self.out_dir, fn), "w"))
 
@@ -58,6 +148,26 @@ class Task2:
             scores = np.dot(self.tfidf, self.tfidf[idx].reshape((-1, 1))).tolist()
         scores = [(self.idx_file[id], s) for id,s in enumerate(scores)]
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
+        return top_10_scores
+
+    def _edit_cost_distance_(self, fn):
+        scores = []
+        for file_id in self.sequences:
+            print("Calculating for : ", fn, file_id)
+            all_list = self._construct_list_for_mp_(fn, file_id)
+            scores.append(sum([self._edit_distance_(seqs) for seqs in all_list]))
+        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
+        top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
+        return top_10_scores
+
+    def _dtw_cost_distance_(self, fn):
+        scores = []
+        for file_id in self.sequences:
+            print("Calculating for : ", fn, file_id)
+            all_list = self._construct_list_for_mp_(fn, file_id)
+            scores.append(sum([self._dtw_distance_(seqs) for seqs in all_list]))
+        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
+        top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
         return top_10_scores
 
     def _pca_similarity_(self, fn):
@@ -99,6 +209,10 @@ class Task2:
             scores = self._nmf_similarity_(fn)
         elif option == 5:
             scores = self._lda_similarity_(fn)
+        elif option == 6:
+            scores = self._edit_cost_distance_(fn)
+        elif option == 7:
+            scores = self._dtw_cost_distance_(fn)
 
         self._save_results_(scores, fn, option)
 
