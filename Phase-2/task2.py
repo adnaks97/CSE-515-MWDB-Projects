@@ -156,7 +156,6 @@ class Task2:
             print("Calculating for : ", fn, file_id)
             all_list = self._construct_list_for_mp_(fn, file_id)
             scores.append(sum([self._edit_distance_(seqs) for seqs in all_list]))
-            print(scores)
         scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
         top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
         return top_10_scores
@@ -225,7 +224,7 @@ if __name__ == "__main__":
     user_choice = 0
     while user_choice != 8:
         file_name = input("Enter the file id to use: ")
-        file_name = "0"+file_name if len(file_name) == 1 else file_name
+        file_name = file_name.zfill(3)
         vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
         print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
         user_choice = int(input("Enter a user option: "))

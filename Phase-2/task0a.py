@@ -25,7 +25,7 @@ class wordExtractor:
         self.w = window_size
         self.s = stride
         self.fname = fname
-        self.nfname = "0"+self.fname if len(self.fname) == 1 else self.fname
+        self.nfname = self.fname.zfill(3)
         self.DIR = DIR
 
 

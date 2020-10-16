@@ -133,34 +133,6 @@ class Task0b(object):
 
         pkl.dump(self.unique_words, open(os.path.join(self.out_dir,"all_words_idx.txt"), "wb"))
 
-
-        #     tf_values = []
-        #     tf_idf_values = []
-        #     for c in self.compNames:
-        #         tf, tf_idf, entropy = [], [], []
-        #         data = file[c]
-        #         prev_sensor_id = 0
-        #         for idx in data:
-        #             file_id = idx[0][0]
-        #             sensor_id = idx[0][1]
-        #             word = tuple(idx[1])
-        #             vectors[file_id] = {}
-        #             if prev_sensor_id !=
-        #                 sensor_id:
-        #             vectors[file_id]["{}-{}".format(c, prev_sensor_id)] = [tf, tf_idf, entropy]
-        #             tf, tf_idf, entropy = [], [], []
-        #         tf.append(self.tf[c][file_id][sensor_id][word])
-        #         tf_idf.append(self.tf_idf[c][file_id][sensor_id][word])
-        #         entropy.append(self.entropy[c][file_id][sensor_id][word])
-        #         prev_sensor_id = sensor_id
-        #         tf_values.extend(tf)
-        #         tf_idf_values.extend(tf_idf)
-        #     vectors[file_id]["{}-{}".format(c, prev_sensor_id)] = [tf, tf_idf, entropy]
-        # with open(os.path.join(self.dir, "tf_vectors_" + fileNo + ".txt"), "w") as f:
-        #     json.dump(tf_values, f)
-        # with open(os.path.join(self.dir, "tfidf_vectors_" + fileNo + ".txt"), "w") as f:
-        #     json.dump(tf_idf_values, f)
-
 if __name__ == "__main__":
     dir = input("Enter the directory to use: ")
     tob = Task0b(dir)
