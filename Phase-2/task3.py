@@ -1,28 +1,26 @@
-import os
+from pathlib import Path
+from sklearn.metrics import pairwise_distances
+from sklearn.decomposition import TruncatedSVD, NMF
 import json
 import numpy as np
+import os
 import pickle as pkl
-from pathlib import Path
-import multiprocessing as mpl
-from multiprocessing import Pool
-from sklearn.metrics import pairwise_distances
 
-
-class Task2:
+class Task3:
     def __init__(self, dir):
         self.dir = os.path.abspath(dir)
         self.task0a_dir = os.path.join(self.dir, "task0a")
         self.task0b_dir = os.path.join(self.dir, "task0b")
         self.task1_dir = os.path.join(self.dir, "task1")
-        self.pca = self.nmf = self.lda = self.svd = None
-        self.out_dir = os.path.join(self.dir, "task2")
+        self.pca = self.nmf = self.lda = self.svd = self.model = None
+        self.out_dir = os.path.join(self.dir, "task3")
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.compNames = ['words_X', 'words_Y', 'words_Z', 'words_W']
         self.file_paths = sorted([os.path.join(self.task0a_dir, f) for f in os.listdir(self.task0a_dir) if ".wrd" in f])
         self.tf_files = sorted([os.path.join(self.task0b_dir, k) for k in os.listdir(os.path.join(self.task0b_dir)) if "tf_" in k and ".txt" in k])
         self.tfidf_files = sorted([os.path.join(self.task0b_dir, k) for k in os.listdir(os.path.join(self.task0b_dir)) if "tfidf_" in k and ".txt" in k])
         self.sequences = {}
-        self.tf, self.tfidf, self.entropy = [], [], []
+        self.tf, self.tfidf, self.entropy, self.scores_final = [], [], [], []
         self.file_idx, self.idx_file = {}, {}
         self._read_wrd_files_()
         self._load_all_vectors_()
@@ -134,101 +132,157 @@ class Task2:
                 dtw_matrix[i][j] = cost + last_min
         return dtw_matrix[n][m]
 
-    def _save_results_(self, scores, fn, option):
+    def _save_results_(self, scores, option, p_comp, sem_id):
         names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
                  "edit_dist_{}.txt", "dtw_dist_{}.txt"]
-        fn = names[option-1].format(fn)
-        json.dump(scores, open(os.path.join(self.out_dir, fn), "w"))
+        matrix = "sim_matrix"
+        score_name = "score"
+        sim_matrix = names[option-1].format(matrix)
+        score_data = names[option-1].format(score_name)
+        json.dump(json.dumps(scores), open(os.path.join(self.out_dir, sim_matrix), "w"))
+        json.dump(self.scores_final, open(os.path.join(self.out_dir, score_data), "w"))
+        self.semantic_identifier(option, scores, p_comp, sem_id)
 
-    def _dot_product_similarity_(self, fn, model):
-        idx = self.file_idx[fn]
-        if model == 1:
-            scores = np.dot(self.tf, self.tf[idx].reshape((-1,1))).tolist()
-        elif model == 2:
-            scores = np.dot(self.tfidf, self.tfidf[idx].reshape((-1, 1))).tolist()
-        scores = [(self.idx_file[id], s) for id,s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
+    def semantic_identifier(self, option, scores, p_comp, sem_id):
+        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
+                 "edit_dist_{}.txt", "dtw_dist_{}.txt"]
+        if sem_id == 1:
+            name = "svd_{}".format(p_comp)
+            sem_file_name = names[option - 1].format(name)
+            self.model = TruncatedSVD(n_components=p_comp)
+        elif sem_id == 2:
+            name = "nmf_{}".format(p_comp)
+            sem_file_name = names[option - 1].format(name)
+            self.model = NMF(n_components=p_comp)
 
-    def _edit_cost_distance_(self, fn):
+        top_p = self.model.fit_transform(scores)
+        json.dump(json.dumps(top_p.tolist()), open(os.path.join(self.out_dir, sem_file_name), "w"))
+
+    def _dot_product_similarity_(self, model):
+        scores_flat = []
+        f = 0
+        for i in range(len(self.file_paths)):
+            if model == 1:
+                scores = np.dot(self.tf, self.tf[i].reshape((-1, 1))).tolist()
+            elif model == 2:
+                scores = np.dot(self.tfidf, self.tfidf[i].reshape((-1, 1))).tolist()
+            flat = [item for sublist in scores for item in sublist]
+            scores_flat.append(flat)
+            f += 1
+            if f == 3:
+                break
+        for i in range(len(scores_flat)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores_flat[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
+            self.scores_final.append(scores_order)
+        return scores_flat
+
+    def _edit_cost_distance_(self):
         scores = []
+        f = 0
         for file_id in self.sequences:
-            print("Calculating for : ", fn, file_id)
-            all_list = self._construct_list_for_mp_(fn, file_id)
-            scores.append(sum([self._edit_distance_(seqs) for seqs in all_list]))
-            print(scores)
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
-        return top_10_scores
+            scores.append(
+                [sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(fn, file_id)]) for fn in
+                 self.sequences])
+            f += 1
+            if f == 3:
+                break
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1]))
+            self.scores_final.append(scores_order)
+        for i in range(len(scores)):
+            scores_max = max(scores[i])
+            for j in range(len(scores[i])):
+                scores[i][j] = (scores_max - scores[i][j]) / scores_max
+        return scores
 
-    def _dtw_cost_distance_(self, fn):
+    def _dtw_cost_distance_(self):
         scores = []
+        f = 0
         for file_id in self.sequences:
-            print("Calculating for : ", fn, file_id)
-            all_list = self._construct_list_for_mp_(fn, file_id)
-            scores.append(sum([self._dtw_distance_(seqs) for seqs in all_list]))
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
-        return top_10_scores
+            scores.append(
+                [sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(fn, file_id)]) for fn in
+                 self.sequences])
+            f += 1
+            if f == 3:
+                break
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1]))
+            self.scores_final.append(scores_order)
+        for i in range(len(scores)):
+            scores_max = max(scores[i])
+            for j in range(len(scores[i])):
+                scores[i][j] = (scores_max - scores[i][j]) / scores_max
+        return scores
 
-    def _pca_similarity_(self, fn):
-        idx = self.file_idx[fn]
-        scores = (1-pairwise_distances(self.pca, metric="cosine"))[idx]
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
+    def _pca_similarity_(self):
+        scores = (1-pairwise_distances(self.pca, metric="cosine"))
+        scores = scores.tolist()
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
+            self.scores_final.append(scores_order)
+        return scores
 
-    def _svd_similarity_(self, fn):
-        idx = self.file_idx[fn]
-        scores = (1-pairwise_distances(self.svd, metric="cosine"))[idx]
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
+    def _svd_similarity_(self):
+        scores = (1-pairwise_distances(self.svd, metric="cosine"))
+        scores = scores.tolist()
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
+            self.scores_final.append(scores_order)
+        return scores
 
-    def _nmf_similarity_(self, fn):
-        idx = self.file_idx[fn]
-        scores = (1-pairwise_distances(self.nmf, metric="cosine"))[idx]
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
+    def _nmf_similarity_(self):
+        scores = (1-pairwise_distances(self.nmf, metric="cosine"))
+        scores = scores.tolist()
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
+            self.scores_final.append(scores_order)
+        return scores
 
-    def _lda_similarity_(self, fn):
-        idx = self.file_idx[fn]
-        scores = (1-pairwise_distances(self.lda, metric="cosine"))[idx]
-        scores = [(self.idx_file[id], s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
+    def _lda_similarity_(self):
+        scores = (1-pairwise_distances(self.lda, metric="cosine"))
+        scores = scores.tolist()
+        for i in range(len(scores)):
+            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
+            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
+            self.scores_final.append(scores_order)
+        return scores
 
-    def find_10_similar_gestures(self, fn, model, option):
+    def process(self, model, option, p_comp, sem_id):
         if option == 1:
-            scores = self._dot_product_similarity_(fn, model)
+            scores = self._dot_product_similarity_(model)
         elif option == 2:
-            scores = self._pca_similarity_(fn)
+            scores = self._pca_similarity_()
         elif option == 3:
-            scores = self._svd_similarity_(fn)
+            scores = self._svd_similarity_()
         elif option == 4:
-            scores = self._nmf_similarity_(fn)
+            scores = self._nmf_similarity_()
         elif option == 5:
-            scores = self._lda_similarity_(fn)
+            scores = self._lda_similarity_()
         elif option == 6:
-            scores = self._edit_cost_distance_(fn)
+            scores = self._edit_cost_distance_()
         elif option == 7:
-            scores = self._dtw_cost_distance_(fn)
+            scores = self._dtw_cost_distance_()
 
-        self._save_results_(scores, fn, option)
+        self._save_results_(scores, option, p_comp, sem_id)
 
 
 if __name__ == "__main__":
-    print("Performing Task 2")
+    print("Performing Task 3")
     directory = input("Enter directory to use: ")
-    task2 = Task2(directory)
+    task3 = Task3(directory)
     user_choice = 0
     while user_choice != 8:
-        file_name = input("Enter the file id to use: ")
-        file_name = "0"+file_name if len(file_name) == 1 else file_name
         vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+        sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
+        p_components = int(input("Enter number of components (p): "))
         print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
         user_choice = int(input("Enter a user option: "))
         if user_choice == 8:
             break
-        task2.find_10_similar_gestures(file_name, vec_model, user_choice)
+        task3.process(vec_model, user_choice, p_components, sem_model)
