@@ -140,23 +140,40 @@ class Task3:
         sim_matrix = names[option-1].format(matrix)
         score_data = names[option-1].format(score_name)
         json.dump(json.dumps(scores), open(os.path.join(self.out_dir, sim_matrix), "w"))
-        json.dump(self.scores_final, open(os.path.join(self.out_dir, score_data), "w"))
+        # json.dump(self.scores_final, open(os.path.join(self.out_dir, score_data), "w"))
         self.semantic_identifier(option, scores, p_comp, sem_id)
 
     def semantic_identifier(self, option, scores, p_comp, sem_id):
         names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
                  "edit_dist_{}.txt", "dtw_dist_{}.txt"]
         if sem_id == 1:
-            name = "svd_{}".format(p_comp)
+            name = "svd_matrix_{}".format(p_comp)
+            sim_name = "svd_sim_matrix_{}".format(p_comp)
             sem_file_name = names[option - 1].format(name)
+            sim_file_name = names[option - 1].format(sim_name)
             self.model = TruncatedSVD(n_components=p_comp)
         elif sem_id == 2:
-            name = "nmf_{}".format(p_comp)
+            name = "nmf_matrix_{}".format(p_comp)
+            sim_name = "nmf_sim_matrix_{}".format(p_comp)
             sem_file_name = names[option - 1].format(name)
+            sim_file_name = names[option - 1].format(sim_name)
             self.model = NMF(n_components=p_comp)
 
         top_p = self.model.fit_transform(scores)
         json.dump(json.dumps(top_p.tolist()), open(os.path.join(self.out_dir, sem_file_name), "w"))
+        file_name = {v: k for k, v in self.file_idx.items()}
+        with open(os.path.join(self.out_dir, sim_file_name), "w+") as f:
+            f.write("[")
+            for topic in self.model.components_:
+                f.write("{")
+                i = 0
+                for idx in np.argsort(topic)[::-1]:
+                    file = file_name[i]
+                    i += 1
+                    score = topic[idx]
+                    f.write("{}:{},".format(file, score))
+                f.write('},\n')
+            f.write("]")
 
     def _dot_product_similarity_(self, model):
         scores_flat = []
@@ -171,10 +188,6 @@ class Task3:
             f += 1
             if f == 3:
                 break
-        for i in range(len(scores_flat)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores_flat[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
-            self.scores_final.append(scores_order)
         return scores_flat
 
     def _edit_cost_distance_(self):
@@ -187,10 +200,6 @@ class Task3:
             f += 1
             if f == 3:
                 break
-        for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1]))
-            self.scores_final.append(scores_order)
         for i in range(len(scores)):
             scores_max = max(scores[i])
             for j in range(len(scores[i])):
@@ -208,10 +217,6 @@ class Task3:
             if f == 3:
                 break
         for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1]))
-            self.scores_final.append(scores_order)
-        for i in range(len(scores)):
             scores_max = max(scores[i])
             for j in range(len(scores[i])):
                 scores[i][j] = (scores_max - scores[i][j]) / scores_max
@@ -220,37 +225,21 @@ class Task3:
     def _pca_similarity_(self):
         scores = (1-pairwise_distances(self.pca, metric="cosine"))
         scores = scores.tolist()
-        for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
-            self.scores_final.append(scores_order)
         return scores
 
     def _svd_similarity_(self):
         scores = (1-pairwise_distances(self.svd, metric="cosine"))
         scores = scores.tolist()
-        for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
-            self.scores_final.append(scores_order)
         return scores
 
     def _nmf_similarity_(self):
         scores = (1-pairwise_distances(self.nmf, metric="cosine"))
         scores = scores.tolist()
-        for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
-            self.scores_final.append(scores_order)
         return scores
 
     def _lda_similarity_(self):
         scores = (1-pairwise_distances(self.lda, metric="cosine"))
         scores = scores.tolist()
-        for i in range(len(scores)):
-            scores_file = [(self.idx_file[id], s) for id, s in enumerate(scores[i])]
-            scores_order = dict(sorted(scores_file, key=lambda x: x[1], reverse=True))
-            self.scores_final.append(scores_order)
         return scores
 
     def process(self, model, option, p_comp, sem_id):
