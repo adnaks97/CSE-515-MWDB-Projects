@@ -133,94 +133,69 @@ class Task3:
         return dtw_matrix[n][m]
 
     def _save_results_(self, scores, option, p_comp, sem_id):
-        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
+        names = ["dot_pdt_{}.txt", "pca_{}.txt", "svd_{}.txt", "nmf_{}.txt", "lda_{}.txt",
                  "edit_dist_{}.txt", "dtw_dist_{}.txt"]
         matrix = "sim_matrix"
-        score_name = "score"
         sim_matrix = names[option-1].format(matrix)
-        score_data = names[option-1].format(score_name)
         json.dump(json.dumps(scores), open(os.path.join(self.out_dir, sim_matrix), "w"))
-        # json.dump(self.scores_final, open(os.path.join(self.out_dir, score_data), "w"))
         self.semantic_identifier(option, scores, p_comp, sem_id)
 
     def semantic_identifier(self, option, scores, p_comp, sem_id):
         names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
                  "edit_dist_{}.txt", "dtw_dist_{}.txt"]
         if sem_id == 1:
-            name = "svd_matrix_{}".format(p_comp)
-            sim_name = "svd_sim_matrix_{}".format(p_comp)
+            name = "svd_new_{}".format(p_comp)
+            sim_name = "svd_scores_{}".format(p_comp)
             sem_file_name = names[option - 1].format(name)
             sim_file_name = names[option - 1].format(sim_name)
             self.model = TruncatedSVD(n_components=p_comp)
         elif sem_id == 2:
-            name = "nmf_matrix_{}".format(p_comp)
-            sim_name = "nmf_sim_matrix_{}".format(p_comp)
+            name = "nmf_new_{}".format(p_comp)
+            sim_name = "nmf_scores_{}".format(p_comp)
             sem_file_name = names[option - 1].format(name)
             sim_file_name = names[option - 1].format(sim_name)
             self.model = NMF(n_components=p_comp)
 
         top_p = self.model.fit_transform(scores)
         json.dump(json.dumps(top_p.tolist()), open(os.path.join(self.out_dir, sem_file_name), "w"))
-        file_name = {v: k for k, v in self.file_idx.items()}
         with open(os.path.join(self.out_dir, sim_file_name), "w+") as f:
             f.write("[")
             for topic in self.model.components_:
                 f.write("{")
-                i = 0
                 for idx in np.argsort(topic)[::-1]:
-                    file = file_name[i]
-                    i += 1
+                    file = self.idx_file[idx]
                     score = topic[idx]
                     f.write("{}:{},".format(file, score))
                 f.write('},\n')
             f.write("]")
 
     def _dot_product_similarity_(self, model):
-        scores_flat = []
-        f = 0
-        for i in range(len(self.file_paths)):
-            if model == 1:
-                scores = np.dot(self.tf, self.tf[i].reshape((-1, 1))).tolist()
-            elif model == 2:
-                scores = np.dot(self.tfidf, self.tfidf[i].reshape((-1, 1))).tolist()
-            flat = [item for sublist in scores for item in sublist]
-            scores_flat.append(flat)
-            f += 1
-            if f == 3:
-                break
-        return scores_flat
+        if model == 1:
+            scores = np.dot(self.tf, self.tf.T).tolist()
+        elif model == 2:
+            scores = np.dot(self.tfidf, self.tfidf.T).tolist()
+        return scores
 
     def _edit_cost_distance_(self):
         scores = []
-        f = 0
-        for file_id in self.sequences:
-            scores.append(
-                [sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(fn, file_id)]) for fn in
-                 self.sequences])
-            f += 1
-            if f == 3:
-                break
-        for i in range(len(scores)):
-            scores_max = max(scores[i])
-            for j in range(len(scores[i])):
-                scores[i][j] = (scores_max - scores[i][j]) / scores_max
-        return scores
+        for f1 in self.sequences:
+            print("Processing file ", f1)
+            scores.append([sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)]) for f2 in self.sequences])
+        scores = np.array(scores).reshape((len(self.sequences), len(self.sequences)))
+        maxes = np.max(scores, axis=0)
+        scores = (maxes - scores)/maxes
+        return scores.tolist()
 
     def _dtw_cost_distance_(self):
         scores = []
-        f = 0
-        for file_id in self.sequences:
-            scores.append(
-                [sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(fn, file_id)]) for fn in
-                 self.sequences])
-            f += 1
-            if f == 3:
-                break
-        for i in range(len(scores)):
-            scores_max = max(scores[i])
-            for j in range(len(scores[i])):
-                scores[i][j] = (scores_max - scores[i][j]) / scores_max
-        return scores
+        for f1 in self.sequences:
+            print("Processing file ", f1)
+            scores.append([sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)]) for f2 in
+                           self.sequences])
+        scores = np.array(scores).reshape((len(self.sequences), len(self.sequences)))
+        maxes = np.max(scores, axis=0)
+        scores = (maxes - scores) / maxes
+        return scores.tolist()
 
     def _pca_similarity_(self):
         scores = (1-pairwise_distances(self.pca, metric="cosine"))
