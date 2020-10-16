@@ -42,9 +42,14 @@ class Task4c(object):
         
     def kmeans(self):
         curIter = 0
-
+        
+        if(self.k>len(self.inputMatrix)):
+            kRandomIndexes = random.sample(range(0,len(self.inputMatrix)), len(self.inputMatrix)) + [random.randint(0, len(self.inputMatrix)) for i in range(self.k-len(self.inputMatrix))]
+        else:
+            kRandomIndexes = random.sample(range(0,len(self.inputMatrix)), self.k)
+            
         # Initializing centroids
-        centroids = np.array([self.inputMatrix[random.randint(0, len(self.inputMatrix)-1)] for i in range(self.k)])
+        centroids = np.array([self.inputMatrix[i] for i in kRandomIndexes])
 
         prevCentroidAssignments = {}
 
@@ -86,7 +91,7 @@ class Task4c(object):
             curIter += 1
 
         return dataAssignments
-		
+        
 		
 if __name__=="__main__":
     print("Performing Task 4c")
