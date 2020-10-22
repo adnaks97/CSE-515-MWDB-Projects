@@ -171,9 +171,12 @@ class Task3:
                 f.write('},\n')
             f.write("]")
 
-    def thread_fn(self, f1, f2, f_idx):
+    def thread_fn(self, f1, f2, f_idx, edit=True):
         print("Processing files ", f1, " ", f2)
-        return f_idx[f1], f_idx[f2], sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
+        if edit:
+            return f_idx[f1], f_idx[f2], sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
+        else:
+            return f_idx[f1], f_idx[f2], sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
 
     def _dot_product_similarity_(self, model):
         if model == 1:
@@ -189,7 +192,7 @@ class Task3:
         combinations = list(combinations_with_replacement(files, 2))
         pool = ThreadPool(len(combinations))
         for f1,f2 in combinations:
-            res = pool.apply_async(self.thread_fn, args=(f1,f2,f_idx,)).get()
+            res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, True,)).get()
             scores[res[0], res[1]] = res[2]
             scores[res[1], res[0]] = res[2]
         pool.close()
@@ -199,12 +202,17 @@ class Task3:
         return scores.tolist()
 
     def _dtw_cost_distance_(self):
-        scores = []
-        for f1 in self.sequences:
-            print("Processing file ", f1)
-            scores.append([sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)]) for f2 in
-                           self.sequences])
-        scores = np.array(scores).reshape((len(self.sequences), len(self.sequences)))
+        scores = np.zeros((len(self.sequences), len(self.sequences)))
+        files = list(self.sequences.keys())
+        f_idx = {k: idx for idx, k in enumerate(files)}
+        combinations = list(combinations_with_replacement(files, 2))
+        pool = ThreadPool(len(combinations))
+        for f1, f2 in combinations:
+            res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, False,)).get()
+            scores[res[0], res[1]] = res[2]
+            scores[res[1], res[0]] = res[2]
+        pool.close()
+        pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores) / maxes
         return scores.tolist()
