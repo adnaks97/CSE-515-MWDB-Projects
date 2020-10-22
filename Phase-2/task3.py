@@ -1,4 +1,6 @@
 from pathlib import Path
+from multiprocessing.pool import ThreadPool
+from itertools import combinations_with_replacement
 from sklearn.metrics import pairwise_distances
 from sklearn.decomposition import TruncatedSVD, NMF
 import json
@@ -169,6 +171,10 @@ class Task3:
                 f.write('},\n')
             f.write("]")
 
+    def thread_fn(self, f1, f2, f_idx):
+        print("Processing files ", f1, " ", f2)
+        return f_idx[f1], f_idx[f2], sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
+
     def _dot_product_similarity_(self, model):
         if model == 1:
             scores = np.dot(self.tf, self.tf.T).tolist()
@@ -177,11 +183,17 @@ class Task3:
         return scores
 
     def _edit_cost_distance_(self):
-        scores = []
-        for f1 in self.sequences:
-            print("Processing file ", f1)
-            scores.append([sum([self._edit_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)]) for f2 in self.sequences])
-        scores = np.array(scores).reshape((len(self.sequences), len(self.sequences)))
+        scores = np.zeros((len(self.sequences),len(self.sequences)))
+        files = list(self.sequences.keys())
+        f_idx = {k: idx for idx,k in enumerate(files)}
+        combinations = list(combinations_with_replacement(files, 2))
+        pool = ThreadPool(len(combinations))
+        for f1,f2 in combinations:
+            res = pool.apply_async(self.thread_fn, args=(f1,f2,f_idx,)).get()
+            scores[res[0], res[1]] = res[2]
+            scores[res[1], res[0]] = res[2]
+        pool.close()
+        pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores)/maxes
         return scores.tolist()
