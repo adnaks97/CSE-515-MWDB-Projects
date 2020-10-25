@@ -32,7 +32,8 @@ class Task4(object):
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
             fn = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
-            svd_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r")))).reshape((60,-1))
+            svd_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r"))))
+            svd_mat = svd_mat.reshape((svd_mat.shape[0], -1))
             cluster_assignments = self.top_p_assign_svd(svd_mat)
             self.outputFileName = "cluster_assignment_4a_{}.txt".format(fn.split("/")[-1].split(".")[0])
             self.write_data(cluster_assignments)
@@ -43,7 +44,8 @@ class Task4(object):
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
             fn = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
-            nmf_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r")))).reshape((60, -1))
+            nmf_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r"))))
+            nmf_mat = nmf_mat.reshape((nmf_mat.shape[0], -1))
             cluster_assignments = self.top_p_assign_nmf(nmf_mat)
             self.outputFileName = "cluster_assignment_4b_{}.txt".format(fn.split("/")[-1].split(".")[0])
             self.write_data(cluster_assignments)

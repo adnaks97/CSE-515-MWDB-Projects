@@ -1,6 +1,5 @@
 from pathlib import Path
-from multiprocessing.pool import ThreadPool
-from multiprocessing import Pool
+from multiprocessing.dummy import Pool as ThreadPool
 from itertools import combinations_with_replacement
 from sklearn.metrics import pairwise_distances
 from sklearn.decomposition import TruncatedSVD, NMF
@@ -192,13 +191,12 @@ class Task3:
         files = list(self.sequences.keys())
         f_idx = {k: idx for idx,k in enumerate(files)}
         combinations = list(combinations_with_replacement(files, 2))
-        pool = Pool(3)
+        pool = ThreadPool(4000)
         for f1,f2 in combinations:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, True,)).get()
             scores[res[0], res[1]] = res[2]
             scores[res[1], res[0]] = res[2]
-        # pool.close()
-        pool.kill()
+        pool.close()
         pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores)/maxes
@@ -209,12 +207,11 @@ class Task3:
         files = list(self.sequences.keys())
         f_idx = {k: idx for idx, k in enumerate(files)}
         combinations = list(combinations_with_replacement(files, 2))
-        pool = ThreadPool(len(combinations))
+        pool = ThreadPool(4000)
         for f1, f2 in combinations:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, False,)).get()
             scores[res[0], res[1]] = res[2]
             scores[res[1], res[0]] = res[2]
-        pool.terminate()
         pool.close()
         pool.join()
         maxes = np.max(scores, axis=0)
@@ -264,22 +261,22 @@ class Task3:
 
 if __name__ == "__main__":
     print("Performing Task 3")
-    # directory = input("Enter directory to use: ")
-    directory = "outputs"
+    directory = input("Enter directory to use: ")
+    # directory = "outputs"
     user_choice = 0
     p_components = 15
-    # while user_choice != 8:
-    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-    #     sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
-    #     p_components = int(input("Enter number of components (p): "))
-    #     print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-    #     user_choice = int(input("Enter a user option: "))
-    #     if user_choice == 8:
-    #         break
-    #     task3.process(vec_model, user_choice, p_components, sem_model)
-    for i in [1,2]:
-        for j in [1,2]:
-            for k in [1,2,3,4,5,6,7]:
-            # for k in [4]:
-                task3 = Task3(i, directory)
-                task3.process(k, p_components, j)
+    while user_choice != 8:
+        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+        sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
+        p_components = int(input("Enter number of components (p): "))
+        print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+        user_choice = int(input("Enter a user option: "))
+        if user_choice == 8:
+            break
+        task3.process(vec_model, user_choice, p_components, sem_model)
+    # for i in [1,2]:
+    #     for j in [1,2]:
+    #         for k in [1,2,3,4,5,6,7]:
+    #         # for k in [4]:
+    #             task3 = Task3(i, directory)
+    #             task3.process(k, p_components, j)
