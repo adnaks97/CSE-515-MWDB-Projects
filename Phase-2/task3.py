@@ -1,5 +1,6 @@
 from pathlib import Path
 from multiprocessing.pool import ThreadPool
+from multiprocessing import Pool
 from itertools import combinations_with_replacement
 from sklearn.metrics import pairwise_distances
 from sklearn.decomposition import TruncatedSVD, NMF
@@ -9,7 +10,8 @@ import os
 import pickle as pkl
 
 class Task3:
-    def __init__(self, dir):
+    def __init__(self, model, dir):
+        self.vec_model = model
         self.dir = os.path.abspath(dir)
         self.task0a_dir = os.path.join(self.dir, "task0a")
         self.task0b_dir = os.path.join(self.dir, "task0b")
@@ -45,14 +47,14 @@ class Task3:
         self.tfidf = np.array(self.tfidf).reshape((len(self.tfidf_files), -1))
         self.entropy = np.array(self.entropy).reshape((len(self.tfidf_files), -1))
 
-        if os.path.exists(os.path.join(self.task1_dir, "pca_vectors.txt")):
-            self.pca = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "pca_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "svd_vectors.txt")):
-            self.svd = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "svd_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "nmf_vectors.txt")):
-            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "nmf_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "lda_vectors.txt")):
-            self.lda = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "lda_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "pca_{}_vectors.txt".format(self.vec_model))):
+            self.pca = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "pca_{}_vectors.txt".format(self.vec_model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "svd_{}_vectors.txt".format(self.vec_model))):
+            self.svd = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "svd_{}_vectors.txt".format(self.vec_model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "nmf_{}_vectors.txt".format(self.vec_model))):
+            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "nmf_{}_vectors.txt".format(self.vec_model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "lda_{}_vectors.txt".format(self.vec_model))):
+            self.lda = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "lda_{}_vectors.txt".format(self.vec_model)), "r"))))
 
         self.allWords = pkl.load(open(os.path.join(self.task0b_dir, "all_words_idx.txt"), "rb"))
 
@@ -135,27 +137,27 @@ class Task3:
         return dtw_matrix[n][m]
 
     def _save_results_(self, scores, option, p_comp, sem_id):
-        names = ["dot_pdt_{}.txt", "pca_{}.txt", "svd_{}.txt", "nmf_{}.txt", "lda_{}.txt",
-                 "edit_dist_{}.txt", "dtw_dist_{}.txt"]
+        names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
+                 "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
         matrix = "sim_matrix"
-        sim_matrix = names[option-1].format(matrix)
+        sim_matrix = names[option-1].format(matrix, self.vec_model)
         json.dump(json.dumps(scores), open(os.path.join(self.out_dir, sim_matrix), "w"))
         self.semantic_identifier(option, scores, p_comp, sem_id)
 
     def semantic_identifier(self, option, scores, p_comp, sem_id):
-        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
-                 "edit_dist_{}.txt", "dtw_dist_{}.txt"]
+        names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
+                 "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
         if sem_id == 1:
             name = "svd_new_{}".format(p_comp)
             sim_name = "svd_scores_{}".format(p_comp)
-            sem_file_name = names[option - 1].format(name)
-            sim_file_name = names[option - 1].format(sim_name)
+            sem_file_name = names[option - 1].format(name, self.vec_model)
+            sim_file_name = names[option - 1].format(sim_name, self.vec_model)
             self.model = TruncatedSVD(n_components=p_comp)
         elif sem_id == 2:
             name = "nmf_new_{}".format(p_comp)
             sim_name = "nmf_scores_{}".format(p_comp)
-            sem_file_name = names[option - 1].format(name)
-            sim_file_name = names[option - 1].format(sim_name)
+            sem_file_name = names[option - 1].format(name, self.vec_model)
+            sim_file_name = names[option - 1].format(sim_name, self.vec_model)
             self.model = NMF(n_components=p_comp)
 
         top_p = self.model.fit_transform(scores)
@@ -178,10 +180,10 @@ class Task3:
         else:
             return f_idx[f1], f_idx[f2], sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
 
-    def _dot_product_similarity_(self, model):
-        if model == 1:
+    def _dot_product_similarity_(self):
+        if self.vec_model == 1:
             scores = np.dot(self.tf, self.tf.T).tolist()
-        elif model == 2:
+        elif self.vec_model == 2:
             scores = np.dot(self.tfidf, self.tfidf.T).tolist()
         return scores
 
@@ -190,12 +192,13 @@ class Task3:
         files = list(self.sequences.keys())
         f_idx = {k: idx for idx,k in enumerate(files)}
         combinations = list(combinations_with_replacement(files, 2))
-        pool = ThreadPool(len(combinations))
+        pool = Pool(3)
         for f1,f2 in combinations:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, True,)).get()
             scores[res[0], res[1]] = res[2]
             scores[res[1], res[0]] = res[2]
-        pool.close()
+        # pool.close()
+        pool.kill()
         pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores)/maxes
@@ -211,6 +214,7 @@ class Task3:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, False,)).get()
             scores[res[0], res[1]] = res[2]
             scores[res[1], res[0]] = res[2]
+        pool.terminate()
         pool.close()
         pool.join()
         maxes = np.max(scores, axis=0)
@@ -219,11 +223,13 @@ class Task3:
 
     def _pca_similarity_(self):
         scores = (1-pairwise_distances(self.pca, metric="cosine"))
+        scores = (scores+1)/2
         scores = scores.tolist()
         return scores
 
     def _svd_similarity_(self):
         scores = (1-pairwise_distances(self.svd, metric="cosine"))
+        scores = (scores+1)/2
         scores = scores.tolist()
         return scores
 
@@ -237,9 +243,9 @@ class Task3:
         scores = scores.tolist()
         return scores
 
-    def process(self, model, option, p_comp, sem_id):
+    def process(self, option, p_comp, sem_id):
         if option == 1:
-            scores = self._dot_product_similarity_(model)
+            scores = self._dot_product_similarity_()
         elif option == 2:
             scores = self._pca_similarity_()
         elif option == 3:
@@ -258,15 +264,22 @@ class Task3:
 
 if __name__ == "__main__":
     print("Performing Task 3")
-    directory = input("Enter directory to use: ")
-    task3 = Task3(directory)
+    # directory = input("Enter directory to use: ")
+    directory = "outputs"
     user_choice = 0
-    while user_choice != 8:
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
-        p_components = int(input("Enter number of components (p): "))
-        print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        task3.process(vec_model, user_choice, p_components, sem_model)
+    p_components = 15
+    # while user_choice != 8:
+    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    #     sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
+    #     p_components = int(input("Enter number of components (p): "))
+    #     print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    #     user_choice = int(input("Enter a user option: "))
+    #     if user_choice == 8:
+    #         break
+    #     task3.process(vec_model, user_choice, p_components, sem_model)
+    for i in [1,2]:
+        for j in [1,2]:
+            for k in [1,2,3,4,5,6,7]:
+            # for k in [4]:
+                task3 = Task3(i, directory)
+                task3.process(k, p_components, j)

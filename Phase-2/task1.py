@@ -42,22 +42,22 @@ class Task1(object):
     
     def run_model(self):
         if self.technique==1:
-            self.output_filename = "pca_{}.txt".format(self.num_components)
+            self.output_filename = "pca_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = PCA(n_components=self.num_components)
         elif self.technique==2:
-            self.output_filename = "svd_{}.txt".format(self.num_components)
+            self.output_filename = "svd_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = TruncatedSVD(n_components=self.num_components)
         elif self.technique==3:
-            self.output_filename = "nmf_{}.txt".format(self.num_components)
+            self.output_filename = "nmf_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = NMF(n_components=self.num_components)
         else:
-            self.output_filename = "lda_{}.txt".format(self.num_components)
+            self.output_filename = "lda_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = LatentDirichletAllocation(n_components=self.num_components)
 
         self.reduced_file_vectors = self.model.fit_transform(self.file_vectors)
         
     def write_outputs(self):
-        name = self.output_filename.split("_")[0] + "_vectors.txt"
+        name = self.output_filename.split("_")[0] + "_{}_vectors.txt".format(self.vector_model)
         json.dump(json.dumps(self.reduced_file_vectors.tolist()), open(os.path.join(self.out_dir, name), "w"))
         with open(os.path.join(self.out_dir, self.output_filename), "w+") as f:
             f.write("[")
@@ -78,8 +78,16 @@ class Task1(object):
 
 
 if __name__=="__main__":
-    inputDir = input("Enter the directory to use: ")
-    numComponents = int(input("Enter number of components (k): "))
-    vectorModel = int(input("Enter vector model (1-TF, 2-TFIDF): "))
-    technique = int(input("Enter model to use (1-PCA, 2-SVD, 3-NMF, 4-LDA): "))
-    t1 = Task1(inputDir, numComponents, vectorModel, technique)
+    # inputDir = input("Enter the directory to use: ")
+    # numComponents = int(input("Enter number of components (k): "))
+    inputDir = "outputs/task0b"
+    numComponents = 30
+
+    # vectorModel = int(input("Enter vector model (1-TF, 2-TFIDF): "))
+    # technique = int(input("Enter model to use (1-PCA, 2-SVD, 3-NMF, 4-LDA): "))
+    for i in [1,2]:
+        for j in [1,2,3,4]:
+            t1 = Task1(inputDir, numComponents, i, j)
+    #     vectorModel = int(input("Enter vector model (1-TF, 2-TFIDF): "))
+    # technique = int(input("Enter model to use (1-PCA, 2-SVD, 3-NMF, 4-LDA): "))
+    # t1 = Task1(inputDir, numComponents, vectorModel, technique)

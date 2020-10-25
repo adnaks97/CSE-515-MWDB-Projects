@@ -9,7 +9,8 @@ from sklearn.metrics import pairwise_distances
 
 
 class Task2:
-    def __init__(self, dir):
+    def __init__(self, model, dir):
+        self.model = model
         self.dir = os.path.abspath(dir)
         self.task0a_dir = os.path.join(self.dir, "task0a")
         self.task0b_dir = os.path.join(self.dir, "task0b")
@@ -45,14 +46,14 @@ class Task2:
         self.tfidf = np.array(self.tfidf).reshape((len(self.tfidf_files), -1))
         self.entropy = np.array(self.entropy).reshape((len(self.tfidf_files), -1))
 
-        if os.path.exists(os.path.join(self.task1_dir, "pca_vectors.txt")):
-            self.pca = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "pca_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "svd_vectors.txt")):
-            self.svd = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "svd_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "nmf_vectors.txt")):
-            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "nmf_vectors.txt"), "r"))))
-        if os.path.exists(os.path.join(self.task1_dir, "lda_vectors.txt")):
-            self.lda = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "lda_vectors.txt"), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "pca_{}_vectors.txt".format(self.model))):
+            self.pca = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "pca_{}_vectors.txt".format(self.model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "svd_{}_vectors.txt".format(self.model))):
+            self.svd = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "svd_{}_vectors.txt".format(self.model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "nmf_{}_vectors.txt".format(self.model))):
+            self.nmf = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "nmf_{}_vectors.txt".format(self.model)), "r"))))
+        if os.path.exists(os.path.join(self.task1_dir, "lda_{}_vectors.txt".format(self.model))):
+            self.lda = np.array(json.loads(json.load(open(os.path.join(self.task1_dir, "lda_{}_vectors.txt".format(self.model)), "r"))))
 
         self.allWords = pkl.load(open(os.path.join(self.task0b_dir, "all_words_idx.txt"), "rb"))
 
@@ -135,16 +136,16 @@ class Task2:
         return dtw_matrix[n][m]
 
     def _save_results_(self, scores, fn, option):
-        names = ["dot_pdt_{}.txt", "pca_cosine_{}.txt", "svd_cosine_{}.txt", "nmf_cosine_{}.txt", "lda_cosine_{}.txt",
-                 "edit_dist_{}.txt", "dtw_dist_{}.txt"]
-        fn = names[option-1].format(fn)
+        names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt", "lda_cosine_{}_{}.txt",
+                 "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
+        fn = names[option-1].format(fn, self.model)
         json.dump(scores, open(os.path.join(self.out_dir, fn), "w"))
 
-    def _dot_product_similarity_(self, fn, model):
+    def _dot_product_similarity_(self, fn):
         idx = self.file_idx[fn]
-        if model == 1:
+        if self.model == 1:
             scores = np.dot(self.tf, self.tf[idx].reshape((-1,1))).tolist()
-        elif model == 2:
+        elif self.model == 2:
             scores = np.dot(self.tfidf, self.tfidf[idx].reshape((-1, 1))).tolist()
         scores = [(self.idx_file[id], s) for id,s in enumerate(scores)]
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
@@ -198,9 +199,9 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
-    def find_10_similar_gestures(self, fn, model, option):
+    def find_10_similar_gestures(self, fn, option):
         if option == 1:
-            scores = self._dot_product_similarity_(fn, model)
+            scores = self._dot_product_similarity_(fn)
         elif option == 2:
             scores = self._pca_similarity_(fn)
         elif option == 3:
@@ -219,15 +220,27 @@ class Task2:
 
 if __name__ == "__main__":
     print("Performing Task 2")
-    directory = input("Enter directory to use: ")
-    task2 = Task2(directory)
+    # directory = input("Enter directory to use: ")
+    directory = "outputs"
     user_choice = 0
-    while user_choice != 8:
-        file_name = input("Enter the file id to use: ")
-        file_name = file_name.zfill(3)
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        task2.find_10_similar_gestures(file_name, vec_model, user_choice)
+    # while user_choice != 8:
+        # file_name = input("Enter the file id to use: ")
+
+    file_name = [str(1)] #list(range(1, 10))
+    # file_name = [str(x) for x in file_name]
+    for i in file_name:
+        print(i)
+        file_name = i.zfill(3)
+        print(file_name)
+        for i in [1,2]:
+            for j in [1,2,3,4,5,6,7]:
+            # for j in [4]:
+                task2 = Task2(i, directory)
+                task2.find_10_similar_gestures(file_name, j)
+    # vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    # print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \}[\n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    # user_choice = int(input("Enter a user option: "))
+    # if user_choice == 8:
+    #     break
+    # task2 = Task2(directory, vec_model)
+    # task2.find_10_similar_gestures(file_name, user_choice)
