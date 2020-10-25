@@ -140,12 +140,14 @@ class Task3:
                  "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
         matrix = "sim_matrix"
         sim_matrix = names[option-1].format(matrix, self.vec_model)
-        json.dump(json.dumps(scores), open(os.path.join(self.out_dir, sim_matrix), "w"))
+        json.dump(json.dumps(scores.tolist()), open(os.path.join(self.out_dir, sim_matrix), "w"))
         self.semantic_identifier(option, scores, p_comp, sem_id)
 
     def semantic_identifier(self, option, scores, p_comp, sem_id):
         names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
                  "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
+        scores = (scores+1)/2.
+
         if sem_id == 1:
             name = "svd_new_{}".format(p_comp)
             sim_name = "svd_scores_{}".format(p_comp)
@@ -157,7 +159,7 @@ class Task3:
             sim_name = "nmf_scores_{}".format(p_comp)
             sem_file_name = names[option - 1].format(name, self.vec_model)
             sim_file_name = names[option - 1].format(sim_name, self.vec_model)
-            self.model = NMF(n_components=p_comp)
+            self.model = NMF(n_components=p_comp, max_iter=500)
 
         top_p = self.model.fit_transform(scores)
         json.dump(json.dumps(top_p.tolist()), open(os.path.join(self.out_dir, sem_file_name), "w"))
@@ -181,9 +183,9 @@ class Task3:
 
     def _dot_product_similarity_(self):
         if self.vec_model == 1:
-            scores = np.dot(self.tf, self.tf.T).tolist()
+            scores = np.dot(self.tf, self.tf.T)
         elif self.vec_model == 2:
-            scores = np.dot(self.tfidf, self.tfidf.T).tolist()
+            scores = np.dot(self.tfidf, self.tfidf.T)
         return scores
 
     def _edit_cost_distance_(self):
@@ -200,7 +202,7 @@ class Task3:
         pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores)/maxes
-        return scores.tolist()
+        return scores
 
     def _dtw_cost_distance_(self):
         scores = np.zeros((len(self.sequences), len(self.sequences)))
@@ -216,28 +218,22 @@ class Task3:
         pool.join()
         maxes = np.max(scores, axis=0)
         scores = (maxes - scores) / maxes
-        return scores.tolist()
+        return scores
 
     def _pca_similarity_(self):
         scores = (1-pairwise_distances(self.pca, metric="cosine"))
-        scores = (scores+1)/2
-        scores = scores.tolist()
         return scores
 
     def _svd_similarity_(self):
         scores = (1-pairwise_distances(self.svd, metric="cosine"))
-        scores = (scores+1)/2
-        scores = scores.tolist()
         return scores
 
     def _nmf_similarity_(self):
         scores = (1-pairwise_distances(self.nmf, metric="cosine"))
-        scores = scores.tolist()
         return scores
 
     def _lda_similarity_(self):
         scores = (1-pairwise_distances(self.lda, metric="cosine"))
-        scores = scores.tolist()
         return scores
 
     def process(self, option, p_comp, sem_id):
@@ -262,10 +258,8 @@ class Task3:
 if __name__ == "__main__":
     print("Performing Task 3")
     directory = input("Enter directory to use: ")
-    # directory = "outputs"
     user_choice = 0
-    p_components = 15
-    while user_choice != 8:
+    while True:
         vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
         sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
         p_components = int(input("Enter number of components (p): "))
@@ -273,10 +267,5 @@ if __name__ == "__main__":
         user_choice = int(input("Enter a user option: "))
         if user_choice == 8:
             break
-        task3.process(vec_model, user_choice, p_components, sem_model)
-    # for i in [1,2]:
-    #     for j in [1,2]:
-    #         for k in [1,2,3,4,5,6,7]:
-    #         # for k in [4]:
-    #             task3 = Task3(i, directory)
-    #             task3.process(k, p_components, j)
+        task3 = Task3(vec_model, directory)
+        task3.process(user_choice, p_components, sem_model)

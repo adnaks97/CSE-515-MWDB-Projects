@@ -31,7 +31,10 @@ class Task4(object):
             fn = self.filenames[self.userChoice - 1].format("svd_new", "*_*")
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
-            fn = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
+            if self.vector_model == 1:
+                fn = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
+            elif self.vector_model == 2:
+                fn = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
             svd_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r"))))
             svd_mat = svd_mat.reshape((svd_mat.shape[0], -1))
             cluster_assignments = self.top_p_assign_svd(svd_mat)
@@ -43,7 +46,10 @@ class Task4(object):
             fn = self.filenames[self.userChoice - 1].format("nmf_new", "*_*")
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
-            fn = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
+            if self.vector_model == 1:
+                fn = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
+            elif self.vector_model == 2:
+                fn = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
             nmf_mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", fn), "r"))))
             nmf_mat = nmf_mat.reshape((nmf_mat.shape[0], -1))
             cluster_assignments = self.top_p_assign_nmf(nmf_mat)
@@ -52,13 +58,19 @@ class Task4(object):
 
         if self.task == "c":
             fn = self.filenames[self.userChoice - 1].format("sim_matrix", "*")
-            self.inputFileName = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
+            if self.vector_model == 1:
+                self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
+            elif self.vector_model == 2:
+                self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
             self.outputFileName = "kmeans_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
             self.k_means_clustering()
 
         if self.task == "d":
             fn = self.filenames[self.userChoice - 1].format("sim_matrix", "*")
-            self.inputFileName = glob.glob(os.path.join(self.input_dir, "task3", fn))[self.vector_model-1]
+            if self.vector_model == 1:
+                self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
+            elif self.vector_model == 2:
+                self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
             self.outputFileName = "spectral_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
             self.spectral_clustering()
 
@@ -93,8 +105,6 @@ class Task4(object):
 
     def top_p_assign_nmf(self, fi):
         p_component_nmf = fi.shape[1]
-        # min_max_scaler = preprocessing.MinMaxScaler()
-        # normalized_array = min_max_scaler.fit_transform(fi)
         top_p_nmf = {i: [] for i in range(p_component_nmf)}
         for i, j in enumerate(fi):
             idx = np.argmax(j)
@@ -188,8 +198,6 @@ class Task4(object):
         """
         # Find eigen values and eigen vectors
         eigvals, eigvecs = np.linalg.eig(self.L)
-        # print("Eigvals: \n", eigvals)
-        # print("\nVectors: \n", eigvecs)
 
         # First k eigen values
         inds = np.argsort(eigvals)
@@ -209,22 +217,17 @@ class Task4(object):
         return clusters, dataAssignments
 
 if __name__=="__main__":
-    #print("Performing Task 4c")
-    directory = "outputs" #input("Enter directory to use: ")
+    directory = input("Enter directory to use: ")
     user_choice = 0 
-    # while user_choice != 8:
-    #     task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
-    #     print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-    #     user_choice = int(input("Enter a user option: "))
-    #     if user_choice == 8:
-    #         break
-    #     if task in ["c", "d"]:
-    #         k = int(input("Enter number of clusters (p): "))
-    #         Task4(directory, task, k, 1000, user_choice)
-    #     else:
-    #         Task4(directory, task, userChoice=user_choice)
-    k = 5
-    for t in ['a','b','c','d']:
-        for vm in [1,2]:
-            for uc in [1,2,3,4,5,6,7]:
-                Task4(directory, t, k, 1000, uc, vm)
+    while user_choice != 8:
+        task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
+        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+        print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+        user_choice = int(input("Enter a user option: "))
+        if user_choice == 8:
+            break
+        if task in ["c", "d"]:
+            k = int(input("Enter number of clusters (p): "))
+            Task4(directory, task, k, 100, user_choice, vec_model)
+        else:
+            Task4(directory, task, 5, 100, user_choice, vec_model)
