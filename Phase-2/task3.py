@@ -186,6 +186,8 @@ class Task3:
             scores = np.dot(self.tf, self.tf.T)
         elif self.vec_model == 2:
             scores = np.dot(self.tfidf, self.tfidf.T)
+        maxes = np.max(scores, axis=0)
+        scores = (maxes - scores) / maxes
         return scores
 
     def _edit_cost_distance_(self):
@@ -256,16 +258,23 @@ class Task3:
 
 
 if __name__ == "__main__":
-    print("Performing Task 3")
-    directory = input("Enter directory to use: ")
-    user_choice = 0
-    while True:
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
-        p_components = int(input("Enter number of components (p): "))
-        print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        task3 = Task3(vec_model, directory)
-        task3.process(user_choice, p_components, sem_model)
+    # print("Performing Task 3")
+    # directory = input("Enter directory to use: ")
+    # user_choice = 0
+    # while True:
+    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    #     sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))
+    #     p_components = int(input("Enter number of components (p): "))
+    #     print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    #     user_choice = int(input("Enter a user option: "))
+    #     if user_choice == 8:
+    #         break
+    #     task3 = Task3(vec_model, directory)
+    #     task3.process(user_choice, p_components, sem_model)
+
+    pc = 4
+    for vm in [1,2]:
+        for sm in [1,2]:
+            for uc in [1,2,3,4,5,6,7]:
+                task3 = Task3(vm, "outputs")
+                task3.process(uc, pc, sm)

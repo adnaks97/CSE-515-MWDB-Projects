@@ -62,7 +62,7 @@ class Task4(object):
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
             elif self.vector_model == 2:
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
-            self.outputFileName = "kmeans_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
+            self.outputFileName = "kmeans_{}_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0], self.vector_model)
             self.k_means_clustering()
 
         if self.task == "d":
@@ -71,7 +71,7 @@ class Task4(object):
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
             elif self.vector_model == 2:
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
-            self.outputFileName = "spectral_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
+            self.outputFileName = "spectral_{}_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0], self.vector_model)
             self.spectral_clustering()
 
     def read_data(self):
@@ -202,7 +202,7 @@ class Task4(object):
         # First k eigen values
         inds = np.argsort(eigvals)
         # K dimensional embedding
-        embedding = eigvecs[inds[:k]].T
+        embedding = eigvecs[inds[:self.k]].T
         return embedding
 
     def spectral(self):
@@ -217,17 +217,22 @@ class Task4(object):
         return clusters, dataAssignments
 
 if __name__=="__main__":
-    directory = input("Enter directory to use: ")
-    user_choice = 0 
-    while user_choice != 8:
-        task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        if task in ["c", "d"]:
-            k = int(input("Enter number of clusters (p): "))
-            Task4(directory, task, k, 100, user_choice, vec_model)
-        else:
-            Task4(directory, task, 5, 100, user_choice, vec_model)
+    # directory = input("Enter directory to use: ")
+    # user_choice = 0
+    # while user_choice != 8:
+    #     task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
+    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    #     print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    #     user_choice = int(input("Enter a user option: "))
+    #     if user_choice == 8:
+    #         break
+    #     if task in ["c", "d"]:
+    #         k = int(input("Enter number of clusters (p): "))
+    #         Task4(directory, task, k, 100, user_choice, vec_model)
+    #     else:
+    #         Task4(directory, task, 5, 100, user_choice, vec_model)
+
+    for t in ["a", "b", "c", "d"]:
+        for vm in [1,2]:
+            for uc in [1,2,3,4,5,6,7]:
+                Task4("outputs", t, 5, 100, uc, vm)

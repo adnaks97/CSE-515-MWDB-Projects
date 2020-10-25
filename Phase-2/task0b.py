@@ -112,7 +112,7 @@ class Task0b(object):
                                                                    self.idf[c][word][sensor_id]
 
     def convert_to_vectors(self):
-        self.unique_words = dict(sorted(self.unique_words.items(), key=lambda x: (x[0][0],x[0][1])))
+        # self.unique_words = dict(sorted(self.unique_words.items(), key=lambda x: (x[0][0],x[0][1])))
         for fp in self.file_paths:
             file_id = fp.split(".")[0].split("/")[-1]
             tf_vector, tfidf_vector = [], []
@@ -128,7 +128,6 @@ class Task0b(object):
                     tfidf_vector.append(0)
 
             json.dump(json.dumps(tf_vector), open(os.path.join(self.out_dir,"tf_vectors_{}.txt".format(file_id)), "w"))
-            # pkl.dump(tf_vector, )
             json.dump(json.dumps(tfidf_vector), open(os.path.join(self.out_dir,"tfidf_vectors_{}.txt".format(file_id)), "w"))
 
         pkl.dump(self.unique_words, open(os.path.join(self.out_dir,"all_words_idx.txt"), "wb"))

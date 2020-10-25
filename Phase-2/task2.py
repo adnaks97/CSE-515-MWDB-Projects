@@ -219,16 +219,22 @@ class Task2:
 
 
 if __name__ == "__main__":
-    print("Performing Task 2")
-    directory = input("Enter directory to use: ")
-    user_choice = 0
-    while True:
-        file_name = input("Enter the file id to use: ")
-        file_name = file_name.zfill(3)
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        task2 = Task2(vec_model, directory)
-        task2.find_10_similar_gestures(file_name, user_choice)
+    # print("Performing Task 2")
+    # directory = input("Enter directory to use: ")
+    # user_choice = 0
+    # while True:
+    #     file_name = input("Enter the file id to use: ")
+    #     file_name = file_name.zfill(3)
+    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    #     print("User Options for similarity approaches, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    #     user_choice = int(input("Enter a user option: "))
+    #     if user_choice == 8:
+    #         break
+    #     task2 = Task2(vec_model, directory)
+    #     task2.find_10_similar_gestures(file_name, user_choice)
+
+    file_name = "1".zfill(3)
+    for vm in [1,2]:
+        for uc in [1,2,3,4,5,6,7]:
+            task2 = Task2(vm, "outputs")
+            task2.find_10_similar_gestures(file_name, uc)
