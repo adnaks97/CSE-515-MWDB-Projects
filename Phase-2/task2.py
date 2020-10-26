@@ -28,6 +28,7 @@ class Task2:
         self._read_wrd_files_()
         self._load_all_vectors_()
 
+    #Load all vectors from task0b and task1
     def _load_all_vectors_(self):
         for fname in self.tf_files:
             name = fname.split("/")[-1].split("_")[-1].split(".")[0]
@@ -57,6 +58,7 @@ class Task2:
 
         self.allWords = pkl.load(open(os.path.join(self.task0b_dir, "all_words_idx.txt"), "rb"))
 
+    #Load '.wrd' files from task0a
     def _read_wrd_files_(self):
         for fp in self.file_paths:
             data = json.load(open(fp, "r"))
@@ -69,6 +71,7 @@ class Task2:
                     words = [(it[1], it[2]) for it in items if it[0][1] == sid]
                     self.sequences[file_name][c][sid] = words
 
+    #Multiprocessing helper function
     def _construct_list_for_mp_(self, fn1, fn2):
         all_lists = []
         for c in self.compNames:
@@ -76,6 +79,7 @@ class Task2:
                 all_lists.append((fn1, fn2, c, sid, self.sequences[fn1][c][sid], self.sequences[fn2][c][sid]))
         return all_lists
 
+    #Compute edit distance between two sequences
     def _edit_distance_(self, seqs):
         seq1 = seqs[4]
         seq2 = seqs[5]
@@ -111,6 +115,7 @@ class Task2:
                 d[i][j] = min(d[i-1][j]+cost, d[i][j-1]+cost, d[i-1][j-1] if word1[i-1] == word2[j-1] else d[i-1][j-1]+cost)
         return d[n][m]
 
+    #Compute DTW for two sequences
     def _dtw_distance_(self, seqs):
         seq1 = seqs[4]
         seq2 = seqs[5]
@@ -119,14 +124,17 @@ class Task2:
 
         n = len(word1)
         m = len(word2)
-
+        
+        # array to store the conversion history
         dtw_matrix = [[0] * (m + 1) for i in range(n + 1)]
 
+        # init boundaries
         for i in range(1, n + 1):
             dtw_matrix[i][0] = dtw_matrix[i - 1][0] + abs(word1[i - 1])
         for j in range(1, m + 1):
             dtw_matrix[0][j] = dtw_matrix[0][j - 1] + abs(word2[j - 1])
 
+        #DP compute
         for i in range(1, n + 1):
             for j in range(1, m + 1):
                 cost = abs(word1[i - 1] - word2[j - 1])
@@ -135,12 +143,14 @@ class Task2:
                 dtw_matrix[i][j] = cost + last_min
         return dtw_matrix[n][m]
 
+    #Saving similarity scores
     def _save_results_(self, scores, fn, option):
         names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt", "lda_cosine_{}_{}.txt",
                  "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
         fn = names[option-1].format(fn, self.model)
         json.dump(scores, open(os.path.join(self.out_dir, fn), "w"))
 
+    #Compute dot product 
     def _dot_product_similarity_(self, fn):
         idx = self.file_idx[fn]
         if self.model == 1:
@@ -151,6 +161,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
+    #Computing edit distance for two files
     def _edit_cost_distance_(self, fn):
         scores = []
         for file_id in self.sequences:
@@ -161,6 +172,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
         return top_10_scores
 
+    #Computing DTW for two files
     def _dtw_cost_distance_(self, fn):
         scores = []
         for file_id in self.sequences:
@@ -171,6 +183,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1])[:10])
         return top_10_scores
 
+    #Perform PCA
     def _pca_similarity_(self, fn):
         idx = self.file_idx[fn]
         scores = (1-pairwise_distances(self.pca, metric="cosine"))[idx]
@@ -178,6 +191,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
+    #Perform SVD
     def _svd_similarity_(self, fn):
         idx = self.file_idx[fn]
         scores = (1-pairwise_distances(self.svd, metric="cosine"))[idx]
@@ -185,6 +199,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
+    #Perform NMF
     def _nmf_similarity_(self, fn):
         idx = self.file_idx[fn]
         scores = (1-pairwise_distances(self.nmf, metric="cosine"))[idx]
@@ -192,6 +207,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
+    #Perform LDA
     def _lda_similarity_(self, fn):
         idx = self.file_idx[fn]
         scores = (1-pairwise_distances(self.lda, metric="cosine"))[idx]
@@ -199,6 +215,7 @@ class Task2:
         top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
         return top_10_scores
 
+    #FInd 10 closest gestures to the given file based on user option
     def find_10_similar_gestures(self, fn, option):
         if option == 1:
             scores = self._dot_product_similarity_(fn)

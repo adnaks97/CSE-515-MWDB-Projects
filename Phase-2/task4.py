@@ -11,14 +11,15 @@ class Task4(object):
     def __init__(self, inputDir, task, k=None, maxIter=None, userChoice=None, vectorModel=None):
         self.input_dir = os.path.abspath(inputDir)
         self.vector_model = vectorModel
-        self.out_dir = os.path.join("outputs", "task4", "task4"+task)
+        self.out_dir = os.path.join(self.input_dir, "task4", "task4"+task)
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.k = k
         self.userChoice = userChoice
+        self.delta_values = [0.7, 0.6, 0.5]
         self.max_iter = maxIter
         self.task = task
         self.filenames = ["dot_pdt_{}_{}", "pca_cosine_{}_{}", "svd_cosine_{}_{}", "nmf_cosine_{}_{}", "lda_cosine_{}_{}", "edit_dist_{}_{}", "dtw_dist_{}_{}"]
-        self.tf_files = sorted([k for k in os.listdir(os.path.join("outputs", "task0b")) if "tf_" in k and ".txt" in k])
+        self.tf_files = sorted([k for k in os.listdir(os.path.join(self.input_dir, "task0b")) if "tf_" in k and ".txt" in k])
         self.file_idx, self.idx_file = {}, {}
         for i,f in enumerate(self.tf_files):
             fn = f.split(".")[0].split("_")[-1]
@@ -26,9 +27,11 @@ class Task4(object):
             self.idx_file[i] = fn
         self.perform_corresponding_task()
 
+    #Call the respective functions to perform task 4 based on the user option
     def perform_corresponding_task(self):
         if self.task == "a":
             fn = self.filenames[self.userChoice - 1].format("svd_new", "*_*")
+            #Find the outputs from the previous tasks to be used here
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
             if self.vector_model == 1:
@@ -44,6 +47,7 @@ class Task4(object):
 
         if self.task == "b":
             fn = self.filenames[self.userChoice - 1].format("nmf_new", "*_*")
+            #Find the outputs from the previous tasks to be used here
             if len(glob.glob(os.path.join(self.input_dir, "task3", fn))) == 0:
                 sys.exit("Please first run this option for Task 3 to make the file available")
             if self.vector_model == 1:
@@ -58,6 +62,7 @@ class Task4(object):
 
         if self.task == "c":
             fn = self.filenames[self.userChoice - 1].format("sim_matrix", "*")
+            #Find the outputs from the previous tasks to be used here
             if self.vector_model == 1:
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
             elif self.vector_model == 2:
@@ -67,32 +72,33 @@ class Task4(object):
 
         if self.task == "d":
             fn = self.filenames[self.userChoice - 1].format("sim_matrix", "*")
+            #Find the outputs from the previous tasks to be used here
             if self.vector_model == 1:
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_1.txt" in x][0]
             elif self.vector_model == 2:
                 self.inputFileName = [x for x in glob.glob(os.path.join(self.input_dir, "task3", fn)) if "_2.txt" in x][0]
-            self.outputFileName = "spectral_{}_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0], self.vector_model)
-            self.spectral_clustering()
+            for delta in self.delta_values:
+                for norm in [False, True]:
+                    self.outputFileName = "spectral_{}_{}_{}_{}.txt".format(
+                        self.inputFileName.split("/")[-1].split('_sim_matrix')[0], self.vector_model, str(norm),
+                        str(delta * 10))
+                    self.spectral_clustering(delta, normalized=norm)
+            # self.outputFileName = "spectral_{}_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0], self.vector_model)
+            # self.spectral_clustering()
 
+    #Read task3 outputs
     def read_data(self):
         if (not os.path.exists(os.path.join(self.input_dir, "task3", self.inputFileName))):
             sys.exit("Please first run this option for Task 3 to make the file available")
         with open(os.path.join(self.input_dir, "task3", self.inputFileName), 'r') as inputData:
             self.inputMatrix = np.array(eval(inputData.read()[1:-1]))
 
+    #Write task 4 results
     def write_data(self, dataAssignments):
         json.dump(dataAssignments, open(os.path.join(self.out_dir, self.outputFileName), 'w'))
 
-    # def top_p_assign(self, fi):
-    #     p_component = fi.shape[1]
-    #     min_max_scaler = MinMaxScaler()
-    #     normalized_array = min_max_scaler.fit_transform(fi)
-    #     top_p = {i:[] for i in range(p_component)}
-    #     for i, j in enumerate(normalized_array):
-    #         idx = np.argmax(j)
-    #         top_p[idx].append(self.idx_file[i])
-    #     return top_p
 
+    #Performin task4a 
     def top_p_assign_svd(self, fi):
         p_component_svd = fi.shape[1]
         min_max_scaler = MinMaxScaler()
@@ -103,6 +109,7 @@ class Task4(object):
             top_p_svd[idx].append(self.idx_file[i])
         return top_p_svd
 
+    #Performing task4b
     def top_p_assign_nmf(self, fi):
         p_component_nmf = fi.shape[1]
         top_p_nmf = {i: [] for i in range(p_component_nmf)}
@@ -111,22 +118,28 @@ class Task4(object):
             top_p_nmf[idx].append(self.idx_file[i])
         return top_p_nmf
 
+    #Performing task4c
     def k_means_clustering(self):
         self.read_data()
         clusters, dataAssignments = self.k_means()
         self.write_data(clusters)
-        self.outputFileName = "spectral_dataAssignments_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
+        self.outputFileName = "kmeans_dataAssignments_{}.txt".format(self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
         self.write_data(dataAssignments)
 
-    def spectral_clustering(self):
+    #performing task4d
+    def spectral_clustering(self, delta, normalized=False):
         self.read_data()
-        self.make_laplacian()
+        self.make_laplacian(delta, normalized)
         clusters, dataAssignments = self.spectral()
         self.write_data(clusters)
-        self.outputFileName = "kmeans_dataAssignments_{}.txt".format(
-            self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
+        name_parts = self.outputFileName.split('.')[0].split('_')
+        name_parts.insert(1, 'dataAssignments')
+        # self.outputFileName = "spectral_dataAssignments_{}.txt".format(
+        #    self.inputFileName.split("/")[-1].split('_sim_matrix')[0])
+        self.outputFileName = ('_').join(name_parts) + '.txt'
         self.write_data(dataAssignments)
 
+    #Centroid movement checking function
     def isEqual(self, a, b):
         try:
             np.testing.assert_equal(a, b)
@@ -134,6 +147,7 @@ class Task4(object):
         except:
             return False
 
+    #Performing k-means
     def k_means(self):
         curIter = 0
         if(self.k>len(self.inputMatrix)):
@@ -175,20 +189,27 @@ class Task4(object):
             clusters[val] = clusters.get(val, []) + [self.idx_file[i]]
         return clusters, dataAssignments
 
-    def make_laplacian(self):
+    def make_laplacian(self, delta, normalized):
         """
         Function to compute Laplacian given similarity matrix of gestures.
         """
         # Adjacency matrix based on similarity values
         self.A = np.copy(self.inputMatrix)
         # Making all similarity values <0 as 0
-        self.A[self.A < 0] = 0
+        self.A[self.A < delta] = 0
 
         # Creating Diagonal matrix as degree of each node
         self.D = np.diag(self.A.sum(axis=1))
 
-        # Compute unnormalized laplacian
-        self.L = self.D - self.A
+        if normalized == True:
+            I = np.eye(len(self.A))
+            D_sqrt = np.power(self.D, -0.5)
+            D_sqrt[D_sqrt == float('inf')] = 0
+            self.L = I - np.matmul(np.matmul(D_sqrt, self.A), D_sqrt)
+            # print(D_sqrt)
+        else:
+            # Compute unnormalized laplacian
+            self.L = self.D - self.A
 
     def compute_eigen_values(self):
         """
@@ -217,17 +238,22 @@ class Task4(object):
         return clusters, dataAssignments
 
 if __name__=="__main__":
-    directory = input("Enter directory to use: ")
-    user_choice = 0
-    while user_choice != 8:
-        task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
-        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-        print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-        user_choice = int(input("Enter a user option: "))
-        if user_choice == 8:
-            break
-        if task in ["c", "d"]:
-            k = int(input("Enter number of clusters (p): "))
-            Task4(directory, task, k, 100, user_choice, vec_model)
-        else:
-            Task4(directory, task, 5, 100, user_choice, vec_model)
+    # directory = input("Enter directory to use: ")
+    # user_choice = 0
+    # while user_choice != 8:
+    #     task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
+    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+    #     print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+    #     user_choice = int(input("Enter a user option: "))
+    #     if user_choice == 8:
+    #         break
+    #     if task in ["c", "d"]:
+    #         k = int(input("Enter number of clusters (p): "))
+    #         Task4(directory, task, k, 100, user_choice, vec_model)
+    #     else:
+    #         Task4(directory, task, 5, 100, user_choice, vec_model)
+    directory = "new_theirs_nonNormalized"
+    for t in ["c","d"]:
+        for vm in [1,2]:
+            for uc in [1,2,3,4,5,6,7]:
+                Task4(directory, t, 4, 100, uc, vm)

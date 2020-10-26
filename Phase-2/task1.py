@@ -25,10 +25,12 @@ class Task1(object):
         self.write_outputs()
         self.write_task2_inputs()
 
+    #Load vector index word mapping    
     def get_word_indexes(self, indexFileName):
         tempIndexData = pkl.load(open(os.path.join(self.input_dir, indexFileName), 'rb'))
         return {tempIndexData[i]:i for i in tempIndexData} # reversing key/values
     
+    #Load TF and TF-IDF vectors for each file
     def load_vectors(self):
         self.vector_file_prefix = "tf_vectors_" if self.vector_model==1 else "tfidf_vectors_"
         
@@ -41,7 +43,9 @@ class Task1(object):
 
         self.file_vectors = np.array([vectors[key] for key in sorted(vectors)])
     
+    #Running feature reduction
     def run_model(self):
+        #Choose model based on user option
         if self.technique==1:
             self.output_filename = "pca_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = PCA(n_components=self.num_components)
@@ -58,7 +62,8 @@ class Task1(object):
         # scaler = MinMaxScaler()
         # self.file_vectors = scaler.fit_transform(self.file_vectors)
         self.reduced_file_vectors = self.model.fit_transform(self.file_vectors)
-        
+    
+    #Writing results as <word, scores> pairs     
     def write_outputs(self):
         name = self.output_filename.split("_")[0] + "_{}_vectors.txt".format(self.vector_model)
         json.dump(json.dumps(self.reduced_file_vectors.tolist()), open(os.path.join(self.out_dir, name), "w"))
@@ -74,7 +79,7 @@ class Task1(object):
             f.write("]")
 
 
-
+    #Write reduced dimensional data
     def write_task2_inputs(self):
         new_file_name = self.output_filename.split('.')[0] + "_" + self.vector_file_prefix.split('_')[0] + "_reduced.txt"
         pkl.dump(self.reduced_file_vectors, open(os.path.join(self.out_dir, new_file_name), "wb"))

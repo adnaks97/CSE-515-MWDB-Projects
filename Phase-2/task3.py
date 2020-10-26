@@ -27,7 +27,8 @@ class Task3:
         self.file_idx, self.idx_file = {}, {}
         self._read_wrd_files_()
         self._load_all_vectors_()
-
+    
+    #Load all vectors from task0b and task1
     def _load_all_vectors_(self):
         for fname in self.tf_files:
             name = fname.split("/")[-1].split("_")[-1].split(".")[0]
@@ -57,6 +58,7 @@ class Task3:
 
         self.allWords = pkl.load(open(os.path.join(self.task0b_dir, "all_words_idx.txt"), "rb"))
 
+    #Load '.wrd' files from task0a
     def _read_wrd_files_(self):
         for fp in self.file_paths:
             data = json.load(open(fp, "r"))
@@ -69,6 +71,7 @@ class Task3:
                     words = [(it[1], it[2]) for it in items if it[0][1] == sid]
                     self.sequences[file_name][c][sid] = words
 
+    #Multiprocessing helper function
     def _construct_list_for_mp_(self, fn1, fn2):
         all_lists = []
         for c in self.compNames:
@@ -76,6 +79,7 @@ class Task3:
                 all_lists.append((fn1, fn2, c, sid, self.sequences[fn1][c][sid], self.sequences[fn2][c][sid]))
         return all_lists
 
+    #Compute edit distance between two sequences
     def _edit_distance_(self, seqs):
         seq1 = seqs[4]
         seq2 = seqs[5]
@@ -111,6 +115,7 @@ class Task3:
                 d[i][j] = min(d[i-1][j]+cost, d[i][j-1]+cost, d[i-1][j-1] if word1[i-1] == word2[j-1] else d[i-1][j-1]+cost)
         return d[n][m]
 
+    #Compute DTW for two sequences
     def _dtw_distance_(self, seqs):
         seq1 = seqs[4]
         seq2 = seqs[5]
@@ -120,13 +125,16 @@ class Task3:
         n = len(word1)
         m = len(word2)
 
+        # array to store the conversion history
         dtw_matrix = [[0] * (m + 1) for i in range(n + 1)]
 
+        # init boundaries
         for i in range(1, n + 1):
             dtw_matrix[i][0] = dtw_matrix[i - 1][0] + abs(word1[i - 1])
         for j in range(1, m + 1):
             dtw_matrix[0][j] = dtw_matrix[0][j - 1] + abs(word2[j - 1])
 
+        #DP compute
         for i in range(1, n + 1):
             for j in range(1, m + 1):
                 cost = abs(word1[i - 1] - word2[j - 1])
@@ -135,6 +143,7 @@ class Task3:
                 dtw_matrix[i][j] = cost + last_min
         return dtw_matrix[n][m]
 
+    #Saving similarity matrix
     def _save_results_(self, scores, option, p_comp, sem_id):
         names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
                  "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
@@ -143,6 +152,7 @@ class Task3:
         json.dump(json.dumps(scores.tolist()), open(os.path.join(self.out_dir, sim_matrix), "w"))
         self.semantic_identifier(option, scores, p_comp, sem_id)
 
+    #Saving latent semantic based matrix from SVD/NMF
     def semantic_identifier(self, option, scores, p_comp, sem_id):
         names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
                  "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
@@ -174,6 +184,7 @@ class Task3:
                 f.write('},\n')
             f.write("]")
 
+    #Multithreading function
     def thread_fn(self, f1, f2, f_idx, edit=True):
         print("Processing files ", f1, " ", f2)
         if edit:
@@ -181,6 +192,7 @@ class Task3:
         else:
             return f_idx[f1], f_idx[f2], sum([self._dtw_distance_(seqs) for seqs in self._construct_list_for_mp_(f1, f2)])
 
+    #Compute dot product 
     def _dot_product_similarity_(self):
         if self.vec_model == 1:
             scores = np.dot(self.tf, self.tf.T)
@@ -190,6 +202,7 @@ class Task3:
         scores = scores / maxes
         return scores
 
+    #Computing edit distance for two files
     def _edit_cost_distance_(self):
         scores = np.zeros((len(self.sequences),len(self.sequences)))
         files = list(self.sequences.keys())
@@ -206,6 +219,7 @@ class Task3:
         scores = (maxes - scores)/maxes
         return scores
 
+    #Computing DTW for two files
     def _dtw_cost_distance_(self):
         scores = np.zeros((len(self.sequences), len(self.sequences)))
         files = list(self.sequences.keys())
@@ -222,22 +236,27 @@ class Task3:
         scores = (maxes - scores) / maxes
         return scores
 
+    #Perform PCA
     def _pca_similarity_(self):
         scores = (1-pairwise_distances(self.pca, metric="cosine"))
         return scores
 
+    #Perform SVD
     def _svd_similarity_(self):
         scores = (1-pairwise_distances(self.svd, metric="cosine"))
         return scores
 
+    #Perform NMF
     def _nmf_similarity_(self):
         scores = (1-pairwise_distances(self.nmf, metric="cosine"))
         return scores
 
+    #Perform LDA
     def _lda_similarity_(self):
         scores = (1-pairwise_distances(self.lda, metric="cosine"))
         return scores
 
+    #Find similarity matrix and top p-components based on the user option 
     def process(self, option, p_comp, sem_id):
         if option == 1:
             scores = self._dot_product_similarity_()
