@@ -55,8 +55,8 @@ class Task1(object):
             self.output_filename = "lda_{}_{}.txt".format(self.vector_model, self.num_components)
             self.model = LatentDirichletAllocation(n_components=self.num_components)
 
-        scaler = MinMaxScaler()
-        self.file_vectors = scaler.fit_transform(self.file_vectors)
+        # scaler = MinMaxScaler()
+        # self.file_vectors = scaler.fit_transform(self.file_vectors)
         self.reduced_file_vectors = self.model.fit_transform(self.file_vectors)
         
     def write_outputs(self):
@@ -81,13 +81,8 @@ class Task1(object):
 
 
 if __name__=="__main__":
-    # inputDir = input("Enter the directory to use: ")
-    # numComponents = int(input("Enter number of components (k): "))
-    # vectorModel = int(input("Enter vector model (1-TF, 2-TFIDF): "))
-    # technique = int(input("Enter model to use (1-PCA, 2-SVD, 3-NMF, 4-LDA): "))
-    # t1 = Task1(inputDir, numComponents, vectorModel, technique)
-
-    numComponents = 4
-    for vm in [1,2]:
-        for t in [1,2,3,4]:
-            t1 = Task1("outputs/task0b", numComponents, vm, t)
+    inputDir = input("Enter the directory to use: ")
+    numComponents = int(input("Enter number of components (k): "))
+    vectorModel = int(input("Enter vector model (1-TF, 2-TFIDF): "))
+    technique = int(input("Enter model to use (1-PCA, 2-SVD, 3-NMF, 4-LDA): "))
+    t1 = Task1(inputDir, numComponents, vectorModel, technique)
