@@ -1,0 +1,26 @@
+Readme
+
+To run these files, please place them separately in the directory which is the parent of the data directory
+For example, parent/data holds the 4 component directories each having the csv files, then the python files need to be in parent/
+
+Steps to run the Task0
+    Run task0a with command line arguments -r 3 -s 3 -w 3 -dir data
+    Run task0b, enter outputs/task0a as directory when prompted
+
+Steps to run the Task -1
+    Just run the program from the command line, the program would request input for dir, and other parameters. dir is outputs/task0b in general
+
+Steps to run the Task - 2
+
+    Just run the program from the command line and enter the dir (outputs) name when prompted
+
+Steps to run the Task - 3
+
+    Just run the program from the command line and enter the dir name (outputs), the file id and the feature you wish to see the heatmap for when prompted
+    This can go on in an infinite loop till you choose to exit from main menu
+
+Steps to run the Task - 4
+
+    Just run the program from the command line and enter dir name (outputs), file id, feature and similarity measure when prompted
+    Then we can see the top 10 similar files for the query file id
+    This can go on in an infinite loop till you choose to exit from main menu
