@@ -238,22 +238,17 @@ class Task4(object):
         return clusters, dataAssignments
 
 if __name__=="__main__":
-    # directory = input("Enter directory to use: ")
-    # user_choice = 0
-    # while user_choice != 8:
-    #     task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
-    #     vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
-    #     print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
-    #     user_choice = int(input("Enter a user option: "))
-    #     if user_choice == 8:
-    #         break
-    #     if task in ["c", "d"]:
-    #         k = int(input("Enter number of clusters (p): "))
-    #         Task4(directory, task, k, 100, user_choice, vec_model)
-    #     else:
-    #         Task4(directory, task, 5, 100, user_choice, vec_model)
-    directory = "new_theirs_nonNormalized"
-    for t in ["c","d"]:
-        for vm in [1,2]:
-            for uc in [1,2,3,4,5,6,7]:
-                Task4(directory, t, 4, 100, uc, vm)
+    directory = input("Enter directory to use: ")
+    user_choice = 0
+    while user_choice != 8:
+        task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
+        vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
+        print("User Options for K-Means clustering, \n(1)Dot Product \n(2)PCA \n(3)SVD \n(4)NMF \n(5)LDA \n(6)Edit Distance \n(7)DTW \n(8)Exit")
+        user_choice = int(input("Enter a user option: "))
+        if user_choice == 8:
+            break
+        if task in ["c", "d"]:
+            k = int(input("Enter number of clusters (p): "))
+            Task4(directory, task, k, 100, user_choice, vec_model)
+        else:
+            Task4(directory, task, 5, 100, user_choice, vec_model)
