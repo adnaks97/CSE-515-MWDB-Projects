@@ -147,6 +147,7 @@ class Task3:
     def _save_results_(self, scores, option):
         names = ["dot_pdt_{}_{}.txt", "pca_cosine_{}_{}.txt", "svd_cosine_{}_{}.txt", "nmf_cosine_{}_{}.txt",
                  "lda_cosine_{}_{}.txt", "edit_dist_{}_{}.txt", "dtw_dist_{}_{}.txt"]
+        scores = (scores + 1) / 2.
         matrix = "sim_matrix"
         sim_matrix = names[option-1].format(matrix, self.vec_model)
         json.dump(json.dumps(scores.tolist()), open(os.path.join(self.out_dir, sim_matrix), "w"))
