@@ -13,7 +13,7 @@ class Task1:
         self.vm = vm
         self.uc = uc
         self.input_dir = os.path.abspath(input_dir)
-        self.output_dir = os.path.join("outputs", "task1")
+        self.output_dir = os.path.join("outputs1", "task1")
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         files = sorted([x.split(".")[0] for x in os.listdir(os.path.join(self.input_dir, "task0a")) if ".wrd" in x])
         indices = list(range(0, len(files)))
