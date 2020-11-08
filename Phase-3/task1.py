@@ -13,7 +13,7 @@ class Task1:
         self.vm = vm
         self.uc = uc
         self.input_dir = os.path.abspath(input_dir)
-        self.output_dir = os.path.join("outputs1", "task1")
+        self.output_dir = os.path.join("outputs", "task1")
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         files = sorted([x.split(".")[0] for x in os.listdir(os.path.join(self.input_dir, "task0a")) if ".wrd" in x])
         indices = list(range(0, len(files)))
@@ -34,12 +34,11 @@ class Task1:
         return mat / (mat.sum(axis=0, keepdims=1) + 1e-7)
 
     def get_sim_matrix(self):
-        names = {2: "pca_cosine_sim_matrix_{}.txt",
-                 3: "svd_cosine_sim_matrix_{}.txt",
-                 4: "nmf_cosine_sim_matrix_{}.txt",
-                 5: "lda_cosine_sim_matrix_{}.txt"}
-        mat = np.array(
-            json.loads(json.load(open(os.path.join(self.input_dir, "task3", names[self.uc].format(self.vm)), "r"))))
+        names = {2:"pca_cosine_sim_matrix_{}.txt", 
+                 3:"svd_cosine_sim_matrix_{}.txt",
+                 4:"nmf_cosine_sim_matrix_{}.txt",
+                 5:"lda_cosine_sim_matrix_{}.txt"}
+        mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir,"task3",names[self.uc].format(self.vm)), "r"))))
         return mat
 
     def preprocess_ppr(self, n, m, k):

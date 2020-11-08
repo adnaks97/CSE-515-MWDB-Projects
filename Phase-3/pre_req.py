@@ -26,7 +26,7 @@ class Preprocess:
 
     def task0b(self):
         if not os.path.exists(os.path.join(self.output_dir,"task0b")) or len(os.listdir(os.path.join(self.output_dir,"task0b"))) == 0:
-            Task0b(os.path.join(self.output_dir,"task0a"))
+            Task0b(os.path.join(self.output_dir,"task0a"), self.output_dir)
         else:
             print("already have results of task0b in outputs")
 
@@ -37,7 +37,7 @@ class Preprocess:
                  4:"lda_{}_vectors.txt"}
         
         if not os.path.exists(os.path.join(self.output_dir,"task1",names[tc].format(vm))):
-            Task1(os.path.join(self.output_dir,"task0b"), k, vm, tc)
+            Task1(os.path.join(self.output_dir,"task0b"), k, vm, tc, self.output_dir)
         else:
             print("already have results of task1 in outputs")
     
@@ -54,7 +54,7 @@ class Preprocess:
             print("already have results of task1 in outputs")
         
 if __name__ == "__main__":
-    ob = Preprocess("Data_new_test", "outputs")
+    ob = Preprocess("Data_new_test", "phase2_outputs")
     ob.task0a()
     ob.task0b()
     ob.task1()

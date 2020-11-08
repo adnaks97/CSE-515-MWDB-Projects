@@ -6,9 +6,9 @@ from pathlib import Path
 
 
 class Task0b(object):
-    def __init__(self, dir):
+    def __init__(self, dir, out_dir="outputs"):
         self.dir = os.path.abspath(dir)
-        self.out_dir = os.path.join("outputs", "task0b")
+        self.out_dir = os.path.join(out_dir, "task0b")
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.file_paths = sorted([os.path.join(self.dir, f) for f in os.listdir(self.dir) if ".wrd" in f])
         self.compNames = ['words_X', 'words_Y', 'words_Z', 'words_W']

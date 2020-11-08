@@ -7,9 +7,9 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.decomposition import PCA, TruncatedSVD, NMF, LatentDirichletAllocation
 
 class Task1(object):
-    def __init__(self, inputDir, k, vector_model, technique):
+    def __init__(self, inputDir, k, vector_model, technique, out_dir="outputs"):
         self.input_dir = os.path.abspath(inputDir)
-        self.out_dir = os.path.join("outputs", "task1")
+        self.out_dir = os.path.join(out_dir, "task1")
         Path(self.out_dir).mkdir(parents=True, exist_ok=True)
         self.num_components = k
         self.vector_model = vector_model
