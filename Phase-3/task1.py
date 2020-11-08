@@ -22,9 +22,10 @@ class Task1:
 
     @staticmethod
     def get_knn_nodes(sim_matrix, k=3):
+        k = sim_matrix.shape[0] - k
         p = np.argsort(sim_matrix, axis=1)
-        p[p < k] = 0
-        p[p >= k] = 1
+        p[p <= k] = 0
+        p[p > k] = 1
         p = p.astype(bool)
         sim_matrix_truncated = np.where(p, sim_matrix, 0)
         return sim_matrix_truncated
@@ -69,7 +70,7 @@ class Task1:
         v[idx - 1, 0] = 1
         A = adj_matrix_norm
         diff = 1
-        c = 0.15
+        c = 0.8
         while diff > 1e-20:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
