@@ -1,11 +1,8 @@
 import os
-import math
 import json
 import numpy as np
 from pathlib import Path
 from scipy.spatial import distance
-from sklearn.preprocessing import normalize
-from multiprocessing.dummy import Pool as ThreadPool
 
 
 class Task1:
@@ -42,48 +39,36 @@ class Task1:
         mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir,"task3",names[self.uc].format(self.vm)), "r"))))
         return mat
 
-    def preprocess_ppr(self, n, m, k):
+    def process_ppr(self, n, m, k):
         sim_matrix = self.get_sim_matrix()
         adj_matrix = self.get_knn_nodes(sim_matrix, k)
         adj_matrix_norm = self.normalize(adj_matrix)
-        res = []
-        pool = ThreadPool(4000)
-        for idx in n:
-            res.append(pool.apply_async(self.process_ppr, args=(adj_matrix_norm, idx, self.idx_file_map[idx],)).get())
-        pool.close()
-        pool.join()
-        self.cal_m_dominant(res, m, k)
-
-    def cal_m_dominant(self, n_sim, m_value, k_value):
-        res = {}
-        for n_value in n_sim:
-            files = [self.idx_file_map[x] for x in n_value[2].ravel().argsort()[::-1][:m_value]]
-            res[n_value[0]] = files
-        json.dump(res, open(self.output_dir + "/{}_{}_dominant.txt".format(k_value, m_value), "w"))
-
-    @staticmethod
-    def process_ppr(adj_matrix_norm, idx, file_name):
         size = adj_matrix_norm.shape[0]
         u_old = np.zeros(size, dtype=float).reshape((-1, 1))
-        u_old[idx - 1, 0] = 1
         v = np.zeros(size, dtype=float).reshape((-1, 1))
-        v[idx - 1, 0] = 1
+        for value in n:
+            u_old[value - 1] = 1/len(n)
+            v[value - 1] = 1/len(n)
         A = adj_matrix_norm
         diff = 1
-        c = 0.8
+        c = 0.65
         while diff > 1e-20:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
             u_old = u_new
-        result = (file_name, idx, u_new)
-        return result
+        for index in n:
+            u_new[index - 1] = 0
+        res = [self.idx_file_map[x] for x in u_new.ravel().argsort()[::-1][:m]]
+        print(u_new)
+        print(res)
+        json.dump(res, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"))
 
 
 if __name__ == "__main__":
     print("Performing Task 1")
-    input_directory = input("Enter directory to use: ")
+    input_directory = "phase2_outputs" # input("Enter the input directory to use: ")
     k = int(input("Enter a value K for outgoing gestures : "))
     m = int(input("Enter a value M for most dominant gestures : "))
     n = list(map(int, input("Enter N indices separated by space : ").split()))
     task1 = Task1(input_directory)
-    task1.preprocess_ppr(n, m, k)
+    task1.process_ppr(n, m, k)
