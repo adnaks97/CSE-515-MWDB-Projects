@@ -56,6 +56,14 @@ class Task2:
         mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", names[self.uc].format(self.vm)), "r"))))
         return mat
 
+    def get_vectors(self):
+        names =  {1: "pca_{}_vectors.txt",
+                  2: "svd_{}_vectors.txt",
+                  3: "nmf_{}_vectors.txt", 
+                  4: "lda_{}_vectors.txt"}
+        vec = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task1", names[self.uc].format(self.vm)), "r"))))
+        return vec
+
     @staticmethod
     def process_ppr(adj_matrix_norm, idx, rem_indices, file_name, c=0.8):
         size = adj_matrix_norm.shape[0]
@@ -120,8 +128,7 @@ class Task2:
         json.dump(final_result, open(self.output_dir + "/{}_{}_dominant_{}_{}.txt".format(k, m, self.vm, self.uc), "w"), indent="\t")
     
     def decision_tree(self):
-        file = np.array(json.loads(json.load(open("phase2_outputs/task1/nmf_2_vectors.txt", "r"))))
-        print(file)
+        file = self.get_vectors()
         targets = {'vattene':0, 'combinato':1, 'daccordo':2}
         key_list = list(targets.keys()) 
         val_list = list(targets.values()) 
@@ -141,10 +148,8 @@ class Task2:
         for k in result:
             if result[k]['predicted'] == result[k]['original']:
                 count+=1
-        print("total", len(result))
-        print("correct", count)  
-        print("accuracy:", count/len(result))
-        json.dump(final_result, open(self.output_dir + "/decision_tree_{}_{}.txt".format(self.vm, self.uc), "w"), indent="\t")
+        result["Accuracy"] = (count/len(result))*100
+        json.dump(result, open(self.output_dir + "/decision_tree_{}_{}.txt".format(self.vm, self.uc), "w"), indent="\t")
     
     def knn(self):
         def most_found(array):
@@ -204,7 +209,7 @@ class Task2:
                     break
             return label
         
-        file = np.array(json.loads(json.load(open("phase2_outputs/task1/pca_2_vectors.txt", "r"))))
+        file = self.get_vectors()
         targets = {'vattene':0, 'combinato':1, 'daccordo':2}
         key_list = list(targets.keys()) 
         val_list = list(targets.values()) 
@@ -222,10 +227,8 @@ class Task2:
         for k in result:
             if result[k]['predicted'] == result[k]['original']:
                 count+=1
-        print("total", len(result))
-        print("correct", count)  
-        print("accuracy:", count/len(result))
-        json.dump(final_result, open(self.output_dir + "/knn_{}_{}.txt".format(self.vm, self.uc), "w"), indent="\t")
+        result["Accuracy"] = (count/len(result))*100
+        json.dump(result, open(self.output_dir + "/knn_{}_{}.txt".format(self.vm, self.uc), "w"), indent="\t")
     
 class Node:
     def __init__(self, predicted_class):
@@ -312,3 +315,8 @@ if __name__ == "__main__":
         for uc in [2,3,4,5,6,7]:
             task2 = Task2(input_directory, vm, uc)
             task2.preprocess_ppr_task2(m_value, ppr_k)
+
+        for uc in [1, 2, 3, 4]:
+            task2 = Task2(input_directory, vm, uc)
+            task2.decision_tree()
+            # task2.knn()
