@@ -56,12 +56,11 @@ class Task1:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
             u_old = u_new
-        for index in n:
-            u_new[index - 1] = 0
         res = [self.idx_file_map[x] for x in u_new.ravel().argsort()[::-1][:m]]
-        print(u_new)
-        print(res)
-        json.dump(res, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"))
+        c = {}
+        c['user_files'] = n
+        c['dominant_gestures'] = res 
+        json.dump(c, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"), indent='\t')
 
 
 if __name__ == "__main__":

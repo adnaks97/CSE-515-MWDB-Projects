@@ -280,6 +280,7 @@ if __name__ == "__main__":
     print("Performing Task 3")
     directory = input("Enter directory to use: ")
     user_choice = 0
+
     while True:
         vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
         sem_model = int(input("Enter which semantic identifier to use. (1) SVD (2) NMF : "))

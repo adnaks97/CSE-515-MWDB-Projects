@@ -14,6 +14,7 @@ class Preprocess:
     
     def task0a(self, r=3, s=3, w=3):
         if not os.path.exists(os.path.join(self.output_dir,"task0a")):
+            print("Run task0a")
             file_list = glob.glob(self.data_dir + '/*/*.csv')
             for csv_file in file_list:
                 print("Processing: ", csv_file)
@@ -42,10 +43,12 @@ class Preprocess:
             print("already have results of task1 in outputs")
     
     def task3(self, vm=2, uc=2):
-        names = {2:"pca_cosine_sim_matrix_{}.txt", 
-                 3:"svd_cosine_sim_matrix_{}.txt",
-                 4:"nmf_cosine_sim_matrix_{}.txt",
-                 5:"lda_cosine_sim_matrix_{}.txt"}
+        names = {2: "pca_cosine_sim_matrix_{}.txt",
+                 3: "svd_cosine_sim_matrix_{}.txt",
+                 4: "nmf_cosine_sim_matrix_{}.txt",
+                 5: "lda_cosine_sim_matrix_{}.txt", 
+                 6: "edit_dist_sim_matrix_{}.txt", 
+                 7: "dtw_dist_sim_matrix_{}.txt"}
 
         if not os.path.exists(os.path.join(self.output_dir,"task3",names[uc].format(vm))):
             task3 = Task3(vm, self.output_dir)
@@ -57,5 +60,9 @@ if __name__ == "__main__":
     ob = Preprocess("Data_new_test", "phase2_outputs")
     ob.task0a()
     ob.task0b()
-    ob.task1()
-    ob.task3()
+    for vm in [1,2]:
+        for tc in [1,2,3,4]:
+            ob.task1(4, vm, tc)
+    for vm in [1,2]:
+        for uc in [2,3,4,5,6,7]:
+            ob.task3(vm, uc)

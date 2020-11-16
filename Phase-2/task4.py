@@ -219,7 +219,6 @@ class Task4(object):
         """
         # Find eigen values and eigen vectors
         eigvals, eigvecs = np.linalg.eig(self.L)
-
         # First k eigen values
         inds = np.argsort(eigvals)
         # K dimensional embedding
@@ -240,6 +239,7 @@ class Task4(object):
 if __name__=="__main__":
     directory = input("Enter directory to use: ")
     user_choice = 0
+
     while user_choice != 8:
         task = input("Enter the subtask to perform (a/b/c/d) : ").lower()
         vec_model = int(input("Enter which vector model to use. (1) TF (2) TFIDF : "))
