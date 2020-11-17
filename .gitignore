@@ -1,3 +1,7 @@
-Phase_1/Data/Phase1_sample_data.zip
+Phase-1/Data/Phase1_sample_data.zip
+Phase-2/.*
+Phase-3/.*
+Phase-3/*/*/.*
+Phase-1/.*
 __pycache__/
 .idea/
