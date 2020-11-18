@@ -163,7 +163,58 @@ class Task4:
                 return top_10_scores
         else:
             return self._cosine_top_10_(vectors, q)
+    
+
+    def new_prob_retrieval(self, q, f_c, f_w):
+        q = q.reshape((1,-1))
+        sim = {}
+        vectors = copy.deepcopy(self.tf_vectors) if self.vm == 1 else copy.deepcopy(self.tfidf_vectors)
+        vectors = np.array(vectors).reshape((-1,len(vectors[0])))
+        if f_c is not None and f_w is not None:
+            R = vectors[fc,:]
+            q_i = (q!=0).astype(int)*3
+            r_i = np.count_nonzero(R, axis=0)
+            n_i = np.count_nonzero(vectors, axis=0)
+            r_i = r_i+q_i
+
+            p_i = (r_i+(n_i/len(vectors)))/(len(f_c)+1)
+            u_i = (n_i-r_i+(n_i/len(vectors)))/(len(vectors)-len(f_c)+1)
             
+            q_new = np.log((p_i*(1-u_i))/(u_i*(1-p_i)))
+            # for i in range(len(vectors[0])):
+            #     n=0
+            #     r=0
+            #     for j in range(len(vectors)):
+            #         if vectors[j][i] != 0:
+            #             n+=1
+            #             if j in f_c:
+            #                 if q[i]!=0:
+            #                     r+=3
+            #                 else:
+            #                     r+=1
+            #     p = (r+(n/len(vectors)))/(len(f_c)+1)
+            #     u = (n-r+(n/len(vectors)))/(len(vectors)-len(f_c)+1)
+
+            #     q_new.append(np.log((p*(1-u))/(u*(1-p))))
+
+        else:
+            q_new = []
+            for i in range(len(vectors[0])):
+                n=0
+                for j in range(len(vectors)):
+                    if vectors[j][i] != 0:
+                        n+=1
+                p = 0.5
+                u = n/len(vectors)
+                q_new.append(np.log((p*(1-u))/(u*(1-p))))
+
+
+        for j in range(len(vectors[0])):
+            sim[j] = np.sum(np.multiply(vectors[j],q_new[j]))
+
+        top_10_scores = dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10])
+        return q_new, top_10_scores
+
     
     def main_feedback_loop(self, query_file):
         idx = self.file_idx_map[query_file]
@@ -175,13 +226,13 @@ class Task4:
         while True:
             # call retrieval function
             print("Getting results")
-            results = self.prob_retrieval(q, relevant, non_relevant)
+            q_new, results = self.new_prob_retrieval(q, relevant, non_relevant)
             # call user feedback function
             print("Getting feedback")
             relevant, non_relevant = self._get_user_feedback_(results)
             # call query mod function
-            print("Query optimization")
-            q_new = self.query_optimization(q, relevant, non_relevant)
+            # print("Query optimization")
+            # q_new = self.query_optimization(q, relevant, non_relevant)
             # call query info function
             print("Relative importance")
             self.relative_importance(q, q_new)
