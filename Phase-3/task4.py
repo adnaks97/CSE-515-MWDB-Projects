@@ -164,58 +164,48 @@ class Task4:
         else:
             return self._cosine_top_10_(vectors, q)
     
-
     def new_prob_retrieval(self, q, f_c, f_w):
         q = q.reshape((1,-1))
         sim = {}
         vectors = copy.deepcopy(self.tf_vectors) if self.vm == 1 else copy.deepcopy(self.tfidf_vectors)
         vectors = np.array(vectors).reshape((-1,len(vectors[0])))
         if f_c is not None and f_w is not None:
-            R = vectors[fc,:]
-            q_i = (q!=0).astype(int)*3
-            r_i = np.count_nonzero(R, axis=0)
-            n_i = np.count_nonzero(vectors, axis=0)
+            q_new = []
+            R = vectors[f_c,:]
+            fcr = np.array([len(f_c)]*len(R[0])).reshape((1,-1))
+            q_i = (q!=0).astype(int)*0.5
+            r_i = np.count_nonzero(R, axis=0).astype(np.float32)
+            n_i = np.count_nonzero(vectors, axis=0).astype(np.float32)
             r_i = r_i+q_i
+            fcr = fcr+q_i
 
-            p_i = (r_i+(n_i/len(vectors)))/(len(f_c)+1)
-            u_i = (n_i-r_i+(n_i/len(vectors)))/(len(vectors)-len(f_c)+1)
-            
+            p_i = (r_i+(n_i/len(vectors)))/(fcr+1)
+            p_i[p_i<0] = 1e-5
+            p_i[p_i>=1] = 0.99
+            u_i = (n_i-r_i+(n_i/len(vectors)))/(len(vectors)-fcr+1)
+            u_i[u_i<=0] = 1e-5
+            u_i[u_i>=1] = 0.99
             q_new = np.log((p_i*(1-u_i))/(u_i*(1-p_i)))
-            # for i in range(len(vectors[0])):
-            #     n=0
-            #     r=0
-            #     for j in range(len(vectors)):
-            #         if vectors[j][i] != 0:
-            #             n+=1
-            #             if j in f_c:
-            #                 if q[i]!=0:
-            #                     r+=3
-            #                 else:
-            #                     r+=1
-            #     p = (r+(n/len(vectors)))/(len(f_c)+1)
-            #     u = (n-r+(n/len(vectors)))/(len(vectors)-len(f_c)+1)
-
-            #     q_new.append(np.log((p*(1-u))/(u*(1-p))))
+            q_new = q_new.reshape((-1,))
 
         else:
-            q_new = []
-            for i in range(len(vectors[0])):
-                n=0
-                for j in range(len(vectors)):
-                    if vectors[j][i] != 0:
-                        n+=1
-                p = 0.5
-                u = n/len(vectors)
-                q_new.append(np.log((p*(1-u))/(u*(1-p))))
+            n_i = np.count_nonzero(vectors, axis=0).astype(np.float32)
+            p_i = np.array([0.5]*len(vectors[0])).reshape((1,-1))
+            u_i = n_i/len(vectors)
+            u_i[u_i<=0] = 1e-5
+            u_i[u_i>=1] = 0.99
+            x = u_i*(1-p_i)
+            y = p_i*(1-u_i)
+            q_new = np.log((p_i*(1-u_i))/(u_i*(1-p_i)))
+            q_new = q_new.reshape((-1,))
 
-
-        for j in range(len(vectors[0])):
-            sim[j] = np.sum(np.multiply(vectors[j],q_new[j]))
+        for j in range(len(vectors)):
+            sim[j] = np.sum(np.multiply(vectors[j],q_new))
 
         top_10_scores = dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10])
         return q_new, top_10_scores
 
-    
+
     def main_feedback_loop(self, query_file):
         idx = self.file_idx_map[query_file]
         if self.vm == 1:
@@ -231,9 +221,6 @@ class Task4:
             print("Getting feedback")
             relevant, non_relevant = self._get_user_feedback_(results)
             # call query mod function
-            # print("Query optimization")
-            # q_new = self.query_optimization(q, relevant, non_relevant)
-            # call query info function
             print("Relative importance")
             self.relative_importance(q, q_new)
             # check for uc value

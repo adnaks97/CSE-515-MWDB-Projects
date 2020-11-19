@@ -6,7 +6,8 @@ from pathlib import Path
 from multiprocessing.dummy import Pool as ThreadPool
 from scipy.spatial import distance
 from scipy.stats import mode
-
+# from numpy.linalg import multi_dot
+from scipy.spatial import distance
 
 class Task2:
     def __init__(self, input_dir, vm=2, uc=2):
@@ -86,7 +87,7 @@ class Task2:
         adj_matrix = self.get_knn_nodes(sim_matrix, k)
         adj_matrix_norm = self.normalize(adj_matrix)
         res = []
-        pool = ThreadPool(4000)
+        pool = ThreadPool(2000)
         for index in self.remove_indices_mat:
             file_name = self.idx_file_map[index]
             res.append(pool.apply_async(self.process_ppr, args=(adj_matrix_norm, index, self.remove_indices_mat, file_name, 0.15)).get())
@@ -151,7 +152,8 @@ class Task2:
         result["Accuracy"] = (count/len(result))*100
         json.dump(result, open(self.output_dir + "/decision_tree_{}_{}.txt".format(self.vm, self.uc), "w"), indent="\t")
     
-    def knn(self):
+    def knn(self,k):
+         
         def most_found(array):
             list_of_words = []
             for i in range(len(array)):
@@ -171,33 +173,22 @@ class Task2:
                     most_counted = None
             return most_counted
         
-        def find_neighbors(point, data, labels, k=3):
+        def find_neighbors(point, data, labels, k):
             n_of_dimensions = len(point)
             neighbors = []
             neighbor_labels = []
-            for i in range(0, k):
-                nearest_neighbor_id = None
-                smallest_distance = None
-                for i in range(0, len(data)):
-                    eucledian_dist = 0
-                    for d in range(0, n_of_dimensions):
-                        dist = abs(point[d] - data[i][d])
-                        eucledian_dist += dist
-                    eucledian_dist = np.sqrt(eucledian_dist)
-                    if smallest_distance == None:
-                        smallest_distance = eucledian_dist
-                        nearest_neighbor_id = i
-                    elif smallest_distance > eucledian_dist:
-                        smallest_distance = eucledian_dist
-                        nearest_neighbor_id = i
-                neighbors.append(data[nearest_neighbor_id])
-                neighbor_labels.append(labels[nearest_neighbor_id])
+            try:
+                # mahalobonis
+                dist = distance.squareform(distance.pdist(data, metric='mahalanobis', VI=None))
+            except:
+                # do euclidean
+                dist = distance.squareform(distance.pdist(data, metric='euclidean'))
+            dist = dist[-1,:-1]
+            neigh_indices = np.argsort(dist)[:k]
+            neighbour_labels = labels[neigh_indices].ravel()
+            return neighbour_labels.tolist()
 
-                data=np.delete(data,data[nearest_neighbor_id])
-                labels=np.delete(labels,labels[nearest_neighbor_id])
-            return neighbor_labels
-
-        def k_nearest_neighbor(point, data, labels, k=3):
+        def k_nearest_neighbor(point, data, labels, k):
                 # If two different labels are most found, continue to search for 1 more k
             while True:
                 neighbor_labels = find_neighbors(point, data, labels, k=k)
@@ -208,20 +199,21 @@ class Task2:
                 if k >= len(data):
                     break
             return label
-        
         file = self.get_vectors()
         targets = {'vattene':0, 'combinato':1, 'daccordo':2}
         key_list = list(targets.keys()) 
-        val_list = list(targets.values()) 
-        X = np.array([list(file[i]) for i in self.train_file_num_indices])
+        val_list = list(targets.values())
+        X = np.round(np.array([list(file[i]) for i in self.train_file_num_indices]),decimals=4)
         labels = np.array([self.class_labels_map[k] for k in self.train_file_num])
-        y = np.array([targets[k] for k in labels])       
+        y = np.array([targets[k] for k in labels]).reshape((-1,1))     
         result = {}
         for r in self.remove_indices_mat:
             feat = list(file[r])
             result[self.idx_file_map[r]] = {}
-            ypred=k_nearest_neighbor(feat, X, y, k=5)
-            result[self.idx_file_map[r]]['predicted'] = key_list[val_list.index(ypred[0])]
+            feat_list=np.array(feat)
+            X_new=np.vstack((X,feat_list))
+            ypred=k_nearest_neighbor(feat, X_new, y, k)
+            result[self.idx_file_map[r]]['predicted'] = key_list[val_list.index(ypred)]
             result[self.idx_file_map[r]]['original'] = self.all_files_classes[self.idx_file_map[r]]
         count=0
         for k in result:
@@ -308,15 +300,17 @@ class DecisionTreeClassifier:
 if __name__ == "__main__":
     print("Performing Task 2")
     input_directory = "phase2_outputs" #input("Enter directory to use: ")
-    knn_k = 5 #int(input("Enter a value K for KNN : "))
+    knn_k =  int(input("Enter a value K for KNN : "))
     ppr_k = 30 #int(input("Enter a value K for outgoing gestures (PPR) : "))
     m_value = 7 #int(input("Enter a value M for most dominant gestures : "))
     for vm in [1,2]:
         for uc in [2,3,4,5,6,7]:
             task2 = Task2(input_directory, vm, uc)
             task2.preprocess_ppr_task2(m_value, ppr_k)
-
+            # print("PPR Done")
         for uc in [1, 2, 3, 4]:
             task2 = Task2(input_directory, vm, uc)
             task2.decision_tree()
+            task2.knn(knn_k)
+            # print("DT done")
             # task2.knn()
