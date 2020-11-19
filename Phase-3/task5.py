@@ -6,13 +6,9 @@ import numpy as np
 import pandas as pd
 import pickle as pkl
 from pathlib import Path
-from multiprocessing.dummy import Pool as ThreadPool
 from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
-from heapq import nlargest
-from scipy.stats import mode
-
 
 class Task5:
     def __init__(self, input_dir, vm=2, uc=2):
@@ -53,6 +49,8 @@ class Task5:
                  "tfidf_vectors" in x])
             for f in files:
                 self.vectors.append(np.array(json.loads(json.load(open(f, "r")))).reshape((-1, 1)))
+        
+        self.mat = self.get_sim_matrix()
 
     def _get_user_feedback_(self, results):
         rel, non_rel = [], []
@@ -69,8 +67,8 @@ class Task5:
     def get_knn_nodes(sim_matrix, k=3):
         k = sim_matrix.shape[0] - k
         p = np.argsort(sim_matrix, axis=1)
-        p[p <= k] = 0
-        p[p > k] = 1
+        p[p < k] = 0
+        p[p >= k] = 1
         p = p.astype(bool)
         sim_matrix_truncated = np.where(p, sim_matrix, 0)
         return sim_matrix_truncated
@@ -92,8 +90,7 @@ class Task5:
         return mat
 
     def process_ppr(self, value, m, k):
-        sim_matrix = self.get_sim_matrix()
-        adj_matrix = self.get_knn_nodes(sim_matrix, k)
+        adj_matrix = self.get_knn_nodes(self.mat, k)
         adj_matrix_norm = self.normalize(adj_matrix)
         size = adj_matrix_norm.shape[0]
         u_old = np.zeros(size, dtype=float).reshape((-1, 1))
@@ -107,19 +104,14 @@ class Task5:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
             u_old = u_new
-        res = [self.idx_file_map[x] for x in u_new.ravel().argsort()[::-1][:m]]
-        # c = {}
-        # c['user_files'] = n
-        # c['dominant_gestures'] = res
-        # json.dump(c, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"), indent='\t')
+        res = [x for x in u_new.ravel().argsort()[::-1][:m]]
         return res
 
     def query_optimization_prob(self, q, f_c, f_w):
         q = q.reshape((1,-1))
-        vectors = copy.deepcopy(self.tf_vectors) if self.vm == 1 else copy.deepcopy(self.tfidf_vectors)
+        vectors = copy.deepcopy(self.vectors)
         vectors = np.array(vectors).reshape((-1,len(vectors[0])))
         if f_c is not None and f_w is not None:
-            q_new = []
             R = vectors[f_c,:]
             fcr = np.array([len(f_c)]*len(R[0])).reshape((1,-1))
             q_i = (q!=0).astype(int)*0.5
@@ -135,7 +127,7 @@ class Task5:
             u_i[u_i<=0] = 1e-5
             u_i[u_i>=1] = 0.99
             q_new = np.log((p_i*(1-u_i))/(u_i*(1-p_i)))
-            q_new = q_new.reshape((-1,))
+            q_new = q_new.reshape((1,-1))
 
         else:
             n_i = np.count_nonzero(vectors, axis=0).astype(np.float32)
@@ -144,7 +136,7 @@ class Task5:
             u_i[u_i<=0] = 1e-5
             u_i[u_i>=1] = 0.99
             q_new = np.log((p_i*(1-u_i))/(u_i*(1-p_i)))
-            q_new = q_new.reshape((-1,))
+            q_new = q_new.reshape((1,-1))
 
         return q_new
 
@@ -157,7 +149,7 @@ class Task5:
         rel_files_vectors, non_rel_files_vectors = [], []
 
         for j in relevant:
-            rel_files_vectors.append(self.tf_vectors[j])
+            rel_files_vectors.append(self.vectors[j])
 
         a = []
         for c in range(len(rel_files_vectors)):
@@ -168,7 +160,7 @@ class Task5:
 
         # non relevant files
         for j in non_relevant:
-            non_rel_files_vectors.append(self.tf_vectors[j])
+            non_rel_files_vectors.append(self.vectors[j])
         an = []
         for c in range(len(non_rel_files_vectors)):
             mag = math.sqrt(sum(pow(element, 2) for element in non_rel_files_vectors[c]))
@@ -179,31 +171,38 @@ class Task5:
         optimized_q = Q + beta * dr - gamma * dnr
         return optimized_q
 
+    def modify_sim_matrix(self, query, idx):
+        sims = cosine_similarity(self.vectors, query).reshape((-1,))
+        self.mat[idx,:] = sims
+        self.mat[:,idx] = sims
+
     def main_feedback_loop(self, query_file, k_value):
         idx = self.file_idx_map[query_file]
-        q = self.vectors[idx]
+        q = np.array(self.vectors[idx]).reshape((1,-1))
         relevant = non_relevant = None
         while True:
             # call retrieval function
             print("Getting results")
-            q_new, results = self.new_prob_retrieval(q, relevant, non_relevant)
+            results = self.process_ppr(idx+1, 10, 30)
             # call user feedback function
             print("Getting feedback")
             relevant, non_relevant = self._get_user_feedback_(results)
             # call query mod function
-            q_new_vect = self.query_optimization(q, relevant, non_relevant)
-            # call retrieval function
-            print("Getting results")
-            results = self.process_ppr(q, )
-            # call user feedback function
-            print("Getting feedback")
-            relevant, non_relevant = self._get_user_feedback_(results)
-            # call query mod function
-            print("Query optimization")
-            q_new = self.query_optimization(q, relevant, non_relevant)
+            q_new_vect = self.query_optimization_vectors(q, relevant, non_relevant)
+            q_new_prob = self.query_optimization_prob(q, relevant, non_relevant)
+            q_change_prob = np.count_nonzero(q-q_new_prob)
+            q_change_vect = np.count_nonzero(q-q_new_vect)
+            print("Total query dimensions - {} \nVector optim changed dims - {} \nProbabilistic optim changed dims - {}".format(q.shape[1], q_change_vect, q_change_prob))
+            q_opt = int(input("Choose which method to use? (q_vect-1, q_prob-2): "))
+            if q_opt == 1:
+                q_new = q_new_vect
+            else:
+                q_new = q_new_prob
+            # update sim_matrix
+            self.modify_sim_matrix(q_new, idx)
             # check for uc value
-            uc = input("Are you done? (y/n) : ")
-            if uc == 'y' or uc == 'Y':
+            uc = input("Continue? (y/n) : ")
+            if uc == 'n' or uc == 'N':
                 break
             q = q_new
 
@@ -213,7 +212,5 @@ if __name__ == "__main__":
     vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
     file = input("Enter a file number : ").zfill(3)
     k = int(input("Enter a value K for outgoing gestures : "))
-    for vm in [1,2]:
-        for uc in [2,3,4,5,6,7]:
-            task5 = Task5(input_dir, vm=vm, uc=uc)
-            task5.main_feedback_loop(file, k)
+    task5 = Task5(input_dir, vm=2, uc=2)
+    task5.main_feedback_loop(file, k)
