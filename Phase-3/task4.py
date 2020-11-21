@@ -12,6 +12,8 @@ from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
 from heapq import nlargest
 from scipy.stats import mode
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 class Task4:
     def __init__(self, input_dir, vm=2):
@@ -236,6 +238,7 @@ class Task4:
         else:
             q = self.tfidf_vectors[idx]
         relevant = non_relevant = None
+        q = np.array([item for sublist in q for item in sublist])
         while True:
             # call retrieval function
             print("Getting results")
