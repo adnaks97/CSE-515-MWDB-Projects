@@ -32,6 +32,9 @@ class Task4:
             c.append((w[0],w[1],*tuple(w[2])))
         self.all_idx_words = dict(zip(list(self.all_words_idx.values()),c))
         self.diff = []
+        self.change_in_sensor = []
+        self.change_in_comp = []
+        self.change_in_words = []
         self._get_file_vectors_()
     
     def _get_file_vectors_(self):
@@ -101,11 +104,13 @@ class Task4:
 
         def change_in_vector(d1, d2):
             diff = {}
+            change = []
             for k in d1:
                 c = np.sum(np.array(d1[k]) - np.array(d2[k])).ravel()[0]
                 diff[k]=c
+                change.append(c)
             newDiff = dict(sorted(diff.items(), key=lambda x: x[1], reverse=True))
-            return newDiff
+            return newDiff, change
         
         sensors = {}
         for k in range(20):
@@ -120,14 +125,19 @@ class Task4:
         
         sd1, sd2 = get_list_items(sensors, D1, D2)
         cd1, cd2 = get_list_items(comp_vector, D1, D2)
-        diff_s = change_in_vector(sd1, sd2)
-        diff_c = change_in_vector(cd1, cd2)
+        diff_s, sensor_change = change_in_vector(sd1, sd2)
+        diff_c, comp_change = change_in_vector(cd1, cd2)
+        D1 = D1.reshape((-1,))
+        word_change = np.array(D1) - np.array(D2)
         diff_w_indices = np.argsort((np.array(D1) - np.array(D2)))[::-1]
         difference = {}
         difference['sensors'] = diff_s
         difference['components'] = diff_c
-        difference['words'] = diff_w_indices
-        difference['words'] = [self.all_idx_words[w] for w in difference['words'].ravel().tolist()]
+        # difference['words'] = diff_w_indices
+        # difference['words'] = [self.all_idx_words[w] for w in difference['words'].ravel().tolist()]
+        self.change_in_sensor.append(sensor_change)
+        self.change_in_comp.append(comp_change)
+        self.change_in_words.append(word_change)
         self.diff.append(difference)
 
     @staticmethod
@@ -205,6 +215,19 @@ class Task4:
         top_10_scores = dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10])
         return q_new, top_10_scores
 
+    def plot_heatmap(self):
+
+        fig1 = plt.figure(figsize=(14, 8))
+        sns.heatmap(self.change_in_sensor, cmap="gray", xticklabels=False)
+        fig1.savefig(os.path.join(self.output_dir, "sensor_change.png"))
+
+        fig2 = plt.figure(figsize=(14, 8))
+        sns.heatmap(self.change_in_comp, cmap="gray", xticklabels=False)
+        fig2.savefig(os.path.join(self.output_dir, "comp_change.png"))        
+
+        fig3 = plt.figure(figsize=(14, 8))
+        sns.heatmap(self.change_in_words, cmap="gray", xticklabels=False)
+        fig3.savefig(os.path.join(self.output_dir, "words_change.png"))        
 
     def main_feedback_loop(self, query_file):
         idx = self.file_idx_map[query_file]
@@ -226,6 +249,7 @@ class Task4:
             # check for uc value
             uc = input("Are you done? (y/n) : ")
             if uc == 'y' or uc == 'Y':
+                self.plot_heatmap()              
                 break
             q = q_new
         json.dump(self.diff, open(os.path.join(self.output_dir,"{}_{}_query_difference.txt".format(self.vm,query_file)),"w"), indent="\t")
