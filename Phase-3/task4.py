@@ -141,40 +141,6 @@ class Task4:
         self.change_in_comp.append(comp_change)
         self.change_in_words.append(word_change)
         self.diff.append(difference)
-
-    @staticmethod
-    def _cosine_top_10_(vectors, q):
-        vectors.append(q)
-        vectors = np.array(vectors).reshape((-1,len(q)))
-        scores = (1-pairwise_distances(vectors, metric="cosine"))[-1,:-1]
-        scores = [(id, s) for id, s in enumerate(scores)]
-        top_10_scores = dict(sorted(scores, key=lambda x: x[1], reverse=True)[:10])
-        return top_10_scores
-
-    def prob_retrieval(self, q, f_c, f_w):
-        sim = {}
-        vectors = copy.deepcopy(self.tf_vectors) if self.vm == 1 else copy.deepcopy(self.tfidf_vectors)
-        if f_c is not None and f_w is not None:
-            f = f_c + f_w
-            N = len(f)
-            R = len(f_c)
-            if N == R:
-                return self._cosine_top_10_(vectors, q)
-            else:
-                n = 0
-                r = 0
-                for i in range(len(vectors[0])):
-                    for index in f:
-                        if vectors[index][i] != 0:
-                            n += 1
-                            if index in f_c:
-                                r += 1
-                for j in range(len(vectors)):
-                    sim[j] = np.sum(vectors[j] * np.log((r/R-r+1e-5) / ((n - r)/(N - R - n + r + 1e-5) + 1e-5)))
-                top_10_scores = dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10])
-                return top_10_scores
-        else:
-            return self._cosine_top_10_(vectors, q)
     
     def new_prob_retrieval(self, q, f_c, f_w):
         q = q.reshape((1,-1))
