@@ -101,14 +101,14 @@ class Task6:
                 [os.path.join(self.input_dir, "task0b", x) for x in os.listdir(os.path.join(self.input_dir, "task0b")) if
                  "tf_vectors" in x])
             for f in files:
-                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))).reshape((-1, 1)))
+                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))))
         # load tfidf vectors
         elif self.uc == 7:
             files = sorted(
                 [os.path.join(self.input_dir, "task0b", x) for x in os.listdir(os.path.join(self.input_dir, "task0b")) if
                  "tfidf_vectors" in x])
             for f in files:
-                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))).reshape((-1, 1)))
+                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))))
     
     ################################################################# PPR Retrieval functions ##############################################################
     

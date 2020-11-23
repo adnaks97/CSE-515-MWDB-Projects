@@ -1,6 +1,7 @@
 import os
 import json
 import numpy as np
+import pandas as pd
 from pathlib import Path
 from scipy.spatial import distance
 
@@ -10,6 +11,7 @@ class Task1:
         self.vm = vm
         self.uc = uc
         self.input_dir = os.path.abspath(input_dir)
+        self.input_dir_for_plots=os.path.abspath(input_dir_for_plots)
         self.output_dir = os.path.join("outputs", "task1")
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         files = sorted([x.split(".")[0] for x in os.listdir(os.path.join(self.input_dir, "task0a")) if ".wrd" in x])
@@ -39,6 +41,16 @@ class Task1:
         mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir,"task3",names[self.uc].format(self.vm)), "r"))))
         return mat
 
+    def plot_dominant_gestures(self,res,k):
+        for j in range(len(res)):
+            for i in ['W','X','Y','Z']:
+                d = os.path.join(self.input_dir_for_plots, i)
+                df=pd.read_csv(os.path.join(d, res[j].lstrip('0')+".csv"), header=None)
+                df=df.T
+                fig=df.plot()
+                outFile = os.path.join(self.output_dir, res[j] + '_' + i + '_' + str(k) + '.png')
+                fig.figure.savefig(outFile)
+
     def process_ppr(self, n, m, k):
         sim_matrix = self.get_sim_matrix()
         adj_matrix = self.get_knn_nodes(sim_matrix, k)
@@ -57,17 +69,20 @@ class Task1:
             diff = distance.minkowski(u_new, u_old, 1)
             u_old = u_new
         res = [self.idx_file_map[x] for x in u_new.ravel().argsort()[::-1][:m]]
+        self.plot_dominant_gestures(res,k)
         c = {}
         c['user_files'] = n
         c['dominant_gestures'] = res 
         json.dump(c, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"), indent='\t')
-
+        
 
 if __name__ == "__main__":
     print("Performing Task 1")
     input_directory = "phase2_outputs" # input("Enter the input directory to use: ")
+    input_dir_for_plots=input("Enter the directory that contains all files of all components ")
     k = int(input("Enter a value K for outgoing gestures : "))
     m = int(input("Enter a value M for most dominant gestures : "))
     n = list(map(int, input("Enter N indices separated by space : ").split()))
     task1 = Task1(input_directory)
     task1.process_ppr(n, m, k)
+    # task1.plot_dominant_gestures()
