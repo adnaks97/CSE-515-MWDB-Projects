@@ -1,0 +1,4656 @@
+{
+	"00001-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"acc": {
+		"voting": 0.23225806451612904,
+		"wt_scores": 0.23870967741935484
+	},
+	"00001-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00001-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00002-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00003-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00004-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00005-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00006-1": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-5": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00006-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00006-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00006-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00006-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00007-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00007-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00007-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00007-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00007-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00008-2": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00008-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00008-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00008-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00008-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00009-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00009-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00009-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00009-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00010-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00010-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00010-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00010-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00011-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00011-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00011-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00011-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-2": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00012-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00012-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00012-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00013-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00013-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00013-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00014-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00014-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00014-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00014-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00014-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00014-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00014-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00014-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00014-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00014-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00015-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00015-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00016-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00016-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00016-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00017-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00017-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00018-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00018-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00018-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00019-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00019-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00019-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00019-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00020-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00020-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00020-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00021-0": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00021-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00021-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00021-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00021-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00021-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00021-6": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00021-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00021-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00021-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00022-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00022-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00022-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-6": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00022-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00022-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00023-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00023-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00023-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00023-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00023-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00023-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00023-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00023-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00023-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00023-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00024-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00024-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00024-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00024-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00025-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00025-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00025-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00025-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00025-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00025-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00025-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00025-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00025-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00025-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00026-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00026-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00026-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00026-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00026-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00026-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00026-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00026-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00026-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00026-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00027-0": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00027-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00027-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00027-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00027-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00027-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00027-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00027-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00027-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00027-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00028-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00028-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00028-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00028-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00028-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00029-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00029-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00029-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00029-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00029-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00029-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00029-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00029-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00029-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00029-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00030-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00030-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "vattene"
+	},
+	"00030-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00030-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00030-4": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00030-5": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00030-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00030-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00030-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00030-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00031-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "vattene"
+	},
+	"00031-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00031-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "vattene"
+	},
+	"00249-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00249-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00249-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00249-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00249-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00249-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00249-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00249-7": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00249-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00249-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00250-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00250-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00250-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00250-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00250-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00250-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00250-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00250-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00250-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00250-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00251-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00251-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00251-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00251-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00251-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00251-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00251-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00251-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00251-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00251-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00252-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00252-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00252-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00252-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00252-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00252-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00252-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00252-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00252-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00252-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00253-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00253-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00253-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00253-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00253-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00253-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00253-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00253-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00253-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00253-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00254-0": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00254-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00254-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00254-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00254-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00254-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00254-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00254-7": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00254-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00254-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00255-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00255-3": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00255-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00255-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00256-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00256-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00256-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00256-3": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00256-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00256-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00256-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00256-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00256-8": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00256-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00257-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00257-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00257-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00257-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00257-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00257-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00257-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00257-7": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00257-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00257-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00258-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00258-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00258-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00258-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00258-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00258-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00258-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00258-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00258-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00258-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00259-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-4": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-8": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00259-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00260-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00260-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00260-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00260-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00260-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00260-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00260-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00260-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00260-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00260-9": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00261-0": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00261-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00261-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00261-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00261-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00261-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00261-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00261-7": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00261-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00261-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00262-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00262-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00262-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00262-3": {
+		"voting": "daccordo",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00262-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00262-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00262-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00262-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00262-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00262-9": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00263-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00263-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00263-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-6": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-7": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00263-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00264-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00264-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00264-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00264-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00264-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00264-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00264-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00264-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00264-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00264-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00265-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00265-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00265-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00265-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00265-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00265-5": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00265-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00265-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00265-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00265-9": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00266-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00266-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00266-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00266-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00266-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00266-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00266-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00266-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00266-8": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00266-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00267-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-4": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00267-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00267-7": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00267-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00267-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00268-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00268-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-6": {
+		"voting": "daccordo",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00268-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00268-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00268-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00269-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00269-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00269-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00269-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00269-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00269-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00269-6": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00269-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00269-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00269-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00270-0": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00270-2": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-3": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00270-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-6": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-7": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00270-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00271-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-2": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00271-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00271-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00271-7": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00271-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00272-0": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00272-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00272-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00272-3": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00272-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00272-5": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00272-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00272-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00272-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00272-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00273-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00273-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00273-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00273-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00273-4": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00273-5": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00273-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00273-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00273-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00273-9": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00274-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00274-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00274-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00274-3": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00274-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00274-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00274-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00274-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00274-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00274-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00275-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00275-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00275-2": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00275-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00275-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00275-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00275-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00275-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00275-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00275-9": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00276-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00276-7": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00276-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00276-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00277-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00277-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00277-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00277-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00277-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00277-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00277-6": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00277-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00277-8": {
+		"voting": "vattene",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00277-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00278-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00278-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00278-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00278-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00278-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00278-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00278-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00278-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00278-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00278-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00279-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00279-1": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00279-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00279-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00279-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00279-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "combinato"
+	},
+	"00279-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00279-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00279-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "combinato"
+	},
+	"00279-9": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "combinato"
+	},
+	"00559-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00559-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00559-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00559-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00559-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00559-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00559-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00559-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00559-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00559-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00560-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00560-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00560-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00560-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00560-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00561-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00561-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00561-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00561-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00561-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00561-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00561-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00561-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00561-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00561-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00562-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00562-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00562-2": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00562-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00562-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00562-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00562-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00562-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00562-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00562-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00563-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00563-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00563-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00563-9": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-0": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00564-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00564-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00564-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00564-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00565-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00565-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00565-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00565-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00565-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00565-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00565-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00565-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00565-8": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00565-9": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00566-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00566-1": {
+		"voting": "vattene",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00566-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00566-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00566-4": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00566-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00566-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00566-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00566-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00566-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00567-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00567-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00567-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00567-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00567-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00567-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00567-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00567-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00567-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00567-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00568-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00568-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-6": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00568-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00568-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00569-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-3": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00569-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00569-7": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00569-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00569-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00570-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00570-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00570-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00570-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00570-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00570-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00570-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00570-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00570-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00570-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00571-1": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-2": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00571-3": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00571-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00571-9": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00572-0": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00572-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00572-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00572-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00572-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00572-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00572-6": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00572-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00572-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00572-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00573-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00573-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-4": {
+		"voting": "daccordo",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00573-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00573-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00573-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-0": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-5": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00574-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00574-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00574-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-0": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00575-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00575-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-7": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00575-8": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00575-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00576-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-1": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-4": {
+		"voting": "combinato",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00576-5": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-6": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00576-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00576-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00577-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00577-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00577-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00577-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00577-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00578-2": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00578-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00578-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-6": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00578-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00578-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-2": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00579-3": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00579-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00579-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00579-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00579-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00580-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00580-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00580-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00580-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-1": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00581-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00581-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00581-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00581-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-4": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00582-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00582-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00582-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00582-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00582-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-0": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00583-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00583-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-7": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00583-8": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00583-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00584-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00584-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00584-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00584-3": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00584-4": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00584-5": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00584-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00584-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00584-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00584-9": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00585-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00585-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00585-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00585-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00585-4": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00585-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00585-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00585-7": {
+		"voting": "daccordo",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00585-8": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00585-9": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-0": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00586-1": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-2": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-3": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-4": {
+		"voting": "combinato",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00586-5": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-6": {
+		"voting": "daccordo",
+		"weighted_scores": "daccordo",
+		"actual_label": "daccordo"
+	},
+	"00586-7": {
+		"voting": "vattene",
+		"weighted_scores": "vattene",
+		"actual_label": "daccordo"
+	},
+	"00586-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00586-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00587-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00588-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-0": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-1": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-2": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-3": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-4": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-5": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-6": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-7": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-8": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	},
+	"00589-9": {
+		"voting": "combinato",
+		"weighted_scores": "combinato",
+		"actual_label": "daccordo"
+	}
+}

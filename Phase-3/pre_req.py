@@ -57,12 +57,12 @@ class Preprocess:
             print("already have results of task1 in outputs")
         
 if __name__ == "__main__":
-    ob = Preprocess("Data_new_test", "phase2_outputs")
+    ob = Preprocess("Data_phase3", "phase2_outputs")
     ob.task0a()
     ob.task0b()
     for vm in [1,2]:
         for tc in [1,2,3,4]:
             ob.task1(4, vm, tc)
     for vm in [1,2]:
-        for uc in [2,3,4,5,6,7]:
+        for uc in [2,3,4,5]:
             ob.task3(vm, uc)

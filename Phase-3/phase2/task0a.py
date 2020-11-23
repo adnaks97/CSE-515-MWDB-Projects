@@ -8,6 +8,7 @@ import pandas as pd
 from pathlib import Path
 from scipy.stats import norm
 from sklearn.preprocessing import MinMaxScaler
+from multiprocessing.dummy import Pool as ThreadPool
 
 
 class wordExtractor:
@@ -25,7 +26,7 @@ class wordExtractor:
         self.w = window_size
         self.s = stride
         self.fname = fname
-        self.nfname = self.fname.zfill(3)
+        self.nfname = self.fname.zfill(7).replace('_','-')
         self.DIR = DIR
 
 
@@ -224,6 +225,11 @@ class wordExtractor2(wordExtractor):
         #print("lengths: \n", lengths)
         #print("levels: \n", levels)
 
+def thread_fn(csv_file):
+    print("Processing: ", csv_file)
+    f = csv_file.split('/')[-1].split('.')[0]
+    component = csv_file.split('/')[-2]
+    wordExtractor2(fname=f, component=component, bands=args.r, window_size=args.w, stride=args.s, DIR=args.dir).main()
 
 if __name__ == '__main__':
 
@@ -235,9 +241,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     file_list = glob.glob(os.path.abspath(args.dir) + '/*/*.csv')
-    for csv_file in file_list:
-        print("Processing: ", csv_file)
-        f = csv_file.split('/')[-1].split('.')[0]
-        component = csv_file.split('/')[-2]
-        wordExtractor_obj = wordExtractor2(fname=f, component=component, bands=args.r, window_size=args.w, stride=args.s, DIR=args.dir)
-        wordExtractor_obj.main()
+    pool = ThreadPool(len(file_list))
+    [pool.apply_async(thread_fn, args=(csv_file,)) for csv_file in file_list]
+    pool.close()
+    pool.join()

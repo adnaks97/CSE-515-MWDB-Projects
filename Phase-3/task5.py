@@ -5,6 +5,7 @@ import copy
 import numpy as np
 import pandas as pd
 import pickle as pkl
+import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
@@ -41,20 +42,25 @@ class Task5:
                 [os.path.join(self.input_dir, "task0b", x) for x in os.listdir(os.path.join(self.input_dir, "task0b")) if
                  "tf_vectors" in x])
             for f in files:
-                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))).reshape((-1, 1)))
+                self.vectors.append(json.loads(json.load(open(f, "r"))))
         # load tfidf vectors
         elif self.uc == 7:
             files = sorted(
                 [os.path.join(self.input_dir, "task0b", x) for x in os.listdir(os.path.join(self.input_dir, "task0b")) if
                  "tfidf_vectors" in x])
             for f in files:
-                self.vectors.append(np.array(json.loads(json.load(open(f, "r")))).reshape((-1, 1)))
+                self.vectors.append(json.loads(json.load(open(f, "r"))))
         
         self.mat = self.get_sim_matrix()
 
     def _get_user_feedback_(self, results):
         rel, non_rel = [], []
         for i, r in enumerate(results, 1):
+            # fn = int(self.idx_file_map[r].lstrip("0").split("-")[0])
+            # if fn <= 31:
+            #     rel.append(r)
+            # else:
+            #     non_rel.append(r)
             print("{} : File ID {}".format(i, self.idx_file_map[r]))
             fd = input("Enter your feedback(1-Correct/0-Wrong) : ")
             if fd == '1':
@@ -86,7 +92,8 @@ class Task5:
             mat = np.array(
                 json.loads(json.load(open(os.path.join(self.input_dir, "task3", names[self.uc].format(self.vm)), "r"))))
         elif self.uc in [6,7]:
-            mat = (1 - pairwise_distances(self.vectors, metric="cosine"))
+            print(np.array(self.vectors).shape)
+            mat = (1 - pairwise_distances(np.array(self.vectors), metric="cosine"))
         return mat
 
     def process_ppr(self, value, m, k):
@@ -178,6 +185,7 @@ class Task5:
         self.mat[:,idx] = sims
 
     def main_feedback_loop(self, query_file, k_value):
+        self.acc_measure = []
         self.seed_files = []
         idx = self.file_idx_map[query_file]
         self.seed_files.append(idx)
@@ -192,6 +200,7 @@ class Task5:
             relevant, non_relevant = self._get_user_feedback_(results)
             self.seed_files.extend(relevant)
             self.seed_files = list(set(self.seed_files))
+            self.acc_measure.append(len(relevant)/10.)
             # call query mod function
             q_new_vect = self.query_optimization_vectors(q, relevant, non_relevant)
             q_new_prob = self.query_optimization_prob(q, relevant, non_relevant)
@@ -210,12 +219,21 @@ class Task5:
             if uc == 'n' or uc == 'N':
                 break
             q = q_new
+        
+        # fig = plt.figure(figsize=(8,8))
+        # plt.plot(self.acc_measure)
+        # plt.xlabel("Iterations")
+        # plt.ylabel("Relevance")
+        # plt.grid()
+        # fig.savefig(self.output_dir+"/{}_{}_{}_relevance_plot.png".format(query_file, self.uc, self.vm))
 
 
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
-    vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
-    file = input("Enter a file number : ").zfill(3)
-    k = int(input("Enter a value K for outgoing gestures : "))
-    task5 = Task5(input_dir, vm=2, uc=2)
-    task5.main_feedback_loop(file, k)
+    #vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
+    file = "6".zfill(7) #input("Enter a file number : ").zfill(7)
+    k = 3 #int(input("Enter a value K for outgoing gestures : "))
+    for vm in [1,2]:
+        for uc in [2,3,4,5,6,7]:
+            task5 = Task5(input_dir, vm=vm, uc=uc)
+            task5.main_feedback_loop(file, k)

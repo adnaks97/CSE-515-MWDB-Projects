@@ -10,10 +10,12 @@ from multiprocessing.dummy import Pool as ThreadPool
 from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.preprocessing import MinMaxScaler
 from heapq import nlargest
 from scipy.stats import mode
 import matplotlib.pyplot as plt
 import seaborn as sns
+
 
 class Task4:
     def __init__(self, input_dir, vm=2):
@@ -53,12 +55,17 @@ class Task4:
     def _get_user_feedback_(self, results):
         rel, non_rel = [], []
         for i,r in enumerate(results,1):
-            print("{} : File ID {}".format(i,self.idx_file_map[r]))
-            fd = input("Enter your feedback(1-Correct/0-Wrong) : ")
-            if fd == '1':
+            fn = int(self.idx_file_map[r].lstrip("0").split("-")[0])
+            if fn > 279:
                 rel.append(r)
-            elif fd == '0':
+            else:
                 non_rel.append(r)
+            # print("{} : File ID {}".format(i,self.idx_file_map[r]))
+            # fd = input("Enter your feedback(1-Correct/0-Wrong) : ")
+            # if fd == '1':
+            #     rel.append(r)
+            # elif fd == '0':
+            #     non_rel.append(r)
         return rel, non_rel
     
     def query_optimization(self, Q, relevant, non_relevant):
@@ -112,6 +119,8 @@ class Task4:
                 diff[k]=c
                 change.append(c)
             newDiff = dict(sorted(diff.items(), key=lambda x: x[1], reverse=True))
+            minmax = MinMaxScaler()
+            change = minmax.fit_transform(np.array(change).reshape((-1,1)))
             return newDiff, change
         
         sensors = {}
@@ -131,15 +140,17 @@ class Task4:
         diff_c, comp_change = change_in_vector(cd1, cd2)
         D1 = D1.reshape((-1,))
         word_change = np.array(D1) - np.array(D2)
+        minmax = MinMaxScaler()
+        word_change = minmax.fit_transform(np.array(word_change).reshape((-1, 1)))
         diff_w_indices = np.argsort((np.array(D1) - np.array(D2)))[::-1]
         difference = {}
         difference['sensors'] = diff_s
         difference['components'] = diff_c
         # difference['words'] = diff_w_indices
         # difference['words'] = [self.all_idx_words[w] for w in difference['words'].ravel().tolist()]
-        self.change_in_sensor.append(sensor_change)
-        self.change_in_comp.append(comp_change)
-        self.change_in_words.append(word_change)
+        self.change_in_sensor.append(sensor_change.tolist())
+        self.change_in_comp.append(comp_change.tolist())
+        self.change_in_words.append(word_change.tolist())
         self.diff.append(difference)
     
     def new_prob_retrieval(self, q, f_c, f_w):
@@ -183,19 +194,19 @@ class Task4:
         top_10_scores = dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10])
         return q_new, top_10_scores
 
-    def plot_heatmap(self):
+    def plot_heatmap(self, q_file):
 
         fig1 = plt.figure(figsize=(14, 8))
-        sns.heatmap(self.change_in_sensor, cmap="gray", xticklabels=False)
-        fig1.savefig(os.path.join(self.output_dir, "sensor_change.png"))
+        sns.heatmap(np.array(self.change_in_sensor).reshape((-1,len(self.change_in_sensor[0]))), cmap="gray", xticklabels=False)
+        fig1.savefig(os.path.join(self.output_dir, "sensor_change_{}_{}.png".format(q_file, self.vm)))
 
         fig2 = plt.figure(figsize=(14, 8))
-        sns.heatmap(self.change_in_comp, cmap="gray", xticklabels=False)
-        fig2.savefig(os.path.join(self.output_dir, "comp_change.png"))        
+        sns.heatmap(np.array(self.change_in_comp).reshape((-1,len(self.change_in_comp[0]))), cmap="gray", xticklabels=False)
+        fig2.savefig(os.path.join(self.output_dir, "comp_change_{}_{}.png".format(q_file, self.vm)))        
 
         fig3 = plt.figure(figsize=(14, 8))
-        sns.heatmap(self.change_in_words, cmap="gray", xticklabels=False)
-        fig3.savefig(os.path.join(self.output_dir, "words_change.png"))        
+        sns.heatmap(np.array(self.change_in_words).reshape((-1,len(self.change_in_words[0]))), cmap="gray", xticklabels=False)
+        fig3.savefig(os.path.join(self.output_dir, "words_change_{}_{}.png".format(q_file, self.vm)))        
 
     def main_feedback_loop(self, query_file):
         idx = self.file_idx_map[query_file]
@@ -218,7 +229,7 @@ class Task4:
             # check for uc value
             uc = input("Are you done? (y/n) : ")
             if uc == 'y' or uc == 'Y':
-                self.plot_heatmap()              
+                self.plot_heatmap(query_file)              
                 break
             q = q_new
         json.dump(self.diff, open(os.path.join(self.output_dir,"{}_{}_query_difference.txt".format(self.vm,query_file)),"w"), indent="\t")
@@ -226,6 +237,6 @@ class Task4:
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
     vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
-    file = input("Enter a file number : ").zfill(3)
+    file = input("Enter a file number : ").zfill(7)
     task4 = Task4(input_dir, vm=vm)
     task4.main_feedback_loop(file)

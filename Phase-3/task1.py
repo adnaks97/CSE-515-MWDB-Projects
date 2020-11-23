@@ -45,13 +45,15 @@ class Task1:
         for j in range(len(res)):
             for i in ['W','X','Y','Z']:
                 d = os.path.join(self.input_dir_for_plots, i)
-                df=pd.read_csv(os.path.join(d, res[j].lstrip('0')+".csv"), header=None)
+                df=pd.read_csv(os.path.join(d, res[j].lstrip('0').replace('-','_')+".csv"), header=None)
                 df=df.T
                 fig=df.plot()
                 outFile = os.path.join(self.output_dir, res[j] + '_' + i + '_' + str(k) + '.png')
                 fig.figure.savefig(outFile)
 
     def process_ppr(self, n, m, k):
+        self.output_dir = self.output_dir+"/{}_{}_{}".format(k,m,",".join([str(x) for x in n]))
+        Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         sim_matrix = self.get_sim_matrix()
         adj_matrix = self.get_knn_nodes(sim_matrix, k)
         adj_matrix_norm = self.normalize(adj_matrix)

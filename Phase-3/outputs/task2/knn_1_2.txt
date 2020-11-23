@@ -1,0 +1,3723 @@
+{
+	"00001-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00001-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00002-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00003-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00004-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00005-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00006-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00007-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00008-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00009-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00010-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00011-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00012-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00013-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00014-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00015-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00016-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00017-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00018-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00019-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00020-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00021-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00022-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00023-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00024-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00025-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00026-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00027-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00028-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00029-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00030-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-0": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-1": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-2": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-3": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-4": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-5": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-6": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-7": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-8": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00031-9": {
+		"predicted": "vattene",
+		"original": "vattene"
+	},
+	"00249-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00249-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00250-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00251-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00252-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00253-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00254-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00255-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00256-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00257-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00257-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00258-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00259-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00260-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00261-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00261-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00261-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00261-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00262-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00263-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00264-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00265-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00266-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00267-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00268-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00268-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00269-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00270-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00270-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00271-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00271-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00271-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00271-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00271-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00272-0": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-1": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-2": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-3": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-4": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-5": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-6": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-7": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-8": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00272-9": {
+		"predicted": "vattene",
+		"original": "combinato"
+	},
+	"00273-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00273-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00274-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00275-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00276-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00277-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00278-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-0": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-1": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-2": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-3": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-4": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-5": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-6": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-7": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-8": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00279-9": {
+		"predicted": "combinato",
+		"original": "combinato"
+	},
+	"00559-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00559-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00560-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00561-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00562-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00563-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00564-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00565-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00566-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00567-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00568-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00569-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00570-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00571-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00572-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00573-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00574-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00575-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00576-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00577-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-1": {
+		"predicted": "daccordo",
+		"original": "daccordo"
+	},
+	"00578-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-3": {
+		"predicted": "daccordo",
+		"original": "daccordo"
+	},
+	"00578-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00578-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00579-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00580-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00581-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-0": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00582-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-5": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00582-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00582-7": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00582-8": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00582-9": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00583-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00583-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00584-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00585-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00586-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00587-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00588-0": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00588-2": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-3": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00588-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00588-6": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-7": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-8": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00588-9": {
+		"predicted": "combinato",
+		"original": "daccordo"
+	},
+	"00589-0": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-1": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-2": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-3": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-4": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-5": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-6": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-7": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-8": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"00589-9": {
+		"predicted": "vattene",
+		"original": "daccordo"
+	},
+	"Accuracy": 44.40860215053763
+}

@@ -209,7 +209,7 @@ class Task3:
         files = list(self.sequences.keys())
         f_idx = {k: idx for idx,k in enumerate(files)}
         combinations = list(combinations_with_replacement(files, 2))
-        pool = ThreadPool(4000)
+        pool = ThreadPool(12000)
         for f1,f2 in combinations:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, True,)).get()
             scores[res[0], res[1]] = res[2]
@@ -226,7 +226,7 @@ class Task3:
         files = list(self.sequences.keys())
         f_idx = {k: idx for idx, k in enumerate(files)}
         combinations = list(combinations_with_replacement(files, 2))
-        pool = ThreadPool(4000)
+        pool = ThreadPool(12000)
         for f1, f2 in combinations:
             res = pool.apply_async(self.thread_fn, args=(f1, f2, f_idx, False,)).get()
             scores[res[0], res[1]] = res[2]

@@ -23,10 +23,10 @@ class Task2:
         self.idx_file_map = dict(zip(indices, files))
         self.file_idx_map = dict(zip(files, indices))
         # creating map for train and test gesture files v/s indices
-        train_labels = pd.read_excel("sample_training_labels.xlsx", header=None)
-        all_labels = pd.read_excel("all_labels.xlsx", header=None)
-        self.all_files_classes = dict(zip(all_labels.iloc[:,0].apply(lambda x: str(x).zfill(3)).tolist(),all_labels.iloc[:,1].tolist()))
-        self.train_file_num = train_labels.iloc[:, 0].apply(lambda x: str(x).zfill(3)).tolist()
+        train_labels = pd.read_excel("sample_training_labels_new.xlsx", header=None)
+        all_labels = pd.read_excel("all_labels_new.xlsx", header=None)
+        self.all_files_classes = dict(zip(all_labels.iloc[:,0].apply(lambda x: str(x).zfill(7)).tolist(),all_labels.iloc[:,1].tolist()))
+        self.train_file_num = train_labels.iloc[:, 0].apply(lambda x: str(x).zfill(7)).tolist()
         self.class_labels_map = dict(zip(self.train_file_num,train_labels.iloc[:,1].tolist()))
         self.remove_indices_mat = list(set(files) - set(self.train_file_num))
         self.train_file_num_indices = sorted([self.file_idx_map[x] for x in self.train_file_num])
@@ -51,9 +51,7 @@ class Task2:
         names = {2: "pca_cosine_sim_matrix_{}.txt",
                  3: "svd_cosine_sim_matrix_{}.txt",
                  4: "nmf_cosine_sim_matrix_{}.txt",
-                 5: "lda_cosine_sim_matrix_{}.txt", 
-                 6: "edit_dist_sim_matrix_{}.txt", 
-                 7: "dtw_dist_sim_matrix_{}.txt"}
+                 5: "lda_cosine_sim_matrix_{}.txt"}
         mat = np.array(json.loads(json.load(open(os.path.join(self.input_dir, "task3", names[self.uc].format(self.vm)), "r"))))
         return mat
 
@@ -74,11 +72,13 @@ class Task2:
         v[idx - 1, 0] = 1
         A = adj_matrix_norm
         diff = 1
-        while diff > 1e-20:
+        icnt = 0
+        while diff > 1e-20 and icnt < 100:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
             u_old = u_new
-        u_new[rem_indices] = 0
+            icnt += 1
+        u_new[rem_indices] = -0.001
         result = (file_name, idx, u_new)
         return result
 
@@ -87,19 +87,23 @@ class Task2:
         adj_matrix = self.get_knn_nodes(sim_matrix, k)
         adj_matrix_norm = self.normalize(adj_matrix)
         res = []
-        pool = ThreadPool(2000)
+        pool = ThreadPool(12000)
         for index in self.remove_indices_mat:
             file_name = self.idx_file_map[index]
-            res.append(pool.apply_async(self.process_ppr, args=(adj_matrix_norm, index, self.remove_indices_mat, file_name, 0.15)).get())
+            res.append(pool.apply_async(self.process_ppr, args=(adj_matrix_norm, index, self.remove_indices_mat, file_name, 0.65)).get())
         pool.close()
         pool.join()
         
         result = {}
         for n_value in res:
-            files = np.array([self.idx_file_map[x] for x in n_value[2].ravel()[:-1].argsort()[::-1][:m]])
-            classes = np.array([self.class_labels_map[x] for x in files])
-            scores = np.array(sorted(n_value[2].ravel())[:-1][::-1][:m])
-            scores = scores / (scores.sum(axis=0, keepdims=1) + 1e-7)
+            u_new = n_value[2]
+            try:
+                files = np.array([self.idx_file_map[x] for x in u_new.ravel()[:-1].argsort()[::-1][:m]])
+                scores = np.array(sorted(u_new.ravel())[:-1][::-1][:m])
+                classes = np.array([self.class_labels_map[x] for x in files])
+                scores = scores / (scores.sum(axis=0, keepdims=1) + 1e-7)
+            except:
+                print(files, scores)
             result[n_value[0]] = {}
             result[n_value[0]]['files'] = files
             result[n_value[0]]['classes'] = classes
@@ -304,7 +308,7 @@ if __name__ == "__main__":
     ppr_k = 30 #int(input("Enter a value K for outgoing gestures (PPR) : "))
     m_value = 7 #int(input("Enter a value M for most dominant gestures : "))
     for vm in [1,2]:
-        for uc in [2,3,4,5,6,7]:
+        for uc in [2,3,4,5]:
             task2 = Task2(input_directory, vm, uc)
             task2.preprocess_ppr_task2(m_value, ppr_k)
             # print("PPR Done")

@@ -18,8 +18,8 @@ class LSH:
         self.hash_tables = []
         self.n_words = None
         self.file_list = sorted(glob.glob('{}/{}_*.txt'.format(input_dir, mode)))
-        self.idx_2_file = {i:fname for i,fname in enumerate(self.file_list)}
-        self.file_2_idx = {fname:i for i,fname in enumerate(self.file_list)}
+        self.idx_2_file = {i:fname.split("_")[-1].split(".")[0] for i,fname in enumerate(self.file_list)}
+        self.file_2_idx = {fname.split("_")[-1].split(".")[0]:i for i,fname in enumerate(self.file_list)}
     
     
     def get_random_vectors(self):
@@ -113,13 +113,13 @@ class LSH:
                 'retrieved_files': [self.idx_2_file[retrieval[d]] for d in data_idx]
                }
                
-def loadDataMatrix(input_dir, mode):
-    file_list = glob.glob(input_dir + '/{}_*.txt'.format(mode))
-    data = dict()
-    for fname in sorted(file_list):
-        fileNum = int(fname.split("_")[-1].split('.')[0])
-        data[fileNum] = json.loads(json.load(open(fname, 'r')))
-    return data
+    def loadDataMatrix(self, input_dir, mode):
+        file_list = glob.glob(input_dir + '/{}_*.txt'.format(mode))
+        data = dict()
+        for fname in sorted(file_list):
+            fileNum = self.file_2_idx[fname.split("_")[-1].split('.')[0]]
+            data[fileNum] = json.loads(json.load(open(fname, 'r')))
+        return data
     
 if __name__ == "__main__":
     L = int(input("Enter Number of Layers : "))
@@ -133,7 +133,7 @@ if __name__ == "__main__":
     lsh.train()
     
     # Data Matrix
-    data = loadDataMatrix(inputDir, mode)
+    data = lsh.loadDataMatrix(inputDir, mode)
     
     print("Hashing Complete!\n")
     

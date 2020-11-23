@@ -75,7 +75,7 @@ class Task6:
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         self.display = Display()
         self.display.create_first()
-        self.query_id = str(self.display.query_id).zfill(3)
+        self.query_id = str(self.display.query_id).zfill(7)
         self.top_retrieve = self.display.results_cnt
         # creating map for files and indices
         files = sorted([x.split(".")[0] for x in os.listdir(os.path.join(self.input_dir, "task0a")) if ".wrd" in x])
@@ -242,11 +242,12 @@ class Task6:
 
     ############################# ---------------------------------------------------------------------- #####################################
 
-    def choose_result_set(self, results, relevant, non_relevant):
+    def choose_result_set(self, results, relevant, prev_results, iter):
         chosen_method = None
         max_relevant = 0
+        max_var = 100
 
-        if(relevant):
+        if len(prev_results.keys()) > 0:
             relevant = [self.idx_file_map[x] for x in relevant]
             self.relevant_super_set = self.relevant_super_set.union(set(relevant))
             
@@ -255,15 +256,22 @@ class Task6:
                 print("{} : {}".format(method, method_files))
                 print("Relevant : {}".format(self.relevant_super_set))
                 
-                count_relevant = len(set(method_files).intersection(set(self.relevant_super_set)))
-                if count_relevant > max_relevant:
-                    chosen_method = method
-                    max_relevant = count_relevant
-            print("Chosen Method : {} with Maximum Relevant Files {}.".format(chosen_method, max_relevant))
+                if iter > 15:
+                    count_relevant = len(set(method_files).intersection(set(self.relevant_super_set)))
+                    if count_relevant > max_relevant:
+                        chosen_method = method
+                        max_relevant = count_relevant
+                else:
+                    prev_method_files = [self.idx_file_map[x] for x in prev_results[method]]
+                    var = len(set(method_files).intersection(set(prev_method_files)))
+                    if var < max_var:
+                        chosen_method = method
+                        max_var = var
+            print("Chosen Method : {}".format(chosen_method))
         
         if(not chosen_method):
             chosen_method = random.choice(list(results.keys()))
-            print("Chosen Method : {} at random.".format(chosen_method)
+            print("Chosen Method : {} at random.".format(chosen_method))
             
         return chosen_method
     
@@ -273,7 +281,7 @@ class Task6:
         ppr_sim_matrix_vect = self.get_sim_matrix()
         ppr_sim_matrix_prob = self.get_sim_matrix()
         relevant = non_relevant = None
-
+        prev_results = {}
         iter = 1
         while True:
             # call retrieval function
@@ -287,7 +295,7 @@ class Task6:
             results['prob_prob'] = self.prob_retrieval(q_prob)
             
             # Choose a result
-            k = self.choose_result_set(results, relevant, non_relevant)
+            k = self.choose_result_set(results, relevant, prev_results, iter)
             chosen_result = [self.idx_file_map[x] for x in results[k]]
 
             # call user feedback function
@@ -312,6 +320,7 @@ class Task6:
             if uc == 'n' or uc == 'N':
                 break
             
+            prev_results = results
             iter += 1
 
 if __name__ == "__main__":

@@ -19,7 +19,10 @@ class Task1(object):
         self.output_filename = ""
         self.model = None
         self.word_indexes = self.get_word_indexes("all_words_idx.txt")
-        
+        files = sorted([x.split(".")[0] for x in os.listdir(os.path.join("phase2_outputs", "task0a")) if ".wrd" in x])
+        indices = list(range(0, len(files)))
+        self.idx_file_map = dict(zip(indices, files))
+        self.file_idx_map = dict(zip(files, indices))
         self.load_vectors()
         self.run_model()
         # self.write_outputs()
@@ -37,7 +40,7 @@ class Task1(object):
         vectors = {}
         for fileName in os.listdir(self.input_dir):
             if(fileName.startswith(self.vector_file_prefix)):
-                fileNumber = int(fileName.split('.')[0].split('_')[-1])
+                fileNumber = fileName.split('.')[0].split('_')[-1]
                 with open(os.path.join(self.input_dir, fileName), 'r') as f:
                     vectors[fileNumber] = json.loads(json.load(f))
 
