@@ -96,10 +96,11 @@ class Task5:
         u_old = np.zeros(size, dtype=float).reshape((-1, 1))
         v = np.zeros(size, dtype=float).reshape((-1, 1))
         u_old[value - 1] = 1
-        v[value - 1] = 1
+        for x in self.seed_files:
+            v[x] = 1/len(self.seed_files)
         A = adj_matrix_norm
         diff = 1
-        c = 0.65
+        c = 0.8
         while diff > 1e-20:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
@@ -177,16 +178,20 @@ class Task5:
         self.mat[:,idx] = sims
 
     def main_feedback_loop(self, query_file, k_value):
+        self.seed_files = []
         idx = self.file_idx_map[query_file]
+        self.seed_files.append(idx)
         q = np.array(self.vectors[idx]).reshape((1,-1))
         relevant = non_relevant = None
         while True:
             # call retrieval function
             print("Getting results")
-            results = self.process_ppr(idx+1, 10, 30)
+            results = self.process_ppr(idx+1, 10, k_value)
             # call user feedback function
             print("Getting feedback")
             relevant, non_relevant = self._get_user_feedback_(results)
+            self.seed_files.extend(relevant)
+            self.seed_files = list(set(self.seed_files))
             # call query mod function
             q_new_vect = self.query_optimization_vectors(q, relevant, non_relevant)
             q_new_prob = self.query_optimization_prob(q, relevant, non_relevant)
