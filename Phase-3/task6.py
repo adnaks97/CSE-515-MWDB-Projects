@@ -11,6 +11,7 @@ from pathlib import Path
 from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
+import random
 
 class Display(object):
     def submit_query(self):
@@ -84,6 +85,7 @@ class Task6:
         self.diff = []
         self.vm = vm
         self.uc = uc
+        self.relevant_super_set = set()
         self._get_file_vectors_()
 
     def _get_file_vectors_(self):
@@ -151,7 +153,7 @@ class Task6:
         while diff > 1e-10:
             u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
             diff = distance.minkowski(u_new, u_old, 1)
-            print(diff)
+            #print(diff)
             u_old = u_new
         res = [x for x in u_new.ravel().argsort()[::-1][:m]]
         return res
@@ -240,8 +242,30 @@ class Task6:
 
     ############################# ---------------------------------------------------------------------- #####################################
 
-    def choose_result_set(self, results):
-        return list(results.keys())[0]
+    def choose_result_set(self, results, relevant, non_relevant):
+        chosen_method = None
+        max_relevant = 0
+
+        if(relevant):
+            relevant = [self.idx_file_map[x] for x in relevant]
+            self.relevant_super_set = self.relevant_super_set.union(set(relevant))
+            
+            for method in results.keys():
+                method_files = [self.idx_file_map[x] for x in results[method]]
+                print("{} : {}".format(method, method_files))
+                print("Relevant : {}".format(self.relevant_super_set))
+                
+                count_relevant = len(set(method_files).intersection(set(self.relevant_super_set)))
+                if count_relevant > max_relevant:
+                    chosen_method = method
+                    max_relevant = count_relevant
+            print("Chosen Method : {} with Maximum Relevant Files {}.".format(chosen_method, max_relevant))
+        
+        if(not chosen_method):
+            chosen_method = random.choice(list(results.keys()))
+            print("Chosen Method : {} at random.".format(chosen_method)
+            
+        return chosen_method
     
     def main_feedback_loop(self, ppr_k_value):
         idx = self.file_idx_map[self.query_id]
@@ -263,7 +287,7 @@ class Task6:
             results['prob_prob'] = self.prob_retrieval(q_prob)
             
             # Choose a result
-            k = self.choose_result_set(results)
+            k = self.choose_result_set(results, relevant, non_relevant)
             chosen_result = [self.idx_file_map[x] for x in results[k]]
 
             # call user feedback function
