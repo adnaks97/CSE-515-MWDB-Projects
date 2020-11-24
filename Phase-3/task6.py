@@ -5,6 +5,7 @@ import copy
 import numpy as np
 import pandas as pd
 import pickle as pkl
+from task3_new import LSH
 import tkinter as tk
 from tkinter import ttk
 from pathlib import Path
@@ -12,11 +13,12 @@ from scipy.spatial import distance
 from sklearn.metrics import pairwise_distances
 from sklearn.metrics.pairwise import cosine_similarity
 import random
+import matplotlib.pyplot as plt
 
 class Display(object):
     def submit_query(self):
-        self.query_id = int(self.query_entry.get())
-        self.results_cnt = int(self.param_entry.get())
+        self.query_id = self.query_entry.get()
+        self.results_cnt = self.param_entry.get()
         self.window.destroy()
         
     def create_first(self):
@@ -36,12 +38,17 @@ class Display(object):
         self.window.mainloop()
     
     def submit_feedback(self):
+        self.quit_op = False
         self.relevant, self.irrelevant = [], []
         for fr in self.frames:
             if fr['var'].get() == 1:
                 self.relevant.append(fr['name']['text'])
             elif fr['var'].get() == 0:
                 self.irrelevant.append(fr['name']['text'])
+        self.window.destroy()
+    
+    def quit_loop(self):
+        self.quit_op = True
         self.window.destroy()
     
     def result_and_feedback(self, query_id, results):
@@ -65,6 +72,8 @@ class Display(object):
             self.frames.append(items)
         submit = tk.Button(master=self.window, width=10, text="submit", command=self.submit_feedback)
         submit.pack()
+        quit = tk.Button(master=self.window, width=10, text="quit", command=self.quit_loop)
+        quit.pack(fill=tk.BOTH, side=tk.RIGHT)
         self.window.mainloop()
 
 class Task6:
@@ -75,8 +84,8 @@ class Task6:
         Path(self.output_dir).mkdir(parents=True, exist_ok=True)
         self.display = Display()
         self.display.create_first()
-        self.query_id = str(self.display.query_id).zfill(7)
-        self.top_retrieve = self.display.results_cnt
+        self.query_id = str(self.display.query_id).zfill(7).replace("_","-")
+        self.top_retrieve = int(self.display.results_cnt)
         # creating map for files and indices
         files = sorted([x.split(".")[0] for x in os.listdir(os.path.join(self.input_dir, "task0a")) if ".wrd" in x])
         indices = list(range(0, len(files)))
@@ -87,6 +96,31 @@ class Task6:
         self.uc = uc
         self.relevant_super_set = set()
         self._get_file_vectors_()
+        self.diff = []
+        self.prob = 0.7
+	
+        # LSH params
+        self.lsh = LSH(L=4, k=8, input_dir=self.input_dir, vm=self.vm, uc=self.uc)
+
+    def knn(self,k,q_vect):
+
+        def find_neighbors(point, data, k):
+            try:
+                # mahalobonis
+                dist = distance.squareform(distance.pdist(data, metric='mahalanobis', VI=None))
+            except:
+                # do euclidean
+                dist = distance.squareform(distance.pdist(data, metric='euclidean'))
+            dist = dist[-1,:-1]
+            neigh_indices = np.argsort(dist)[:k]
+            return neigh_indices.tolist()
+
+
+        X = self.vectors
+        feat = q_vect
+        X_new=np.vstack((X,feat))
+        ypred=find_neighbors(feat, X_new, k)
+        return ypred
 
     def _get_file_vectors_(self):
         self.vectors = []
@@ -147,7 +181,8 @@ class Task6:
         u_old = np.zeros(size, dtype=float).reshape((-1, 1))
         v = np.zeros(size, dtype=float).reshape((-1, 1))
         u_old[value - 1] = 1
-        v[value - 1] = 1
+        for x in self.relevant_super_set:
+            v[self.file_idx_map[x]] = 1/len(self.relevant_super_set)
         A = adj_matrix_norm
         diff = 1
         while diff > 1e-10:
@@ -171,7 +206,7 @@ class Task6:
         for j in range(len(self.vectors)):
             sim[j] = np.sum(np.multiply(self.vectors[j],q_new))
 
-        res = list(dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:10]).keys())
+        res = list(dict(sorted(sim.items(), key=lambda x: x[1], reverse=True)[:self.top_retrieve]).keys())
         return res
     
     ######################################################## Query Optimizations #############################################################
@@ -180,7 +215,7 @@ class Task6:
         q = q.reshape((1,-1))
         vectors = copy.deepcopy(self.vectors)
         vectors = np.array(vectors).reshape((-1,len(vectors[0])))
-        if f_c is not None and f_w is not None:
+        if f_c and f_w:
             R = vectors[f_c,:]
             fcr = np.array([len(f_c)]*len(R[0])).reshape((1,-1))
             q_i = (q!=0).astype(int)*0.5
@@ -241,69 +276,82 @@ class Task6:
         return q_new
 
     ############################# ---------------------------------------------------------------------- #####################################
-
-    def choose_result_set(self, results, relevant, prev_results, iter):
+    
+    def new_choose_result_set(self, results, relevant, prev_results):
         chosen_method = None
-        max_relevant = 0
-        max_var = 100
-
+        d = {}
+       
         if len(prev_results.keys()) > 0:
             relevant = [self.idx_file_map[x] for x in relevant]
             self.relevant_super_set = self.relevant_super_set.union(set(relevant))
-            
+            print(self.relevant_super_set)
+           
             for method in results.keys():
                 method_files = [self.idx_file_map[x] for x in results[method]]
                 print("{} : {}".format(method, method_files))
-                print("Relevant : {}".format(self.relevant_super_set))
-                
-                if iter > 15:
-                    count_relevant = len(set(method_files).intersection(set(self.relevant_super_set)))
-                    if count_relevant > max_relevant:
-                        chosen_method = method
-                        max_relevant = count_relevant
-                else:
-                    prev_method_files = [self.idx_file_map[x] for x in prev_results[method]]
-                    var = len(set(method_files).intersection(set(prev_method_files)))
-                    if var < max_var:
-                        chosen_method = method
-                        max_var = var
+                # print("Relevant : {}".format(self.relevant_super_set))
+               
+                count_relevant = len(set(method_files).intersection(set(self.relevant_super_set)))
+               
+                prev_method_files = [self.idx_file_map[x] for x in prev_results[method]]
+                var = len(set(method_files).intersection(set(prev_method_files)))                
+                d[method] = count_relevant/(var + 1e-10)
+
+            p = np.random.uniform(size=(1,)).tolist()[0]
+            if p <= self.prob:
+                chosen_method = max(d, key=d.get)
+            else:
+                chosen_method = random.choice(list(results.keys()))
             print("Chosen Method : {}".format(chosen_method))
-        
+
+       
         if(not chosen_method):
             chosen_method = random.choice(list(results.keys()))
             print("Chosen Method : {} at random.".format(chosen_method))
-            
+
+        self.prob = min(1, self.prob*1.1)
         return chosen_method
     
     def main_feedback_loop(self, ppr_k_value):
+        self.acc_measure = []
         idx = self.file_idx_map[self.query_id]
         q_vect, q_prob = np.array(self.vectors[idx]).reshape((1,-1)), np.array(self.vectors[idx]).reshape((1,-1))
         ppr_sim_matrix_vect = self.get_sim_matrix()
         ppr_sim_matrix_prob = self.get_sim_matrix()
+        self.lsh.train()
         relevant = non_relevant = None
         prev_results = {}
-        iter = 1
         while True:
             # call retrieval function
             print("Getting results")
             results = {}
+            # knn results collection
+            results['knn_vect'] = self.knn(self.top_retrieve, q_vect)
+            results['knn_prob'] = self.knn(self.top_retrieve,q_prob)
             # ppr results collection
             results['ppr_vect'] = self.process_ppr(ppr_sim_matrix_vect, idx+1, self.top_retrieve, ppr_k_value)
             results['ppr_prob'] = self.process_ppr(ppr_sim_matrix_prob, idx+1, self.top_retrieve, ppr_k_value)
             # prob results collection
             results['prob_vect'] = self.prob_retrieval(q_vect)
             results['prob_prob'] = self.prob_retrieval(q_prob)
+            # LSH results collection
+            results['lsh_vect'] = self.lsh.query(q_vect.ravel(), self.top_retrieve)['retrieved_idx']
+            results['lsh_prob'] = self.lsh.query(q_prob.ravel(), self.top_retrieve)['retrieved_idx']
             
             # Choose a result
-            k = self.choose_result_set(results, relevant, prev_results, iter)
+            k = self.new_choose_result_set(results, relevant, prev_results)
             chosen_result = [self.idx_file_map[x] for x in results[k]]
 
             # call user feedback function
             print("Getting feedback")
             self.display.result_and_feedback(self.query_id, chosen_result)
+            quit = self.display.quit_op
+            if quit:
+                break
             relevant = [self.file_idx_map[x] for x in self.display.relevant]
             non_relevant = [self.file_idx_map[x] for x in self.display.irrelevant]
-            
+            self.acc_measure.append(len(relevant)/10.)
+
             # call query mod function
             if "_vect" in k:
                 q_vect = self.query_optimization_vectors(q_vect, relevant, non_relevant)
@@ -315,17 +363,21 @@ class Task6:
             # PPR update matrix with new similarty values
             self.modify_sim_matrix(ppr_sim_matrix_prob, q_prob, idx)
             self.modify_sim_matrix(ppr_sim_matrix_vect, q_vect, idx)
-            # check for uc value
-            uc = input("Continue? (y/n) : ")
-            if uc == 'n' or uc == 'N':
-                break
             
             prev_results = results
-            iter += 1
+
+        fig = plt.figure(figsize=(8,8))
+        plt.plot(self.acc_measure)
+        plt.xlabel("Iterations")
+        plt.ylabel("Relevance")
+        plt.grid()
+        fig.savefig(self.output_dir+"/{}_{}_{}_relevance_plot.png".format(self.query_id, self.uc, self.vm))
 
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
-    vm = 1
     ppr_k = int(input("Enter a value K for outgoing gestures in PPR : "))
-    task6 = Task6(input_dir, vm=vm, uc=2)
-    task6.main_feedback_loop(ppr_k)
+    for vm in [1,2]:
+        for uc in [2,3,4,5,6,7]:
+            print("vm = {}, uc = {}".format(vm, uc))
+            task6 = Task6(input_dir, vm=vm, uc=uc)
+            task6.main_feedback_loop(ppr_k)
