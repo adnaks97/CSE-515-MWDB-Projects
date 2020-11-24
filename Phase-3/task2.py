@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import json
+from numpy import random
 import pandas as pd
 from pathlib import Path
 from multiprocessing.dummy import Pool as ThreadPool
@@ -64,6 +65,56 @@ class Task2:
         return vec
 
     @staticmethod
+    def ppr_process(adj_matrix_norm, seed_nodes, c=0.8):
+        size = adj_matrix_norm.shape[0]
+        idx = random.choice(seed_nodes)
+        u_old = np.zeros(size, dtype=float).reshape((-1, 1))
+        u_old[idx - 1, 0] = 1
+        v = np.zeros(size, dtype=float).reshape((-1, 1))
+        for x in seed_nodes:
+            v[x, 0] = 1/len(seed_nodes)
+        A = adj_matrix_norm
+        diff = 1
+        icnt = 0
+        while diff > 1e-20 and icnt < 100:
+            u_new = ((1 - c) * np.matmul(A, u_old)) + (c * v)
+            diff = distance.minkowski(u_new, u_old, 1)
+            u_old = u_new
+            icnt += 1
+        # u_new[seed_nodes] = 0.
+        # u_new = (u_new - np.min(u_new)) / (np.max(u_new) - np.min(u_new) + 1e-7) #u_new.sum(axis=0, keepdims=1) + 1e-7)
+        return u_new
+    
+    def run_new_ppr(self, m, k):
+        sim_matrix = self.get_sim_matrix()
+        adj_matrix = self.get_knn_nodes(sim_matrix, k)
+        adj_matrix_norm = self.normalize(adj_matrix)
+        cl_scores = []
+        un_classes = np.unique(list(self.class_labels_map.values()))
+        for cls in un_classes:
+            files = [x[0] for x in self.class_labels_map.items() if x[1] == cls]
+            ind = [self.file_idx_map[x] for x in files]
+            cl_scores.append(self.ppr_process(adj_matrix_norm, ind)[self.remove_indices_mat].tolist())
+        cl_scores = np.array(cl_scores).reshape((len(un_classes),-1))
+        labels = np.argmax(cl_scores, axis=0).tolist()
+        pred_labels = un_classes[labels]
+        result = {}
+        acc = 0.
+        for i,f in enumerate(self.remove_indices_mat):
+            file = self.idx_file_map[f]
+            label = pred_labels[i]
+            act_label = self.all_files_classes[file]
+            result[file] = {}
+            result[file]['pred'] = label
+            result[file]['true'] = act_label
+            if label == act_label:
+                acc += 1
+        acc = acc/len(self.remove_indices_mat)
+        result['$Accuracy'] = acc
+        json.dump(dict(sorted(result.items())), open(self.output_dir + "/{}_{}_dominant_{}_{}.txt".format(k, m, self.vm, self.uc), "w"), indent="\t")
+
+
+    @staticmethod
     def process_ppr(adj_matrix_norm, idx, rem_indices, file_name, c=0.8):
         size = adj_matrix_norm.shape[0]
         u_old = np.zeros(size, dtype=float).reshape((-1, 1))
@@ -80,7 +131,7 @@ class Task2:
             icnt += 1
         u_new[rem_indices] = -0.001
         result = (file_name, idx, u_new)
-        return result
+        return result        
 
     def preprocess_ppr_task2(self, m, k):
         sim_matrix = self.get_sim_matrix()
@@ -97,13 +148,10 @@ class Task2:
         result = {}
         for n_value in res:
             u_new = n_value[2]
-            try:
-                files = np.array([self.idx_file_map[x] for x in u_new.ravel()[:-1].argsort()[::-1][:m]])
-                scores = np.array(sorted(u_new.ravel())[:-1][::-1][:m])
-                classes = np.array([self.class_labels_map[x] for x in files])
-                scores = scores / (scores.sum(axis=0, keepdims=1) + 1e-7)
-            except:
-                print(files, scores)
+            files = np.array([self.idx_file_map[x] for x in u_new.ravel()[:-1].argsort()[::-1][:m]])
+            scores = np.array(sorted(u_new.ravel())[:-1][::-1][:m])
+            classes = np.array([self.class_labels_map[x] for x in files])
+            scores = scores / (scores.sum(axis=0, keepdims=1) + 1e-7)
             result[n_value[0]] = {}
             result[n_value[0]]['files'] = files
             result[n_value[0]]['classes'] = classes
@@ -305,16 +353,29 @@ if __name__ == "__main__":
     print("Performing Task 2")
     input_directory = "phase2_outputs" #input("Enter directory to use: ")
     knn_k =  int(input("Enter a value K for KNN : "))
-    ppr_k = 30 #int(input("Enter a value K for outgoing gestures (PPR) : "))
-    m_value = 7 #int(input("Enter a value M for most dominant gestures : "))
-    for vm in [1,2]:
-        for uc in [2,3,4,5]:
-            task2 = Task2(input_directory, vm, uc)
-            task2.preprocess_ppr_task2(m_value, ppr_k)
-            # print("PPR Done")
-        for uc in [1, 2, 3, 4]:
-            task2 = Task2(input_directory, vm, uc)
-            task2.decision_tree()
-            task2.knn(knn_k)
-            # print("DT done")
-            # task2.knn()
+    ppr_k = int(input("Enter a value K for outgoing gestures (PPR) : "))
+    m_value = int(input("Enter a value M for most dominant gestures : "))
+    algo = int(input("Enter the algorithm to use (1-PPR \t2.Decision Tree \t3.KNN ) : "))
+    task2 = Task2(input_directory, 2, 2)
+    if algo == 1:
+        # old ppr
+        task2.preprocess_ppr_task2(m_value, ppr_k)
+        # new ppr
+        # task2.run_new_ppr(m_value, ppr_k)
+    elif algo == 2:
+        task2.decision_tree()
+    else:
+        task2.knn(knn_k)
+    # for vm in [1,2]:
+    #     for uc in [2,3,4,5]:
+    #         for ppr_k in [20,25,30]:
+    #             print("PPR with vm {} and uc {}".format(vm, uc))
+    #             task2 = Task2(input_directory, vm, uc)
+    #             # task2.preprocess_ppr_task2(m_value, ppr_k)
+    #             task2.run_new_ppr(m_value, ppr_k)
+    #         # print("PPR Done")
+    #     for uc in [1, 2, 3, 4]:
+    #         print("DT and KNN with vm {} and uc {}".format(vm, uc))
+    #         task2 = Task2(input_directory, vm, uc)
+    #         task2.decision_tree()
+    #         task2.knn(knn_k)

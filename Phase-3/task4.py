@@ -55,17 +55,17 @@ class Task4:
     def _get_user_feedback_(self, results):
         rel, non_rel = [], []
         for i,r in enumerate(results,1):
-            fn = int(self.idx_file_map[r].lstrip("0").split("-")[0])
-            if fn > 279:
-                rel.append(r)
-            else:
-                non_rel.append(r)
-            # print("{} : File ID {}".format(i,self.idx_file_map[r]))
-            # fd = input("Enter your feedback(1-Correct/0-Wrong) : ")
-            # if fd == '1':
+            # fn = int(self.idx_file_map[r].lstrip("0").split("-")[0])
+            # if 200 <= fn <= 300:
             #     rel.append(r)
-            # elif fd == '0':
+            # else:
             #     non_rel.append(r)
+            print("{} : File ID {}".format(i,self.idx_file_map[r]))
+            fd = input("Enter your feedback(1-Correct/0-Wrong) : ")
+            if fd == '1':
+                rel.append(r)
+            elif fd == '0':
+                non_rel.append(r)
         return rel, non_rel
     
     def query_optimization(self, Q, relevant, non_relevant):
@@ -209,7 +209,8 @@ class Task4:
         fig3.savefig(os.path.join(self.output_dir, "words_change_{}_{}.png".format(q_file, self.vm)))        
 
     def main_feedback_loop(self, query_file):
-        idx = self.file_idx_map[query_file]
+        self.acc_measure = []
+        idx = self.file_idx_map[query_file.zfill(7)]
         if self.vm == 1:
             q = self.tf_vectors[idx]
         else:
@@ -220,9 +221,12 @@ class Task4:
             # call retrieval function
             print("Getting results")
             q_new, results = self.new_prob_retrieval(q, relevant, non_relevant)
+            q_change = np.count_nonzero(q_new - q)
+            print("Changed dimensions {}".format(q_change))
             # call user feedback function
             print("Getting feedback")
             relevant, non_relevant = self._get_user_feedback_(results)
+            self.acc_measure.append(len(relevant)/10.)
             # call query mod function
             print("Relative importance")
             self.relative_importance(q, q_new)
@@ -232,11 +236,17 @@ class Task4:
                 self.plot_heatmap(query_file)              
                 break
             q = q_new
+        fig = plt.figure(figsize=(8,8))
+        plt.plot(self.acc_measure)
+        plt.xlabel("Iterations")
+        plt.ylabel("Relevance")
+        plt.grid()
+        fig.savefig(self.output_dir+"/{}_{}_relevance_plot.png".format(query_file, self.vm))
         json.dump(self.diff, open(os.path.join(self.output_dir,"{}_{}_query_difference.txt".format(self.vm,query_file)),"w"), indent="\t")
 
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
-    vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
+    vm = 2 #int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
     file = input("Enter a file number : ").zfill(7)
     task4 = Task4(input_dir, vm=vm)
     task4.main_feedback_loop(file)

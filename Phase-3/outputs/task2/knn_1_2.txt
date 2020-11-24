@@ -1564,7 +1564,7 @@
 		"original": "combinato"
 	},
 	"00257-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00257-2": {
@@ -1720,11 +1720,11 @@
 		"original": "combinato"
 	},
 	"00261-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00261-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00261-2": {
@@ -1752,7 +1752,7 @@
 		"original": "combinato"
 	},
 	"00261-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00261-9": {
@@ -2000,83 +2000,83 @@
 		"original": "combinato"
 	},
 	"00268-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00268-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00269-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00270-0": {
@@ -2124,11 +2124,11 @@
 		"original": "combinato"
 	},
 	"00271-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-3": {
@@ -2136,15 +2136,15 @@
 		"original": "combinato"
 	},
 	"00271-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-7": {
@@ -2152,11 +2152,11 @@
 		"original": "combinato"
 	},
 	"00271-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00271-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00272-0": {
@@ -2200,283 +2200,283 @@
 		"original": "combinato"
 	},
 	"00273-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00273-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00274-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00275-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00276-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00277-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00278-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-4": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00279-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "combinato"
 	},
 	"00559-0": {
@@ -3244,7 +3244,7 @@
 		"original": "daccordo"
 	},
 	"00578-1": {
-		"predicted": "daccordo",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00578-2": {
@@ -3400,7 +3400,7 @@
 		"original": "daccordo"
 	},
 	"00582-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00582-1": {
@@ -3420,7 +3420,7 @@
 		"original": "daccordo"
 	},
 	"00582-5": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00582-6": {
@@ -3428,15 +3428,15 @@
 		"original": "daccordo"
 	},
 	"00582-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00582-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00582-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00583-0": {
@@ -3640,7 +3640,7 @@
 		"original": "daccordo"
 	},
 	"00588-0": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-1": {
@@ -3648,11 +3648,11 @@
 		"original": "daccordo"
 	},
 	"00588-2": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-4": {
@@ -3664,19 +3664,19 @@
 		"original": "daccordo"
 	},
 	"00588-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-7": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-8": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00588-9": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00589-0": {
@@ -3719,5 +3719,5 @@
 		"predicted": "vattene",
 		"original": "daccordo"
 	},
-	"Accuracy": 44.40860215053763
+	"Accuracy": 33.44086021505376
 }

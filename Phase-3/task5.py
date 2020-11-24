@@ -220,20 +220,24 @@ class Task5:
                 break
             q = q_new
         
-        # fig = plt.figure(figsize=(8,8))
-        # plt.plot(self.acc_measure)
-        # plt.xlabel("Iterations")
-        # plt.ylabel("Relevance")
-        # plt.grid()
-        # fig.savefig(self.output_dir+"/{}_{}_{}_relevance_plot.png".format(query_file, self.uc, self.vm))
+        fig = plt.figure(figsize=(8,8))
+        plt.plot(self.acc_measure)
+        plt.xlabel("Iterations")
+        plt.ylabel("Relevance")
+        plt.grid()
+        fig.savefig(self.output_dir+"/{}_{}_{}_relevance_plot.png".format(query_file, self.uc, self.vm))
 
 
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
+    vm = 2
+    uc = 2
     #vm = int(input("Which vector model to use? (tf-1/ tfidf-2) : "))
-    file = "6".zfill(7) #input("Enter a file number : ").zfill(7)
-    k = 3 #int(input("Enter a value K for outgoing gestures : "))
-    for vm in [1,2]:
-        for uc in [2,3,4,5,6,7]:
-            task5 = Task5(input_dir, vm=vm, uc=uc)
-            task5.main_feedback_loop(file, k)
+    file = input("Enter a file number : ").zfill(7)
+    k = int(input("Enter a value K for outgoing gestures : "))
+    task5 = Task5(input_dir, vm=vm, uc=uc)
+    task5.main_feedback_loop(file, k)
+    # for vm in [1,2]:
+    #     for uc in [2,3,4,5,6,7]:
+    #         task5 = Task5(input_dir, vm=vm, uc=uc)
+    #         task5.main_feedback_loop(file, k)

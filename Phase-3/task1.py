@@ -87,4 +87,3 @@ if __name__ == "__main__":
     n = list(map(int, input("Enter N indices separated by space : ").split()))
     task1 = Task1(input_directory)
     task1.process_ppr(n, m, k)
-    # task1.plot_dominant_gestures()

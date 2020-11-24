@@ -5,7 +5,7 @@ import copy
 import numpy as np
 import pandas as pd
 import pickle as pkl
-from task3_new import LSH
+from task3 import LSH
 import tkinter as tk
 from tkinter import ttk
 from pathlib import Path
@@ -51,10 +51,12 @@ class Display(object):
         self.quit_op = True
         self.window.destroy()
     
-    def result_and_feedback(self, query_id, results):
+    def result_and_feedback(self, query_id, results, message):
         self.window = tk.Tk()
         query_id = tk.Label(master=self.window, width=60, text="Results for query id " + query_id)
         query_id.pack()
+        message = tk.Label(master=self.window, width=100, text=message)
+        message.pack()
         self.frames = []
         for i in range(len(results)):
             items = {}
@@ -299,18 +301,22 @@ class Task6:
 
             p = np.random.uniform(size=(1,)).tolist()[0]
             if p <= self.prob:
+                cor = "confidently with probability {}".format(np.round(self.prob,2))
                 chosen_method = max(d, key=d.get)
             else:
-                chosen_method = random.choice(list(results.keys()))
+                cor = "randomly with probability {}".format(np.round(1-self.prob,2))
+                chosen_method = random.choice([x for x in results.keys() if ("lsh" in x or "knn" in x) and "vect" in x])
+            message = "Chose method {} {}".format(chosen_method, cor)
             print("Chosen Method : {}".format(chosen_method))
 
        
         if(not chosen_method):
-            chosen_method = random.choice(list(results.keys()))
+            chosen_method = random.choice([x for x in results.keys() if ("lsh" in x or "knn" in x) and "vect" in x])
+            message = "Chose method {} at random".format(chosen_method)
             print("Chosen Method : {} at random.".format(chosen_method))
 
         self.prob = min(1, self.prob*1.1)
-        return chosen_method
+        return chosen_method, message
     
     def main_feedback_loop(self, ppr_k_value):
         self.acc_measure = []
@@ -335,16 +341,16 @@ class Task6:
             results['prob_vect'] = self.prob_retrieval(q_vect)
             results['prob_prob'] = self.prob_retrieval(q_prob)
             # LSH results collection
-            results['lsh_vect'] = self.lsh.query(q_vect.ravel(), self.top_retrieve)['retrieved_idx']
-            results['lsh_prob'] = self.lsh.query(q_prob.ravel(), self.top_retrieve)['retrieved_idx']
+            results['lsh_vect'] = self.lsh.query(q_vect.ravel(), self.top_retrieve, self.query_id)['retrieved_idx']
+            results['lsh_prob'] = self.lsh.query(q_prob.ravel(), self.top_retrieve, self.query_id)['retrieved_idx']
             
             # Choose a result
-            k = self.new_choose_result_set(results, relevant, prev_results)
+            k, message = self.new_choose_result_set(results, relevant, prev_results)
             chosen_result = [self.idx_file_map[x] for x in results[k]]
 
             # call user feedback function
             print("Getting feedback")
-            self.display.result_and_feedback(self.query_id, chosen_result)
+            self.display.result_and_feedback(self.query_id, chosen_result, message)
             quit = self.display.quit_op
             if quit:
                 break
@@ -376,8 +382,12 @@ class Task6:
 if __name__ == "__main__":
     input_dir = "phase2_outputs"
     ppr_k = int(input("Enter a value K for outgoing gestures in PPR : "))
-    for vm in [1,2]:
-        for uc in [2,3,4,5,6,7]:
-            print("vm = {}, uc = {}".format(vm, uc))
-            task6 = Task6(input_dir, vm=vm, uc=uc)
-            task6.main_feedback_loop(ppr_k)
+    vm = 2
+    uc = 2
+    task6 = Task6(input_dir, vm=vm, uc=uc)
+    task6.main_feedback_loop(ppr_k)
+    # for vm in [1,2]:
+    #     for uc in [2,3,4,5,6,7]:
+    #         print("vm = {}, uc = {}".format(vm, uc))
+    #         task6 = Task6(input_dir, vm=vm, uc=uc)
+    #         task6.main_feedback_loop(ppr_k)

@@ -3600,11 +3600,11 @@
 		"original": "daccordo"
 	},
 	"00587-0": {
-		"predicted": "daccordo",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00587-1": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00587-2": {
@@ -3612,7 +3612,7 @@
 		"original": "daccordo"
 	},
 	"00587-3": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00587-4": {
@@ -3624,7 +3624,7 @@
 		"original": "daccordo"
 	},
 	"00587-6": {
-		"predicted": "combinato",
+		"predicted": "vattene",
 		"original": "daccordo"
 	},
 	"00587-7": {
@@ -3719,5 +3719,5 @@
 		"predicted": "combinato",
 		"original": "daccordo"
 	},
-	"Accuracy": 37.74193548387097
+	"Accuracy": 37.634408602150536
 }
