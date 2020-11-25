@@ -1,0 +1,3723 @@
+{
+	"$Accuracy": 0.34838709677419355,
+	"00001-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00001-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00001-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00001-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00002-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00002-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00002-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00002-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00002-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00002-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00002-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00002-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00002-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00002-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00003-0": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00003-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00003-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00003-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00003-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00003-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00003-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00003-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00003-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00003-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00004-0": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00004-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00004-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00004-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00004-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00005-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00005-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00005-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00006-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00006-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00006-5": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00006-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00006-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00007-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00007-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00008-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00008-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00009-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00009-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00009-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00009-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00009-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00009-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00009-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00009-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00009-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00009-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00010-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00010-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00010-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00010-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00010-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00011-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00011-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00011-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00011-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00012-0": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-5": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00012-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00012-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00013-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00013-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00013-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00014-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00014-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00014-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00014-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00014-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00014-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00014-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00014-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00014-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00014-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00015-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00015-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00015-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00015-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00016-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00016-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00016-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00017-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00017-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00017-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00018-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00018-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00018-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00018-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00018-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00018-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00018-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00018-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00018-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00018-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00019-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00019-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00019-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00019-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00020-0": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-3": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-5": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-7": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00020-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00021-0": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00021-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00021-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00021-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00021-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00021-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00021-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00021-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00021-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00021-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00022-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00022-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00022-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00022-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00022-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00023-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00023-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00023-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00023-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00023-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-5": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00024-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00024-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00024-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00024-9": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00025-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00025-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00025-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00025-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00025-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00025-5": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00025-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00025-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00025-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00025-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-2": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00026-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-4": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00026-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00026-8": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00026-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00027-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00027-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00028-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-6": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00028-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-0": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00029-1": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00029-2": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-6": {
+		"pred": "vattene",
+		"true": "vattene"
+	},
+	"00029-7": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-8": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00029-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00030-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00030-1": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-3": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-4": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00030-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00030-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00030-9": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-0": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00031-1": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00031-2": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-3": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00031-4": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-5": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00031-6": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-7": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-8": {
+		"pred": "combinato",
+		"true": "vattene"
+	},
+	"00031-9": {
+		"pred": "daccordo",
+		"true": "vattene"
+	},
+	"00249-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00249-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00249-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00249-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00249-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00250-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00250-1": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-2": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00250-4": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00250-6": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-7": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-8": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00250-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00251-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00251-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00252-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00252-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00253-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00253-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00253-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00253-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-0": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00254-1": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00254-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-3": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00254-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-5": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00254-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00254-9": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-0": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-1": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00255-3": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-4": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-5": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-6": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-7": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-8": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00255-9": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00256-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00256-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00256-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00257-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-2": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00257-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00257-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00258-7": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00258-8": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00258-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00259-0": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-1": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-2": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-3": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-4": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-5": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-6": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-7": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00259-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00259-9": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00260-0": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00260-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00260-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00260-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00260-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00260-5": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00260-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00260-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00260-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00260-9": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00261-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00261-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00261-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00262-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00262-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00263-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00263-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00264-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00264-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00264-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00264-3": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00264-4": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00264-5": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00264-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00264-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00264-8": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00264-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00265-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00265-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00265-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00265-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00266-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00266-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00267-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00267-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00267-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00267-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00267-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00267-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00267-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00267-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00267-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00267-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00268-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00268-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00269-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00269-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00270-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00271-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00271-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00272-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00272-1": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00272-2": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00272-3": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00272-4": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00272-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00272-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00272-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00272-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00272-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00273-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-1": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00273-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00273-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00274-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00274-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00274-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00274-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00275-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00275-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-4": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-5": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00275-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00276-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-2": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00276-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00276-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00276-8": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00276-9": {
+		"pred": "vattene",
+		"true": "combinato"
+	},
+	"00277-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00277-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-0": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-2": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-3": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-6": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-7": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-8": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00278-9": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00279-0": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-1": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00279-2": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-3": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-4": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00279-5": {
+		"pred": "daccordo",
+		"true": "combinato"
+	},
+	"00279-6": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-7": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-8": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00279-9": {
+		"pred": "combinato",
+		"true": "combinato"
+	},
+	"00559-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00559-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00559-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00559-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00559-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00560-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00560-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00560-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00560-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00561-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00561-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00562-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00562-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00562-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00562-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00563-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00563-5": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00563-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00563-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00564-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00564-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00565-2": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00565-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00565-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00565-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00565-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00566-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-1": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00566-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-5": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-6": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-7": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00566-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00567-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00567-1": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00567-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00567-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00567-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00567-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00567-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00567-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00567-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00567-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00568-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00568-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-5": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00568-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-7": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00568-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00568-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00569-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00569-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00570-2": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00570-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00570-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00570-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00570-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00571-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00571-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00571-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00571-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00572-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00572-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00572-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00573-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-2": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00573-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00573-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00573-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00573-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00574-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00574-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00574-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-6": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00575-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00575-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00576-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00576-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00576-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00576-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00576-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00577-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00577-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00577-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00577-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00577-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00577-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00577-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00577-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00577-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00577-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00578-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-1": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00578-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00578-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00579-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00579-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-6": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00579-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00579-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00579-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00580-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-1": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00580-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-5": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-6": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00580-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00580-9": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00581-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00581-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00582-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00582-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-2": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00583-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00583-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00583-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-0": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-1": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00584-3": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-4": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-5": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-6": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-7": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-8": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00584-9": {
+		"pred": "vattene",
+		"true": "daccordo"
+	},
+	"00585-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00585-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00586-0": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00586-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00586-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00586-3": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00586-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00586-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00586-6": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00586-7": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00586-8": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00586-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00587-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-4": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00588-5": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00588-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-0": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-1": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-2": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-3": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-4": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-5": {
+		"pred": "combinato",
+		"true": "daccordo"
+	},
+	"00589-6": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-7": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-8": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	},
+	"00589-9": {
+		"pred": "daccordo",
+		"true": "daccordo"
+	}
+}
