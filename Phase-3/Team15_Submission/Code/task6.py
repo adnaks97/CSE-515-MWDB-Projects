@@ -356,7 +356,7 @@ class Task6:
                 break
             relevant = [self.file_idx_map[x] for x in self.display.relevant]
             non_relevant = [self.file_idx_map[x] for x in self.display.irrelevant]
-            self.acc_measure.append(len(relevant)/10.)
+            self.acc_measure.append(len(relevant)/self.top_retrieve)
 
             # call query mod function
             if "_vect" in k:

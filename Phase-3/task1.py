@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from scipy.spatial import distance
+import matplotlib.pyplot as plt
 
 
 class Task1:
@@ -50,6 +51,7 @@ class Task1:
                 fig=df.plot()
                 outFile = os.path.join(self.output_dir, res[j] + '_' + i + '_' + str(k) + '.png')
                 fig.figure.savefig(outFile)
+                plt.close(fig.get_figure())
 
     def process_ppr(self, n, m, k):
         self.output_dir = self.output_dir+"/{}_{}_{}".format(k,m,",".join([str(x) for x in n]))
@@ -73,7 +75,7 @@ class Task1:
         res = [self.idx_file_map[x] for x in u_new.ravel().argsort()[::-1][:m]]
         self.plot_dominant_gestures(res,k)
         c = {}
-        c['user_files'] = n
+        c['user_files'] = [self.idx_file_map[x] for x in n]
         c['dominant_gestures'] = res 
         json.dump(c, open(self.output_dir + "/{}_{}_dominant.txt".format(k, m), "w"), indent='\t')
         

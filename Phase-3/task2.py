@@ -24,11 +24,12 @@ class Task2:
         self.idx_file_map = dict(zip(indices, files))
         self.file_idx_map = dict(zip(files, indices))
         # creating map for train and test gesture files v/s indices
-        train_labels = pd.read_excel("sample_training_labels_new.xlsx", header=None)
-        all_labels = pd.read_excel("all_labels_new.xlsx", header=None)
+        train_labels = pd.read_excel("sample_training_labels.xlsx", header=None)
+        all_labels = pd.read_excel("all_labels.xlsx", header=None)
         self.all_files_classes = dict(zip(all_labels.iloc[:,0].apply(lambda x: str(x).zfill(7)).tolist(),all_labels.iloc[:,1].tolist()))
         self.train_file_num = train_labels.iloc[:, 0].apply(lambda x: str(x).zfill(7)).tolist()
-        self.class_labels_map = dict(zip(self.train_file_num,train_labels.iloc[:,1].tolist()))
+        self.class_labels_map = dict(zip(self.train_file_num, train_labels.iloc[:,1].tolist()))
+        self.unique_labels = dict(zip(np.unique(train_labels.iloc[:,1]).tolist(),list(range(len(np.unique(train_labels.iloc[:,1]).tolist())))))
         self.remove_indices_mat = list(set(files) - set(self.train_file_num))
         self.train_file_num_indices = sorted([self.file_idx_map[x] for x in self.train_file_num])
         self.remove_indices_mat = sorted([self.file_idx_map[x] for x in self.remove_indices_mat])
@@ -182,7 +183,7 @@ class Task2:
     
     def decision_tree(self):
         file = self.get_vectors()
-        targets = {'vattene':0, 'combinato':1, 'daccordo':2}
+        targets = self.unique_labels
         key_list = list(targets.keys()) 
         val_list = list(targets.values()) 
         X = np.round(np.array([list(file[i]) for i in self.train_file_num_indices]), decimals=4)
@@ -252,7 +253,7 @@ class Task2:
                     break
             return label
         file = self.get_vectors()
-        targets = {'vattene':0, 'combinato':1, 'daccordo':2}
+        targets = self.unique_labels
         key_list = list(targets.keys()) 
         val_list = list(targets.values())
         X = np.round(np.array([list(file[i]) for i in self.train_file_num_indices]),decimals=4)

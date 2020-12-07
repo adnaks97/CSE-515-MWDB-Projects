@@ -57,12 +57,15 @@ class Preprocess:
             print("already have results of task1 in outputs")
         
 if __name__ == "__main__":
-    ob = Preprocess("Data_phase3", "phase2_outputs")
-    ob.task0a()
-    ob.task0b()
-    for vm in [1,2]:
-        for tc in [1,2,3,4]:
-            ob.task1(4, vm, tc)
-    for vm in [1,2]:
-        for uc in [2,3,4,5]:
-            ob.task3(vm, uc)
+    datasets = ["Dataset 1", "Dataset 2", "Dataset 3", "Dataset 4", "Dataset 5", "Dataset 6"]
+    for d in datasets:
+        ob = Preprocess(d, "phase2_outputs")
+        ob.task0a()
+        ob.task0b()
+        for vm in [1,2]:
+            for tc in [1,2,3,4]:
+                ob.task1(4, vm, tc)
+        for vm in [1,2]:
+            for uc in [2,3,4,5]:
+                ob.task3(vm, uc)
+        os.system("mv phase2_outputs {}_phase2_outputs".format(d[-1]))
